@@ -17,11 +17,11 @@ class CreateApartmentsTable extends Migration
             $table->id();
             $table->string("title");
             $table->text("description");
-            $table->text("cover_img");
+            $table->text("cover_img")->nullable();
             $table->integer("rooms");
             $table->integer("beds");
             $table->integer("bathrooms");
-            $table->integer("square_metres");
+            $table->integer("square_metres")->nullable();
             $table->float("night_price", 6, 2);
             $table->text("address");
             $table->string("city");
