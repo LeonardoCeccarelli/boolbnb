@@ -7,6 +7,8 @@
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
+                <h1 class="text-center">Dashboard con lista Appartamenti per utente</h1>
+
                 <div class="card-body">
                     @if (session('status'))
                     <div class="alert alert-success" role="alert">
@@ -15,7 +17,7 @@
                     @endif
 
                     {{ __('You are logged in!') }}
-                    Regitrato
+
                 </div>
             </div>
         </div>
