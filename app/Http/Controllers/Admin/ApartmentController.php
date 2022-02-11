@@ -52,7 +52,7 @@ class ApartmentController extends Controller
         $newApartment->save();
 
         if (array_key_exists("services", $data)) {
-            $newApartment->tags()->sync($data["services"]);
+            $newApartment->services()->sync($data["services"]);
         }
 
         return redirect()->view("admin.apartment.show", $newApartment->id);
