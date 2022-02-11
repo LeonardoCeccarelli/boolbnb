@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Apartment;
 use App\Http\Controllers\Controller;
+use App\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,7 +27,11 @@ class ApartmentController extends Controller
      */
     public function create()
     {
-        return view("admin.apartment.create");
+        $services = Service::all();
+
+        return view("admin.apartment.create", [
+            "services" => $services,
+        ]);
     }
 
     /**
@@ -37,6 +42,8 @@ class ApartmentController extends Controller
      */
     public function store(Request $request)
     {
+        // ESEGUIRE LA VALIDAZIONE
+
         return redirect()->view("admin.apartment.show");
     }
 
