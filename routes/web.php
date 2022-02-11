@@ -17,16 +17,16 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::middleware("auth")
-    ->namespace("Admin")
-    ->name("admin.")
-    ->prefix("admin")
-    ->group(function () {
-        Route::get("/", "HomeController@index")->name("home");
+  ->namespace("Admin")
+  ->name("admin.")
+  ->prefix("admin")
+  ->group(function () {
+    Route::get("/", "HomeController@index")->name("home");
 
-        Route::resource("/apartment", "ApartmentController");
-        Route::get("/apartment/sponsor", "SponsorController@index")->name("sponsor");
-    });
+    Route::resource("/apartment", "ApartmentController");
+    Route::get("/sponsor", "SponsorController@index")->name("sponsor");
+  });
 
 Route::get("{any?}", function () {
-    return view("guests.welcome");
+  return view("guests.welcome");
 })->where("any", ".*");
