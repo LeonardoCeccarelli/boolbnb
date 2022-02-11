@@ -44,7 +44,17 @@ class ApartmentController extends Controller
     {
         // ESEGUIRE LA VALIDAZIONE
 
-        return redirect()->view("admin.apartment.show");
+        $data = $request->all();
+        $newApartment = new Apartment();
+
+        $newApartment->fill($data);
+        $newApartment->save();
+
+        if (array_key_exists("services", $data)) {
+            $newApartment->tags()->sync($data["services"]);
+        }
+
+        return redirect()->view("admin.apartment.show", $newApartment->id);
     }
 
     /**
