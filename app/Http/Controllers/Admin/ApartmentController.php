@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ApartmentController extends Controller
 {
@@ -94,9 +95,33 @@ class ApartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Apartment $apartment)
     {
-        return redirect()->view("admin.apartment.show");
+        // ESEGUIRE VALIDAZIONE
+
+        $data = $request->all();
+
+        $oldImage = $apartment->cover_img;
+        $apartment->fill($data);
+
+        if ($request->file("coverImg")) {
+
+            if ($oldImage) {
+                Storage::delete($oldImage);
+            }
+
+            $apartment->cover_img = $request->file("cover_img")->store("apartments");
+        }
+
+        $apartment->save();
+
+        if (array_key_exists("services", $data)) {
+            $apartment->tags()->sync($data["services"]);
+        } else {
+            $apartment->tags()->detach();
+        }
+
+        return redirect()->view("admin.apartment.show", $apartment->id);
     }
 
     /**
@@ -105,8 +130,12 @@ class ApartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Apartment $apartment)
     {
+        $apartment->services()->detach();
+
+        $apartment->delete();
+
         return redirect()->view("admin.home");
     }
 }
