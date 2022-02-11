@@ -2,6 +2,7 @@
 
 use App\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
@@ -56,7 +57,7 @@ class UserSeeder extends Seeder
       $newValue->first_name = $value["first_name"];
       $newValue->last_name = $value["last_name"];
       $newValue->email = $value["email"];
-      $newValue->password = $value["password"];
+      $newValue->password = Hash::make($value["password"]);
       $newValue->date_of_birth = $value["date_of_birth"];
       $newValue->save();
     }
