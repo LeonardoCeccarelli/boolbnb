@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Apartment;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ApartmentController extends Controller
 {
@@ -14,7 +16,7 @@ class ApartmentController extends Controller
      */
     public function index()
     {
-        return view("admin.home");
+        // Il metodo index è gestito dall' Admin/HomeController@index 
     }
 
     /**
