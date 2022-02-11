@@ -9,12 +9,14 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
-    public function index()
-    {
-        $apartments = Apartment::orderBy("created_at", "DESC")
-            ->where("id", Auth::user()->id)
-            ->with(["services", "images", "sponsor", "user"])->get();
+  public function index()
+  {
+    $apartments = Apartment::orderBy("created_at", "DESC")
+      ->where("user_id", Auth::user()->id)
+      ->with(["services", "images", "sponsor", "user"])->get();
 
-        return view("admin.home", compact("apartments"));
-    }
+    // dd($apartments);
+
+    return view("admin.home", compact("apartments"));
+  }
 }
