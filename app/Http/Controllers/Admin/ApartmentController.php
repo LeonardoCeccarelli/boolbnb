@@ -63,9 +63,11 @@ class ApartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Apartment $apartment)
     {
-        return redirect()->view("admin.apartment.show");
+        return redirect()->view("admin.apartment.show", [
+            "apartment" => $apartment,
+        ]);
     }
 
     /**
@@ -74,9 +76,15 @@ class ApartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Apartment $apartment)
     {
-        return view("admin.apartment.edit");
+
+        $services = Service::all();
+
+        return view("admin.apartment.edit", [
+            "apartment" => $apartment,
+            "services" => $services,
+        ]);
     }
 
     /**
