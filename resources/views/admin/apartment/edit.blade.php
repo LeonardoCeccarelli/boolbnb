@@ -17,7 +17,7 @@
         <div class="col-8">
             <div class="form-check form-switch">
                 <input class="form-check-input" name="visible" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-                    checked>
+                    @if($apartment->visible) checked @endif>
                 <label class="form-check-label" for="flexSwitchCheckChecked">Visibile</label>
             </div>
         </div>
