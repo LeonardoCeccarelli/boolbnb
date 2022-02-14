@@ -44,8 +44,7 @@ class ApartmentController extends Controller
    */
   public function store(Request $request)
   {
-
-    // Chiamata APi per ricevere lat e lon
+    // Data to format url string
     $address = str_replace(' ', '%20', $request['address']);
     $city = $request['city'];
     $key = '74G2HVlLeNW6ZnVG4yzsaMj20OxuW1sJ';
@@ -53,6 +52,7 @@ class ApartmentController extends Controller
     $endUrl = '.json?key=';
     $url = $baseUrl . $city . '%20' . $address . $endUrl . $key;
 
+    // Chiamata APi per ricevere lat e lon
     $response = Http::get($url);
     $lat = $response->json()['results'][0]['position']['lat'];
     $lon = $response->json()['results'][0]['position']['lon'];
