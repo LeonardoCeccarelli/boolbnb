@@ -13,6 +13,7 @@
     <form action="{{ route('admin.apartment.update', $apartment->id) }}" enctype="multipart/form-data" method="POST"
         class="row justify-content-center gy-5">
         @csrf
+        @method('PUT')
 
         <div class="col-8">
             <div class="form-check form-switch">

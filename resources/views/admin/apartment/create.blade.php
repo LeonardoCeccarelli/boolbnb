@@ -21,7 +21,7 @@
         <div class="col-8">
             <div class="form-check form-switch">
                 <input class="form-check-input" name="visible" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-                    checked>
+                    value="visible" checked>
                 <label class="form-check-label" for="flexSwitchCheckChecked">Visibile</label>
             </div>
         </div>
@@ -48,6 +48,16 @@
                 {{ $errors->get("description")[0]}}
             </div>
             @endif
+        </div>
+
+        <div class="col-12 col-md-10 col-lg-8">
+            <label for="field_address" class="form-label">Indirizzo</label>
+            <input type="text" class="form-control {{ $errors->has('address') ? 'is-invalid' : '' }}" name="address"
+                id="field_address" value="{{ old('address') }}">
+            <input hidden type="text" value="pippo" name="city">
+            <input hidden type="text" value="1.23543" name="lat">
+            <input hidden type="text" value="8.56432" name="lon">
+
         </div>
 
         <div class="col-12 col-md-10 col-lg-8">

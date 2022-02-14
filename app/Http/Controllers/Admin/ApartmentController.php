@@ -50,6 +50,8 @@ class ApartmentController extends Controller
 
         $newApartment->fill($data);
 
+        $newApartment->visible = $request["visible"] ? "1" : "0";
+
         $newApartment->user_id = Auth::user()->id;
 
         $newApartment->save();
@@ -58,7 +60,7 @@ class ApartmentController extends Controller
             $newApartment->services()->sync($data["services"]);
         }
 
-        return redirect()->view("admin.apartment.show", $newApartment->id);
+        return redirect()->route("admin.apartment.show", $newApartment->id);
     }
 
     /**
@@ -106,6 +108,8 @@ class ApartmentController extends Controller
 
         $oldImage = $apartment->cover_img;
         $apartment->fill($data);
+        $apartment->visible = $request["visible"] ? "1" : "0";
+
 
         if ($request->file("coverImg")) {
 
@@ -119,12 +123,12 @@ class ApartmentController extends Controller
         $apartment->save();
 
         if (array_key_exists("services", $data)) {
-            $apartment->tags()->sync($data["services"]);
+            $apartment->services()->sync($data["services"]);
         } else {
-            $apartment->tags()->detach();
+            $apartment->services()->detach();
         }
 
-        return redirect()->view("admin.apartment.show", $apartment->id);
+        return redirect()->route("admin.apartment.show", $apartment->id);
     }
 
     /**
