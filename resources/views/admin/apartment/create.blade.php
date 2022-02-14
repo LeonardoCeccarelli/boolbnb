@@ -171,18 +171,26 @@
         $form = document.getElementById("form_submit");
         $form.addEventListener("submit", (e) => {    
             e.preventDefault() 
-            window.axios.get("https://api.tomtom.com/search/2/geocode/" + city.value + " " + address.value + ".json", {
-                params: {
-                    storeResult: "false",
-                    typehead: "true",
-                    extendedPostalCodesFor: "addr",
-                    view: "Unified",
-                    key: "74G2HVlLeNW6ZnVG4yzsaMj20OxuW1sJ",
-
+            window.axios.get("https://api.tomtom.com/search/2/geocode/4%20north%202nd%20street%20san%20jose.json?key=74G2HVlLeNW6ZnVG4yzsaMj20OxuW1sJ", {
+                headers: {
+                    'access-control-request-headers': '*',
+                    'access-control-allow-origin': '*',
                 }
-            }).then((resp) => {
-                console.log(resp.data);
+            }).then(resp => {
+                console.log(resp)
             })
+            // window.axios.get("https://api.tomtom.com/search/2/geocode/" + city.value + " " + address.value + ".json", {
+            //     params: {
+            //         storeResult: "false",
+            //         typehead: "true",
+            //         extendedPostalCodesFor: "addr",
+            //         view: "Unified",
+            //         key: "74G2HVlLeNW6ZnVG4yzsaMj20OxuW1sJ",
+
+            //     }
+            // }).then((resp) => {
+            //     console.log(resp.data);
+            // })
     })});
 </script>
 @endsection
