@@ -49,6 +49,9 @@ class ApartmentController extends Controller
         $newApartment = new Apartment();
 
         $newApartment->fill($data);
+
+        $newApartment->user_id = Auth::user()->id;
+
         $newApartment->save();
 
         if (array_key_exists("services", $data)) {
