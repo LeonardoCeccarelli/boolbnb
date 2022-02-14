@@ -1,9 +1,9 @@
 
-<footer>
+<footer class="my-5">
   <div class="container ">
-    <div class="footer_a row row-cols-4 py-5 mt-5 border-top">
+    <div class="footer_a row row-cols-4 py-5  border-top">
       <div class="col">
-        <h5 class="fw-bold">Informazioni</h5>
+        <h5 class="fw-bold mb-3">Informazioni</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Newsroom</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Scopri le nuove funzionalità</a></li>
@@ -14,7 +14,7 @@
       </div>
   
       <div class="col">
-        <h5 class="fw-bold">Ospitare</h5>
+        <h5 class="fw-bold mb-3">Ospitare</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Prova a ospitare</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Esplora le risorse per host</a></li>
@@ -24,7 +24,7 @@
       </div>
   
       <div class="col">
-        <h5 class="fw-bold">Community</h5>
+        <h5 class="fw-bold mb-3">Community</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Boolbnb un rifugio sicuro</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contro la discriminazione</a></li>
@@ -33,7 +33,7 @@
       </div>
   
       <div class="col">
-        <h5 class="fw-bold">Assistenza</h5>
+        <h5 class="fw-bold mb-3">Assistenza</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">centro Assistenza</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Informazioni di sicurezza</a></li>
@@ -60,4 +60,4 @@
       </div>
     </div>
   </div>
-</footer>
+</footer >
