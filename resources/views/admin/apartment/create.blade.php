@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@section('other_meta')
+
+<script src="{{ mix('js/apiAddress.js') }}" defer></script>
+
+@endsection
+
 @section('page_title', 'Nuovo Appartamento - BollBnB')
 
 @section('content')

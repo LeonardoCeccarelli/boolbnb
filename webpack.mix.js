@@ -13,4 +13,5 @@ const mix = require('laravel-mix');
 mix.disableSuccessNotifications(); //Rimuove le notifiche andate a buon fine dopo aver compilato
 
 mix.js('resources/js/app.js', 'public/js')
+    .js('resources/js/assets/apiAddress.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
