@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page_title', 'Modifica Appartamento - BollBnB')
+@section('page_title', mb_strimwidth($apartment->title, 0, 25, "...") . ' - Modifica Appartamento')
 
 @section('content')
 <div class="container">
