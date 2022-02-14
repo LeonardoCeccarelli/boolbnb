@@ -93,8 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-console.log("apiAddress Funziona"); // DA AGGIUNGERE NELL'HEAD DELLA VIEW CREATE PER CALCOLARE E AGGIUNGERE AUTOMATICAMENTE
-// TRAMITE CHIAMATA API LAT E LON
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/home/leonardo/Scrivania/Boolean/boolbnb/resources/js/assets/apiAddress.js'");
 
 /***/ }),
 

@@ -143,6 +143,6 @@ class ApartmentController extends Controller
 
         $apartment->delete();
 
-        return redirect()->view("admin.home");
+        return redirect()->route("admin.home");
     }
 }

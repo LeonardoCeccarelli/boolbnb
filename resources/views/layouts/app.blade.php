@@ -67,6 +67,7 @@
 
   @include('partials.the_footer')
 
+  @yield('scripts')
 </body>
 
 </html>

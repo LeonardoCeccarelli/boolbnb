@@ -1,11 +1,5 @@
 @extends('layouts.app')
 
-@section('other_meta')
-
-<script src="{{ mix('js/apiAddress.js') }}" defer></script>
-
-@endsection
-
 @section('page_title', 'Nuovo Appartamento - BollBnB')
 
 @section('content')
@@ -14,7 +8,7 @@
         <h2>Ciao {{Auth::user()->first_name}}</h2>
         <h4>In questa sezione puoi inserire un nuovo appartamento</h4>
     </div>
-    <form action="{{ route('admin.apartment.store') }}" enctype="multipart/form-data" method="POST"
+    <form id="form_submit" action="{{ route('admin.apartment.store') }}" enctype="multipart/form-data" method="POST"
         class="row justify-content-center gy-5">
         @csrf
 
@@ -54,11 +48,16 @@
             <label for="field_address" class="form-label">Indirizzo</label>
             <input type="text" class="form-control {{ $errors->has('address') ? 'is-invalid' : '' }}" name="address"
                 id="field_address" value="{{ old('address') }}">
-            <input hidden type="text" value="pippo" name="city">
-            <input hidden type="text" value="1.23543" name="lat">
-            <input hidden type="text" value="8.56432" name="lon">
-
         </div>
+
+        <div class="col-12 col-md-10 col-lg-8">
+            <label for="field_city" class="form-label">Città</label>
+            <input type="text" class="form-control {{ $errors->has('city') ? 'is-invalid' : '' }}" name="city"
+                id="field_city" value="{{ old('city') }}">
+        </div>
+
+        <input id="field_lat" hidden type="text" value="" name="lat">
+        <input id="field_lon" hidden type="text" value="" name="lon">
 
         <div class="col-12 col-md-10 col-lg-8">
             <label for="field_cover_img" class="form-label">Link Immagine</label>
@@ -159,4 +158,31 @@
 
     </form>
 </div>
+@endsection
+
+@section('scripts')
+<script>
+    window.addEventListener("DOMContentLoaded", () => {  
+        const address = document.getElementById('field_address')
+        const city = document.getElementById('field_city')
+        const lat = document.getElementById('field_lat')
+        const lon = document.getElementById('field_lon')
+
+        $form = document.getElementById("form_submit");
+        $form.addEventListener("submit", (e) => {    
+            e.preventDefault() 
+            window.axios.get("https://api.tomtom.com/search/2/geocode/" + city.value + " " + address.value + ".json", {
+                params: {
+                    storeResult: "false",
+                    typehead: "true",
+                    extendedPostalCodesFor: "addr",
+                    view: "Unified",
+                    key: "74G2HVlLeNW6ZnVG4yzsaMj20OxuW1sJ",
+
+                }
+            }).then((resp) => {
+                console.log(resp.data);
+            })
+    })});
+</script>
 @endsection
