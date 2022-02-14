@@ -69,7 +69,7 @@ class ApartmentController extends Controller
      */
     public function show(Apartment $apartment)
     {
-        return redirect()->view("admin.apartment.show", [
+        return view("admin.apartment.show", [
             "apartment" => $apartment,
         ]);
     }

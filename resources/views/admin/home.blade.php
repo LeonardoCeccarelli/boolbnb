@@ -31,7 +31,11 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title">{{ $apartment->title }}</h5>
+                                    <h5 class="card-title">
+                                        <a href="{{ route('admin.apartment.show', $apartment->id) }}">
+                                            {{$apartment->title }}
+                                        </a>
+                                    </h5>
                                     <p class="card-text">{{ $apartment->description }}</p>
                                     <p class="card-text">
                                         <small class="text-muted">Ultima modifica {{$apartment->updated_at }}
