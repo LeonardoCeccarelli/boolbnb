@@ -121,7 +121,7 @@
         {{-- Square_Metres --}}
         <div class="col">
           <label for="field_square_metres" class="form-label">Metri quadrati</label>
-          <input type="number" min="1" max="300"
+          <input type="number" min="1" max="1000"
             class="form-control {{ $errors->has('square_metres') ? 'is-invalid' : ''}}" name="square_metres"
             id="field_square_metres" value="{{ old('square_metres') }}">
 
