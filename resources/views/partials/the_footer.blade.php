@@ -1,5 +1,5 @@
 
-<footer class="my-5">
+<footer class="mb-5">
   <div class="container ">
     <div class="footer_a row row-cols-4 py-5  border-top">
       <div class="col">

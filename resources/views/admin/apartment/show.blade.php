@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container-fluid" style="background: rgb(2,0,36);background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,70,121,1) 35%, rgba(161,232,246,1) 100%);">
-    <div class="container  d-flex flex-column align-items-center ">
+    <div class="container pt-5 d-flex flex-column align-items-center ">
 
         {{-- titolo / info base --}}
         <section class="bg-light col-11 mt-5 p-5  rounded-top">
@@ -34,13 +34,15 @@
             <div class="left col-6 border bg-light p-5">
     
                 {{-- immagini / carosello --}}
+                <h4 class="fw-bold">Immagini Appartamento</h4>
                 <img src="{{ asset('storage/' . $apartment->cover_img) }}"  alt=" {{$apartment->cover_img}}" style="width: 400px;height.400px;">    
             
                 {{-- descrizione appartamento --}}
+                <h4 class="fw-bold">Descrizione</h4>
                 <p>{{ $apartment->description }}</p>
                 
                 {{-- Servizzi --}}
-            
+                <h4 class="fw-bold">Servizzi</h4>
                 <ul class="d-flex  flex-wrap p-0 list-unstyled ">
                     @foreach($apartment->services as $service)
                     <li class="me-3"><span class="me-1">{!! $service->icon !!}</span>
