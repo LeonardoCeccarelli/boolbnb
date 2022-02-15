@@ -44,6 +44,18 @@ class ApartmentController extends Controller
    */
   public function store(Request $request)
   {
+    // Data validation
+    $request->validate([
+      'title' => 'required|min:5|max:100',
+      'description' => 'required|min:25|max:1000',
+      'rooms' => 'required|min:1',
+      'beds' => 'required|min:1',
+      'bathrooms' => 'required|min:1',
+      'night_price' => 'required|min:1|max:9999',
+      'address' => 'required',
+      'city' => 'required',
+    ]);
+
     // Data to format url string
     $address = str_replace(' ', '%20', $request['address']);
     $city = $request['city'];
@@ -58,11 +70,17 @@ class ApartmentController extends Controller
     $lon = $response->json()['results'][0]['position']['lon'];
     // Fine chiamata API
 
-    // ESEGUIRE LA VALIDAZIONE
-
     $data = $request->all();
     $newApartment = new Apartment();
-    $newApartment->fill($data);
+    $newApartment->title = $data['title'];
+    $newApartment->description = $data['description'];
+    $newApartment->rooms = $data['rooms'];
+    $newApartment->beds = $data['beds'];
+    $newApartment->bathrooms = $data['bathrooms'];
+    $newApartment->square_metres = $data['square_metres'];
+    $newApartment->night_price = $data['night_price'];
+    $newApartment->address = $data['address'];
+    $newApartment->city = $data['city'];
     $newApartment->visible = $request["visible"] ? "1" : "0";
     $newApartment->lat = $lat;
     $newApartment->lon = $lon;
@@ -118,7 +136,15 @@ class ApartmentController extends Controller
    */
   public function update(Request $request, Apartment $apartment)
   {
-    // ESEGUIRE VALIDAZIONE
+    // Data validation
+    $request->validate([
+      'title' => 'required|min:5|max:100',
+      'description' => 'required|min:25|max:1000',
+      'rooms' => 'required|min:1',
+      'beds' => 'required|min:1',
+      'bathrooms' => 'required|min:1',
+      'night_price' => 'required|min:1|max:9999',
+    ]);
 
     $data = $request->all();
 
