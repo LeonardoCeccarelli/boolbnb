@@ -3,11 +3,12 @@
 @section('page_title', 'Dashboard | BoolBnB')
 
 @section('content')
-<div class="container col-10 shadow-lg p-3 mb-5 bg-body rounded" style="background-color: rgb(255,90,95);background: linear-gradient(180deg, rgba(255,90,95,1) 0%, rgba(255,110,152,1) 30%, rgba(245,245,245,1) 100%);">
+<div class="container col-10 shadow-lg p-3 mb-5 bg-body rounded" style="background: rgb(2,0,36);
+background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,70,121,1) 35%, rgba(161,232,246,1) 100%);">
     <div class="row justify-content-center">
         <div class="col-10">
             <div class="d-flex mb-4">
-                <div class="col-8 py-3">
+                <div class="col-8 py-3 text-white">
                     <h3 class="mb-3">Buongiorno {{ Auth::user()->first_name }} <i class="far fa-wifi"></i></h3>
                     <h2 class="fw-bold ">Benvenuto Nella Tua Area Riservata</h2>
                 </div>
@@ -22,18 +23,18 @@
                 <div class="col-10">
                     <div class="card mb-3 shadow p-3 mb-5 bg-body rounded">
                         <div class="row g-0 ">
-                            <div class="col-md-3 border p-3">
+                            <div class="col-md-3 border">
                                 <img src="#" class="img-fluid rounded-start border" alt="...">
                             </div>
                             <div class="col-md-9 ">
                                 <div class="card-body d-flex p-0">
 
                                     <div class="a col-10 p-2">
-                                        <h4 class="card-title mb-3">
+                                        <h5 class="card-title mb-3">
                                             <a class="text-dark fw-bold text-decoration-none text-uppercase" href="{{ route('admin.apartment.show', $apartment->id) }}">
                                                 {{$apartment->title }}
                                             </a>
-                                        </h4>
+                                        </h5>
                                         {{-- <p class="card-text">{{ $apartment->description }}</p> --}}
                                         <ul class="d-flex  flex-wrap p-0 list-unstyled ">
                                             @foreach($apartment->services as $service)
