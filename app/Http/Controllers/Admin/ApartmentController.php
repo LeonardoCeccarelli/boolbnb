@@ -86,6 +86,10 @@ class ApartmentController extends Controller
     $newApartment->lon = $lon;
     $newApartment->user_id = Auth::user()->id;
 
+    if ($request->file("cover_img")) {
+      $newApartment->cover_img = Storage::put("apartments", $data["cover_img"]);
+    }
+
     $newApartment->save();
 
 
@@ -153,7 +157,7 @@ class ApartmentController extends Controller
     $apartment->visible = $request["visible"] ? "1" : "0";
 
 
-    if ($request->file("coverImg")) {
+    if ($request->file("cover_img")) {
 
       if ($oldImage) {
         Storage::delete($oldImage);
