@@ -16,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+//  Da eliminare prima del MERGE
+Route::get("/show-vue", function () {
+    return view('guests.apartments.show');
+});
+//  Da eliminare prima del MERGE
+
+
 Route::middleware("auth")
     ->namespace("Admin")
     ->name("admin.")

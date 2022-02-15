@@ -4,6 +4,6 @@
 
 @section('content')
 
-{{-- Qui Va il componente Vue --}}
+<card-container></card-container>
 
 @endsection
