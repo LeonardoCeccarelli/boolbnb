@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
+{{-- @section('page_title', '') --}}
+
 @section('content')
 
-<example-component></example-component>
+{{-- Qui Va il componente Vue --}}
 
 @endsection
