@@ -50,7 +50,7 @@
                                             <button type="button" class="btn btn-dark text-white mb-2">
                                                 <a class="text-white fw-bold text-decoration-none " href="{{ route('admin.apartment.show', $apartment->id) }}">
                                                     Visualizza
-                                                </a>
+                                                </a>                       
                                             </button>
                                         </div>
                                        
