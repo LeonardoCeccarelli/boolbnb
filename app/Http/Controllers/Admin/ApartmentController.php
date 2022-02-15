@@ -88,6 +88,8 @@ class ApartmentController extends Controller
 
     if ($request->file("cover_img")) {
       $newApartment->cover_img = Storage::put("apartments", $data["cover_img"]);
+    } else {
+      $newApartment->cover_img = "apartments/default.png";
     }
 
     $newApartment->save();
