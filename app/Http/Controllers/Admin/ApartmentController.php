@@ -72,15 +72,7 @@ class ApartmentController extends Controller
 
     $data = $request->all();
     $newApartment = new Apartment();
-    $newApartment->title = $data['title'];
-    $newApartment->description = $data['description'];
-    $newApartment->rooms = $data['rooms'];
-    $newApartment->beds = $data['beds'];
-    $newApartment->bathrooms = $data['bathrooms'];
-    $newApartment->square_metres = $data['square_metres'];
-    $newApartment->night_price = $data['night_price'];
-    $newApartment->address = $data['address'];
-    $newApartment->city = $data['city'];
+    $newApartment->fill($data);
     $newApartment->visible = $request["visible"] ? "1" : "0";
     $newApartment->lat = $lat;
     $newApartment->lon = $lon;
