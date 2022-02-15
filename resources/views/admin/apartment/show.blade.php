@@ -3,47 +3,53 @@
 @section('page_title', mb_strimwidth($apartment->title, 0, 25, "...") . ' - Informazioni')
 
 @section('content')
-<div class="container col-10 border my-5" style="background: rgb(2,0,36);
-background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,70,121,1) 35%, rgba(161,232,246,1) 100%);">
+<div class="container-fluid" style="background: rgb(2,0,36);background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,70,121,1) 35%, rgba(161,232,246,1) 100%);">
+    <div class="container  d-flex flex-column align-items-center ">
 
-    {{-- titolo / info base --}}
-    <section class="text-center text-white">
-            <h3>{{ $apartment->title }}</h3>
-            <p>{{ $apartment->city }} - Prezzo a notte{{ $apartment->night_price}}</p>
-            <ul class="list-unstyled">
-                <li>Mq {{ $apartment->square_metres }}</li>
-                <li>letti {{ $apartment->beds}}</li>
-                <li>stanze {{ $apartment->rooms}}</li>
-                <li>bagni {{ $apartment->bathrooms }}</li>
-            </ul>
-
-    </section>
-
-    <section class="d-flex justify-content-center">
-        <div class="infos d-flex col-10 ">
-            <div class="left col-6 border">
-    
-                 {{-- immagini / carosello --}}
-                <section>   
-                    <img src="{{ asset('storage/' . $apartment->cover_img) }}"  alt=" {{$apartment->cover_img}}" style="width: 400px;height.400px;">    
-                </section>
-        
-                {{-- descrizione appartamento --}}
-                <section>
-                    <p>{{ $apartment->description }}</p>
-                </section>
-            
-                {{-- Servizzi --}}
-                <section>
-                    <ul class="d-flex  flex-wrap p-0 list-unstyled ">
-                        @foreach($apartment->services as $service)
-                        <li class="me-3"><span class="me-1">{!! $service->icon !!}</span>
-                            {{$service->name}}</li>
-                        @endforeach
-                    </ul>
-                </section>
+        {{-- titolo / info base --}}
+        <section class="bg-light col-11 mt-5 p-5  rounded-top">
+            <div class="row row-cols-2">
+                <div class="div col-8">
+                    <h3 class="fw-bold">{{ $apartment->title }}</h3>
+                </div>
+                <div class="div col-4 text-start ps-5">
+                    <p class="text-capitalize"><i class="fas fa-map-marker-alt fs-5"></i> <span class="fs-5 fw-bold">Posizione: </span>  {{ $apartment->city }}</p>
+                    <p><i class="fas fa-tag fs-5"></i><span class="fs-5 fw-bold"> Prezzo a notte: </span>  {{ $apartment->night_price}} Euro </p>
+                </div>
             </div>
-            <div class="right col-6 border">
+            <div class=" mt-4 flex-wrap">
+                <h4 class="fw-bold">Informazioni Generali</h4>
+                <ul class=" d-flex">
+                    <li class="mx-2 me-4">{{ $apartment->square_metres }} m²</li>
+                    <li class="mx-2 me-4">Letti: {{ $apartment->beds}}</li>
+                    <li class="mx-2 me-4">Stanze: {{ $apartment->rooms}}</li>
+                    <li class="mx-2 me-4">Bagni: {{ $apartment->bathrooms }}</li>
+                </ul>
+            </div>            
+            <hr class="">      
+        </section>
+    
+        
+        <section class="infos d-flex col-11 ">
+            <div class="left col-6 border bg-light p-5">
+    
+                {{-- immagini / carosello --}}
+                <img src="{{ asset('storage/' . $apartment->cover_img) }}"  alt=" {{$apartment->cover_img}}" style="width: 400px;height.400px;">    
+            
+                {{-- descrizione appartamento --}}
+                <p>{{ $apartment->description }}</p>
+                
+                {{-- Servizzi --}}
+            
+                <ul class="d-flex  flex-wrap p-0 list-unstyled ">
+                    @foreach($apartment->services as $service)
+                    <li class="me-3"><span class="me-1">{!! $service->icon !!}</span>
+                        {{$service->name}}</li>
+                    @endforeach
+                </ul>
+                
+            </div>
+            <div class="right col-6 border bg-light p-5">
     
                 {{-- edit button --}}
                 <a href="{{ route('admin.apartment.edit', $apartment->id) }}" class="btn btn-success">Modifica</a>
@@ -58,12 +64,14 @@ background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,70,121,1) 35%, rgb
                     <button type="submit" class="btn btn-danger">Elimina</button>
                 </form>
             </div>
-        </div>
-    </section>
-
-    {{-- statistiche --}}
-    <section>
-        statistiche appartamento
-    </section>
+        </section>
+      
+    
+        {{-- statistiche --}}
+        <section class="bg-light col-11 mb-5 p-5 rounded-bottom">
+            statistiche appartamento
+        </section>
+    </div>
 </div>
+
 @endsection
