@@ -1,47 +1,63 @@
-<div class="container">
-  <footer class="row row-cols-5 py-5 my-5 border-top">
-    <div class="col">
-      <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-        {{-- Inserire logo boolbnb --}}
-      </a>
-      <p class="text-muted">© 2021</p>
-    </div>
 
-    <div class="col">
-
+<footer class="my-5">
+  <div class="container ">
+    <div class="footer_a row row-cols-4 py-5  border-top">
+      <div class="col">
+        <h5 class="fw-bold mb-3">Informazioni</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Newsroom</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Scopri le nuove funzionalità</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Opportunità di lavoro</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Investitori</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Boolbnb Luxe</a></li>
+        </ul>
+      </div>
+  
+      <div class="col">
+        <h5 class="fw-bold mb-3">Ospitare</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Prova a ospitare</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Esplora le risorse per host</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Vai al forum della community</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Come ospitare responsabilmente</a></li>
+        </ul>
+      </div>
+  
+      <div class="col">
+        <h5 class="fw-bold mb-3">Community</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Boolbnb un rifugio sicuro</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contro la discriminazione</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Invita degli amici</a></li>
+        </ul>
+      </div>
+  
+      <div class="col">
+        <h5 class="fw-bold mb-3">Assistenza</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">centro Assistenza</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Informazioni di sicurezza</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Opzioni di cancellazione</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Segnala problemi nel quartiere</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">La nostra risposta all'emergenza COVID-19</a></li>
+        </ul>
+      </div>
     </div>
-
-    <div class="col">
-      <h5>Section</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-      </ul>
+    <div class="footer_b  d-flex align-items-center flex-column">
+      <div class="mb-3">
+        <a href="#" class="me-3">
+          <i class="fab fa-facebook text-dark fs-3"></i>
+        </a>
+        <a href="#" class="me-3">
+            <i class="fab fa-twitter text-dark fs-3"></i>
+        </a>
+        <a href="#" class="me-3">
+            <i class="fab fa-instagram text-dark fs-3"></i>
+        </a>
+      </div>
+      <div class="copyright ">
+        <span>&copy; 2022 Boolbnb, Inc. All rights reserved</span>
+      </div>
     </div>
-
-    <div class="col">
-      <h5>Section</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-      </ul>
-    </div>
-
-    <div class="col">
-      <h5>Section</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-      </ul>
-    </div>
-  </footer>
-</div>
+  </div>
+</footer >
