@@ -161,7 +161,7 @@ class ApartmentController extends Controller
 
     if ($request->file("cover_img")) {
 
-      if ($oldImage) {
+      if ($oldImage && $oldImage != "apartments/default.png") {
         Storage::delete($oldImage);
       }
 
@@ -189,7 +189,9 @@ class ApartmentController extends Controller
   {
     $apartment->services()->detach();
 
-    Storage::delete($apartment->cover_img);
+    if ($apartment->cover_img != "apartments/default.png") {
+      Storage::delete($apartment->cover_img);
+    }
 
     $apartment->delete();
 
