@@ -30,8 +30,8 @@
                                     <div class="card-body d-flex p-0">
     
                                         <div class="a col-10 p-2">
-                                            <h5 class="card-title mb-3">
-                                                <a class="text-dark fw-bold text-decoration-none text-uppercase" href="{{ route('admin.apartment.show', $apartment->id) }}">
+                                            <h5 class="card-title mb-3" >
+                                                <a class="fw-bold text-decoration-none text-uppercase" style="color: #094679;" href="{{ route('admin.apartment.show', $apartment->id) }}">
                                                     {{$apartment->title }}
                                                 </a>
                                             </h5>

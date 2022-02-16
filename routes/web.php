@@ -25,6 +25,7 @@ Route::middleware("auth")
 
         Route::resource("/apartment", "ApartmentController");
         Route::get("/sponsor", "SponsorController@index")->name("sponsor");
+        Route::get("/message", "MessageController@index")->name("message");
     });
 
 Route::get("{any?}", function () {

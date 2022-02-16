@@ -10,7 +10,7 @@
         <section class="bg-light col-11 mt-5 p-5 pb-0  rounded-top">
             <div class="row row-cols-2">
                 <div class="div col-8">
-                    <h3 class="fw-bold pb-3">{{ $apartment->title }}</h3>
+                    <h3 class="fw-bold pb-3 text-uppercase" style="color: #094679;" >{{ $apartment->title }}</h3>
                     <div class=" mt-4 ">
                         <h4 class="fw-bold">Informazioni Generali</h4>
                         <ul class=" d-flex flex-wrap">
@@ -41,10 +41,9 @@
                 <img src="{{ asset('storage/' . $apartment->cover_img) }}"  alt=" {{$apartment->cover_img}}" class="rounded mb-4" style="width: 650px;height:350px;">    
                 <hr>
                 {{-- descrizione appartamento --}}
-                <h4 class="fw-bold mt-4 mb-4">Descrizione</h4>
-                <p class="mb-4">{{ $apartment->description }}</p>
-                <hr>
-                
+                <h4 class="fw-bold mt-4 mb-4">Descrizione</h4>               
+                <p class="mb-4" >{{ $apartment->description }}</p>              
+                <hr>             
                 {{-- Servizi --}}
                 <h4 class="fw-bold mt-4 mb-4">Servizi</h4>
                 <ul class="d-flex  flex-wrap p-0 list-unstyled ">
@@ -57,14 +56,14 @@
             </div>
 
             <div class="right col-4 bg-light p-5 ">
-                <div class="shadow p-3 mb-5 bg-body rounded d-flex flex-column align-items-center" style="background-color: red">
+                <div class="shadow p-3  pt-4 mb-5 bg-body rounded d-flex flex-column align-items-center" style="background-color: red">
                    
                     
-                    <ul style="background-color: #094679; " class="rounded text-white list-unstyled p-2 ">
+                    <ul style="background-color: #094679; " class="rounded text-white list-unstyled p-3 ">
                         {{-- messages button --}}
-                        <li class="mb-2 d-flex">
+                        <li class="mb-3 d-flex">
                           
-                            <a href="{{ route('admin.apartment.edit', $apartment->id) }}" class="fw-bold mb-1 text-white text-decoration-none" >
+                            <a href="{{ route('admin.message', $apartment->id) }}" class="fw-bold mb-1 text-white text-decoration-none" >
                                 Visualizza I Tuoi Messaggi <i class="fas fa-arrow-alt-circle-right"></i>
                             </a> 
                         </li>
@@ -77,7 +76,7 @@
                         </li>
                         {{-- edit button --}}
                         <li class="mb-4">                            
-                            <p class="fw-bold mb-1">Desideri Modificare Il Tuo Annuncio ?</p>
+                            <p class="fw-bold mb-1">Vuoi Modificare Il Tuo Annuncio ?</p>
                             <a href="{{ route('admin.apartment.edit', $apartment->id) }}" class="btn btn-light btn-sm text-dark">
                                 Modifica Il Tuo Annuncio <i class="fas fa-arrow-alt-circle-right"></i>
                             </a> 
@@ -101,8 +100,9 @@
       
     
         {{-- statistiche --}}
-        <section class="bg-light col-11 mb-5 p-5 rounded-bottom">
-            <h4 class="fw-bold">Statistiche Del Tuo Annuncio</h4>
+        <section class="bg-light col-11 mb-5 p-5 pt-0 rounded-bottom">
+            <hr>
+            <h4 class="fw-bold mt-4">Statistiche Del Tuo Annuncio</h4>
         </section>
     </div>
 </div>
