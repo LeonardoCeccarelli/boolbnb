@@ -6,8 +6,8 @@
         <div class="row justify-content-center text-center text-white">
             <h1 class="mb-4">BENVENUTO NELLA TUA AREA PERSONALE</h1>
             <h2 class="mb-4">Effetua Il Login</h2>
-            <div class="col-md-5 ">
-                <div class="card p-5">
+            <div class="col-md-6 ">
+                <div class="card p-4">
                     <p class="text-dark">simbolo logo</p>
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
