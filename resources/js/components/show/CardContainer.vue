@@ -2,7 +2,7 @@
   <div>
     <div class="container mt-3">
       <div class="row g-4 image_container mb-5">
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="cover_img">
             <img
               src="https://www.classcountryhomes.it/wp-content/uploads/2019/05/appartamenti-in-vendita-roma-nord-38.jpg"
@@ -10,7 +10,7 @@
             />
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="other_img">
             <div class="overlay_image">
               <div class="button_overlay_image">
@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="row mb-5">
-        <div class="col-8">
+        <div class="col-12 col-md-8">
           <div class="left_info">
             <div class="title_container mb-4">
               <h2>Appartamento vista mare</h2>
@@ -59,7 +59,7 @@
             </div>
           </div>
         </div>
-        <div class="col-4 right_info">
+        <div class="col-12 col-md-4 right_info">
           <p class="mb-2"><span class="price">€50</span>/notte</p>
           <p class="mb-5">
             Proprietario/a : <span class="fw-bold">Leonardo</span>
@@ -106,6 +106,7 @@ export default {
   methods: {
     getFormActive() {
       this.formActive = true;
+      window.scrollTo(0, document.body.scrollHeight);
     },
     closeForm() {
       this.formActive = false;
@@ -178,12 +179,25 @@ ul {
 }
 
 .right_info {
-  border-left: 2px solid #001355;
   .price {
     font-weight: bold;
     font-size: 20px;
     margin-right: 5px;
     color: #ff5a5f;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .right_info {
+    border-top: 2px solid #001355;
+    margin-top: 50px;
+    padding-top: 20px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .right_info {
+    border-left: 2px solid #001355;
   }
 }
 </style>

@@ -71,10 +71,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.form-control:focus {
+  color: #212529;
+  background-color: #f8fafc;
+  border-color: #ff5a5f;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #ff5a608c;
+}
 .close_form {
   i {
     padding: 5px;
-    color: #ff5a5f;
+    color: #001355;
     font-size: 20px;
     cursor: pointer;
   }
