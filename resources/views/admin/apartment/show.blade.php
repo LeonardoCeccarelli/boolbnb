@@ -8,7 +8,8 @@
 
         {{-- titolo / info base --}}
         <section class="bg-light col-11 mt-5 p-5 pb-0  rounded-top">
-            <div class="row row-cols-2">
+            <div class="row  row-cols-md-2 flex-column flex-md-row">
+
                 <div class="div col-8">
                     <h3 class="fw-bold pb-3 text-uppercase" style="color: #094679;" >{{ $apartment->title }}</h3>
                     <div class=" mt-4 ">
@@ -21,15 +22,16 @@
                         </ul>
                     </div>   
                 </div>
-                <div class="col-4 ps-5 pt-5">
-                    <div class="div">
-                        <p class="text-capitalize"><i class="fas fa-map-marker-alt fs-5"></i> <span class="fs-5 fw-bold">Posizione: </span>  {{ $apartment->city }}</p>
+
+                <div class="col-12  col-md-6 col-lg-4 p-2  ps-md-5 pt-md-5">
+                    <div class=" d-flex flex-row flex-md-column">
+                        <p class="text-capitalize me-5 me-md-0"><i class="fas fa-map-marker-alt fs-5"></i> <span class="fs-5 fw-bold">Posizione: </span>  {{ $apartment->city }}</p>
                         <p><i class="fas fa-tag fs-5"></i><span class="fs-5 fw-bold"> Prezzo a notte: </span>  {{ $apartment->night_price}} Euro </p>
                     </div>
                 </div>
             </div>
                      
-            <hr class="">      
+            <hr>      
         </section>
     
         
@@ -38,7 +40,10 @@
     
                 {{-- immagini / carosello --}}
                 <h4 class="fw-bold mb-4">Immagini Appartamento</h4>
-                <img src="{{ asset('storage/' . $apartment->cover_img) }}"  alt=" {{$apartment->cover_img}}" class="rounded mb-4" style="width: 650px;height:350px;">    
+                <div class="border bg-success" style="width: 580px;height:350px;">
+                    <img src="{{ asset('storage/' . $apartment->cover_img) }}"  alt=" {{$apartment->cover_img}}" class="rounded mb-4" style="width: 580px;height:350px;">    
+
+                </div>
                 <hr>
                 {{-- descrizione appartamento --}}
                 <h4 class="fw-bold mt-4 mb-4">Descrizione</h4>               
