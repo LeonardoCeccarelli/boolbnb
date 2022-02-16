@@ -20,7 +20,6 @@
           type="text"
           class="form-control"
           v-model="form.object"
-          value="Appartamento Vista Mare"
           readonly
         />
       </div>
@@ -57,7 +56,7 @@ export default {
       form: {
         name: "",
         email: "",
-        object: "",
+        object: "Appartamento Vista mare",
         content: "",
       },
     };

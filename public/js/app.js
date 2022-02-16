@@ -5305,7 +5305,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     formSend: {
@@ -5317,7 +5316,7 @@ __webpack_require__.r(__webpack_exports__);
       form: {
         name: "",
         email: "",
-        object: "",
+        object: "Appartamento Vista mare",
         content: ""
       }
     };
@@ -39957,11 +39956,7 @@ var render = function () {
                   },
                 ],
                 staticClass: "form-control",
-                attrs: {
-                  type: "text",
-                  value: "Appartamento Vista Mare",
-                  readonly: "",
-                },
+                attrs: { type: "text", readonly: "" },
                 domProps: { value: _vm.form.object },
                 on: {
                   input: function ($event) {
