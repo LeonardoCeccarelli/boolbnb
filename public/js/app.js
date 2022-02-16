@@ -5180,11 +5180,154 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
-    return {};
+    return {
+      formActive: false,
+      formSend: false
+    };
   },
-  methods: {}
+  methods: {
+    getFormActive: function getFormActive() {
+      this.formActive = true;
+    },
+    closeForm: function closeForm() {
+      this.formActive = false;
+    },
+    sendForm: function sendForm() {
+      this.formSend = true;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/show/FormContacts.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/show/FormContacts.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    formSend: {
+      type: Boolean
+    }
+  },
+  data: function data() {
+    return {
+      form: {
+        name: "",
+        email: "",
+        object: "",
+        content: ""
+      }
+    };
+  },
+  methods: {
+    onFormSubmit: function onFormSubmit() {
+      // Fare chiamata Api
+      this.$emit("sendForm");
+    }
+  }
 });
 
 /***/ }),
@@ -10226,7 +10369,26 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "ul[data-v-f7bf6cac] {\n  list-style: none;\n}\n.image_container div[data-v-f7bf6cac] {\n  border-radius: 10px;\n  overflow: hidden;\n}\n.image_container img[data-v-f7bf6cac] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 10px;\n}\n.image_container .cover_img[data-v-f7bf6cac] {\n  cursor: pointer;\n}\n.image_container .other_img[data-v-f7bf6cac] {\n  height: 100%;\n  position: relative;\n  overflow: hidden;\n}\n.image_container .overlay_image[data-v-f7bf6cac] {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.55);\n  opacity: 0;\n  -webkit-backdrop-filter: none;\n          backdrop-filter: none;\n  transition: all 0.2s linear;\n}\n.image_container .overlay_image .button_overlay_image[data-v-f7bf6cac] {\n  position: absolute;\n  bottom: 110%;\n  left: 50%;\n  transform: translate(-50%, 50%);\n  transition: all 0.3s 0.2s ease-in-out;\n}\n.image_container .other_img:hover .overlay_image[data-v-f7bf6cac] {\n  opacity: 1;\n  -webkit-backdrop-filter: blur(4px);\n          backdrop-filter: blur(4px);\n}\n.image_container .other_img:hover .overlay_image .button_overlay_image[data-v-f7bf6cac] {\n  bottom: 50%;\n}\n.left_info[data-v-f7bf6cac] {\n  border-right: 2px solid black;\n}\n.right_info .price[data-v-f7bf6cac] {\n  font-weight: bold;\n  font-size: 20px;\n  margin-right: 5px;\n}", ""]);
+exports.push([module.i, "ul[data-v-f7bf6cac] {\n  list-style: none;\n}\n.image_container div[data-v-f7bf6cac] {\n  border-radius: 10px;\n  overflow: hidden;\n}\n.image_container img[data-v-f7bf6cac] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 10px;\n}\n.image_container .cover_img[data-v-f7bf6cac] {\n  cursor: pointer;\n  height: 100%;\n}\n.image_container .other_img[data-v-f7bf6cac] {\n  height: 100%;\n  position: relative;\n  overflow: hidden;\n}\n.image_container .overlay_image[data-v-f7bf6cac] {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.55);\n  opacity: 0;\n  -webkit-backdrop-filter: none;\n          backdrop-filter: none;\n  transition: all 0.2s linear;\n}\n.image_container .overlay_image .button_overlay_image[data-v-f7bf6cac] {\n  position: absolute;\n  bottom: 110%;\n  left: 50%;\n  transform: translate(-50%, 50%);\n  transition: all 0.3s 0.2s ease-in-out;\n}\n.image_container .other_img:hover .overlay_image[data-v-f7bf6cac] {\n  opacity: 1;\n  -webkit-backdrop-filter: blur(4px);\n          backdrop-filter: blur(4px);\n}\n.image_container .other_img:hover .overlay_image .button_overlay_image[data-v-f7bf6cac] {\n  bottom: 50%;\n}\n.right_info[data-v-f7bf6cac] {\n  border-left: 2px solid #001355;\n}\n.right_info .price[data-v-f7bf6cac] {\n  font-weight: bold;\n  font-size: 20px;\n  margin-right: 5px;\n  color: #ff5a5f;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/show/FormContacts.vue?vue&type=style&index=0&id=9ae28824&scoped=true&lang=scss&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/show/FormContacts.vue?vue&type=style&index=0&id=9ae28824&scoped=true&lang=scss& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".close_form i[data-v-9ae28824] {\n  padding: 5px;\n  color: #ff5a5f;\n  font-size: 20px;\n  cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -38849,6 +39011,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/show/FormContacts.vue?vue&type=style&index=0&id=9ae28824&scoped=true&lang=scss&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/show/FormContacts.vue?vue&type=style&index=0&id=9ae28824&scoped=true&lang=scss& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./FormContacts.vue?vue&type=style&index=0&id=9ae28824&scoped=true&lang=scss& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/show/FormContacts.vue?vue&type=style&index=0&id=9ae28824&scoped=true&lang=scss&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/lib/addStyles.js":
 /*!****************************************************!*\
   !*** ./node_modules/style-loader/lib/addStyles.js ***!
@@ -39495,82 +39687,336 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c(
+      "div",
+      { staticClass: "container mt-3" },
+      [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "row mb-5" }, [
+          _c("div", { staticClass: "col-8" }, [
+            _c("div", { staticClass: "left_info" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _vm._m(2),
+              _vm._v(" "),
+              _c("div", { staticClass: "form_button" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-primary",
+                    attrs: { type: "button", disabled: _vm.formActive },
+                    on: { click: _vm.getFormActive },
+                  },
+                  [_vm._v("\n              Contattami\n            ")]
+                ),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _vm._m(3),
+        ]),
+        _vm._v(" "),
+        _vm.formActive
+          ? _c("form-contacts", {
+              attrs: { formSend: _vm.formSend },
+              on: { closeForm: _vm.closeForm, sendForm: _vm.sendForm },
+            })
+          : _vm._e(),
+      ],
+      1
+    ),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "container" }, [
-        _c("h2", { staticClass: "mb-4" }, [_vm._v("Appartamento Vista mare")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row g-3 image_container mb-5" }, [
-          _c("div", { staticClass: "col-6 cover_img" }, [
-            _c("img", {
-              attrs: {
-                src: "https://www.classcountryhomes.it/wp-content/uploads/2019/05/appartamenti-in-vendita-roma-nord-38.jpg",
-                alt: "",
-              },
-            }),
+    return _c("div", { staticClass: "row g-4 image_container mb-5" }, [
+      _c("div", { staticClass: "col-6" }, [
+        _c("div", { staticClass: "cover_img" }, [
+          _c("img", {
+            attrs: {
+              src: "https://www.classcountryhomes.it/wp-content/uploads/2019/05/appartamenti-in-vendita-roma-nord-38.jpg",
+              alt: "",
+            },
+          }),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-6" }, [
+        _c("div", { staticClass: "other_img" }, [
+          _c("div", { staticClass: "overlay_image" }, [
+            _c("div", { staticClass: "button_overlay_image" }, [
+              _c(
+                "button",
+                { staticClass: "btn btn-primary", attrs: { type: "button" } },
+                [_vm._v("\n                Vedi Tutto\n              ")]
+              ),
+            ]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-6" }, [
-            _c("div", { staticClass: "other_img" }, [
-              _c("div", { staticClass: "overlay_image" }, [
-                _c("div", { staticClass: "button_overlay_image" }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-primary",
-                      attrs: { type: "button" },
-                    },
-                    [_vm._v("\n                Vedi Tutto\n              ")]
-                  ),
-                ]),
-              ]),
+          _c("img", {
+            attrs: {
+              src: "https://www.lago.it/wp-content/uploads/2017/10/Lago-Appartamento-Store-Arnhem-1.jpg",
+              alt: "",
+            },
+          }),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "title_container mb-4" }, [
+      _c("h2", [_vm._v("Appartamento vista mare")]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n              Roma - Piazza Venezia - 4 stanze/a - 4 posti/o letto - 1 bagni/o\n            "
+        ),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "description_container mb-5" }, [
+      _c("p", [
+        _vm._v(
+          "\n              Lorem ipsum dolor, sit amet consectetur adipisicing elit.\n              Provident, ducimus itaque? Expedita saepe praesentium provident,\n              eaque fuga rerum accusamus optio est repudiandae voluptate sint\n              reiciendis consequatur laboriosam veniam, incidunt nisi. Non\n              dolore alias quam fuga nisi doloribus commodi ut? Quisquam\n              consequuntur facilis hic, in, illum ipsum beatae quo nulla\n              tenetur sed perferendis expedita animi similique eius recusandae\n              tempore molestiae? Tempora!\n            "
+        ),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-4 right_info" }, [
+      _c("p", { staticClass: "mb-2" }, [
+        _c("span", { staticClass: "price" }, [_vm._v("€50")]),
+        _vm._v("/notte"),
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "mb-5" }, [
+        _vm._v("\n          Proprietario/a : "),
+        _c("span", { staticClass: "fw-bold" }, [_vm._v("Leonardo")]),
+      ]),
+      _vm._v(" "),
+      _c("h5", { staticClass: "mb-4" }, [_vm._v("Servizi disponibili")]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "row row-cols-2 row-cols-sm-1 row-cols-md-2 gy-3" },
+        [
+          _c("div", { staticClass: "col" }, [
+            _c("p", [
+              _c("i", { staticClass: "fas fa-wifi" }),
+              _c("span", { staticClass: "ms-2" }, [_vm._v("Wi-Fi")]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col" }, [
+            _c("p", [
+              _c("i", { staticClass: "fas fa-wifi" }),
+              _c("span", { staticClass: "ms-2" }, [_vm._v("Portineria")]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col" }, [
+            _c("p", [
+              _c("i", { staticClass: "fas fa-wifi" }),
+              _c("span", { staticClass: "ms-2" }, [_vm._v("Sauna")]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col" }, [
+            _c("p", [
+              _c("i", { staticClass: "fas fa-wifi" }),
+              _c("span", { staticClass: "ms-2" }, [_vm._v("Piscina")]),
+            ]),
+          ]),
+        ]
+      ),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/show/FormContacts.vue?vue&type=template&id=9ae28824&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/show/FormContacts.vue?vue&type=template&id=9ae28824&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "close_form d-flex justify-content-end" }, [
+      _c("i", {
+        staticClass: "fas fa-times",
+        on: {
+          click: function ($event) {
+            return _vm.$emit("closeForm")
+          },
+        },
+      }),
+    ]),
+    _vm._v(" "),
+    !_vm.formSend
+      ? _c(
+          "form",
+          {
+            on: {
+              submit: function ($event) {
+                $event.preventDefault()
+                return _vm.onFormSubmit.apply(null, arguments)
+              },
+            },
+          },
+          [
+            _c("div", { staticClass: "form-group mb-3" }, [
+              _c("label", { staticClass: "form-label" }, [_vm._v("Nome")]),
               _vm._v(" "),
-              _c("img", {
-                attrs: {
-                  src: "https://www.lago.it/wp-content/uploads/2017/10/Lago-Appartamento-Store-Arnhem-1.jpg",
-                  alt: "",
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.form.name,
+                    expression: "form.name",
+                  },
+                ],
+                staticClass: "form-control",
+                attrs: { type: "text" },
+                domProps: { value: _vm.form.name },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.form, "name", $event.target.value)
+                  },
                 },
               }),
             ]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-8 left_info" }, [
-            _c("h4", [
-              _vm._v(
-                "\n          Appartamento vista mare in affitto da\n          "
-              ),
-              _c("span", { staticClass: "fw-bold" }, [_vm._v("Leonardo")]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-4 right_info" }, [
-            _c("p", { staticClass: "mb-5" }, [
-              _c("span", { staticClass: "price" }, [_vm._v("€50")]),
-              _vm._v("/notte"),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group mb-3" }, [
+              _c("label", { staticClass: "form-label" }, [_vm._v("Email")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.form.email,
+                    expression: "form.email",
+                  },
+                ],
+                staticClass: "form-control",
+                attrs: { type: "email" },
+                domProps: { value: _vm.form.email },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.form, "email", $event.target.value)
+                  },
+                },
+              }),
             ]),
             _vm._v(" "),
-            _c("h5", { staticClass: "mb-4" }, [_vm._v("Servizi")]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("li", [_vm._v("Wi-Fi")]),
+            _c("div", { staticClass: "form-group mb-3" }, [
+              _c("label", { staticClass: "form-label" }, [_vm._v("Oggetto")]),
               _vm._v(" "),
-              _c("li", [_vm._v("Posto Macchina")]),
-              _vm._v(" "),
-              _c("li", [_vm._v("Piscina")]),
-              _vm._v(" "),
-              _c("li", [_vm._v("Portineria")]),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.form.object,
+                    expression: "form.object",
+                  },
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "text",
+                  value: "Appartamento Vista Mare",
+                  readonly: "",
+                },
+                domProps: { value: _vm.form.object },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.form, "object", $event.target.value)
+                  },
+                },
+              }),
             ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group mb-3" }, [
+              _c("label", { staticClass: "form-label" }, [_vm._v("Messaggio")]),
+              _vm._v(" "),
+              _c("textarea", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.form.content,
+                    expression: "form.content",
+                  },
+                ],
+                staticClass: "form-control",
+                attrs: { type: "text", rows: "5" },
+                domProps: { value: _vm.form.content },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.form, "content", $event.target.value)
+                  },
+                },
+              }),
+            ]),
+            _vm._v(" "),
+            _vm._m(0),
+          ]
+        )
+      : _c("div", { staticClass: "alert alert-success" }, [
+          _c("h5", { staticClass: "mb-0" }, [
+            _vm._v("Messaggio inviato correttamente"),
           ]),
         ]),
-      ]),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-center py-3" }, [
+      _c("button", { staticClass: "btn btn-success" }, [_vm._v("Invia")]),
     ])
   },
 ]
@@ -51818,6 +52264,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
 Vue.component('card-container', __webpack_require__(/*! ./components/show/CardContainer.vue */ "./resources/js/components/show/CardContainer.vue")["default"]);
+Vue.component('form-contacts', __webpack_require__(/*! ./components/show/FormContacts.vue */ "./resources/js/components/show/FormContacts.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -52026,6 +52473,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CardContainer_vue_vue_type_template_id_f7bf6cac_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CardContainer_vue_vue_type_template_id_f7bf6cac_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/show/FormContacts.vue":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/show/FormContacts.vue ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormContacts_vue_vue_type_template_id_9ae28824_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormContacts.vue?vue&type=template&id=9ae28824&scoped=true& */ "./resources/js/components/show/FormContacts.vue?vue&type=template&id=9ae28824&scoped=true&");
+/* harmony import */ var _FormContacts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormContacts.vue?vue&type=script&lang=js& */ "./resources/js/components/show/FormContacts.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _FormContacts_vue_vue_type_style_index_0_id_9ae28824_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FormContacts.vue?vue&type=style&index=0&id=9ae28824&scoped=true&lang=scss& */ "./resources/js/components/show/FormContacts.vue?vue&type=style&index=0&id=9ae28824&scoped=true&lang=scss&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _FormContacts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormContacts_vue_vue_type_template_id_9ae28824_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormContacts_vue_vue_type_template_id_9ae28824_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "9ae28824",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/show/FormContacts.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/show/FormContacts.vue?vue&type=script&lang=js&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/show/FormContacts.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormContacts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./FormContacts.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/show/FormContacts.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormContacts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/show/FormContacts.vue?vue&type=style&index=0&id=9ae28824&scoped=true&lang=scss&":
+/*!*****************************************************************************************************************!*\
+  !*** ./resources/js/components/show/FormContacts.vue?vue&type=style&index=0&id=9ae28824&scoped=true&lang=scss& ***!
+  \*****************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_FormContacts_vue_vue_type_style_index_0_id_9ae28824_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./FormContacts.vue?vue&type=style&index=0&id=9ae28824&scoped=true&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/show/FormContacts.vue?vue&type=style&index=0&id=9ae28824&scoped=true&lang=scss&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_FormContacts_vue_vue_type_style_index_0_id_9ae28824_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_FormContacts_vue_vue_type_style_index_0_id_9ae28824_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_FormContacts_vue_vue_type_style_index_0_id_9ae28824_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_FormContacts_vue_vue_type_style_index_0_id_9ae28824_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/components/show/FormContacts.vue?vue&type=template&id=9ae28824&scoped=true&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/js/components/show/FormContacts.vue?vue&type=template&id=9ae28824&scoped=true& ***!
+  \**************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormContacts_vue_vue_type_template_id_9ae28824_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./FormContacts.vue?vue&type=template&id=9ae28824&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/show/FormContacts.vue?vue&type=template&id=9ae28824&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormContacts_vue_vue_type_template_id_9ae28824_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormContacts_vue_vue_type_template_id_9ae28824_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

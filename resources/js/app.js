@@ -21,6 +21,7 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('card-container', require('./components/show/CardContainer.vue').default);
+Vue.component('form-contacts', require('./components/show/FormContacts.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
