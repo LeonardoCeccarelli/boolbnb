@@ -90,6 +90,7 @@
                     <div class="invalid-feedback">
                         {{ $errors->get('rooms')[0] }}
                     </div>
+                    @endif
 
                     {{-- Description --}}
                     <div class="col-12 col-md-10 col-lg-8">
