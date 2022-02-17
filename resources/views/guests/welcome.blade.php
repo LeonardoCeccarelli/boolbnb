@@ -5,5 +5,8 @@
 @section('content')
 
 {{-- Qui Va il componente Vue --}}
+<hero></hero>
+<sponsored></sponsored>
+<cities></cities>
 
 @endsection
