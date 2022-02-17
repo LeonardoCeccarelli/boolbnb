@@ -81,7 +81,7 @@ export default {
 .close_form {
   i {
     padding: 5px;
-    color: #001355;
+    color: #001533;
     font-size: 20px;
     cursor: pointer;
   }

@@ -3,7 +3,7 @@
     <div class="container mt-3">
       <div class="row g-4 image_container mb-5">
         <div class="col-12 col-md-6">
-          <div class="cover_img">
+          <div class="cover_img" @click="getOverlayImage">
             <img
               src="https://www.classcountryhomes.it/wp-content/uploads/2019/05/appartamenti-in-vendita-roma-nord-38.jpg"
               alt=""
@@ -11,7 +11,7 @@
           </div>
         </div>
         <div class="col-12 col-md-6">
-          <div class="other_img">
+          <div class="other_img" @click="getOverlayImage">
             <div class="overlay_image">
               <div class="button_overlay_image">
                 <button class="btn btn-primary" type="button">
@@ -26,14 +26,14 @@
           </div>
         </div>
       </div>
-      <div class="row mb-5">
+      <map-geocode></map-geocode>
+      <div class="row my-5">
         <div class="col-12 col-md-8">
           <div class="left_info">
             <div class="title_container mb-4">
               <h2>Appartamento vista mare</h2>
-              <p>
-                Roma - Piazza Venezia - 4 stanze/a - 4 posti/o letto - 1 bagni/o
-              </p>
+              <p>Roma - Piazza Venezia</p>
+              <p>4 stanze/a - 4 posti/o letto - 1 bagni/o</p>
             </div>
             <div class="description_container mb-5">
               <p>
@@ -62,7 +62,7 @@
         <div class="col-12 col-md-4 right_info">
           <p class="mb-2"><span class="price">€50</span>/notte</p>
           <p class="mb-5">
-            Proprietario/a : <span class="fw-bold">Leonardo</span>
+            Proprietario/a: <span class="fw-bold">Leonardo</span>
           </p>
           <h5 class="mb-4">Servizi disponibili</h5>
           <div class="row row-cols-2 row-cols-sm-1 row-cols-md-2 gy-3">
@@ -85,12 +85,18 @@
           </div>
         </div>
       </div>
+
       <form-contacts
         v-if="formActive"
         :formSend="formSend"
         @closeForm="closeForm"
         @sendForm="sendForm"
       ></form-contacts>
+
+      <overlay-image
+        v-if="overlayImage"
+        @closeOverlayImage="closeOverlayImage"
+      ></overlay-image>
     </div>
   </div>
 </template>
@@ -101,6 +107,7 @@ export default {
     return {
       formActive: false,
       formSend: false,
+      overlayImage: false,
     };
   },
   methods: {
@@ -113,6 +120,14 @@ export default {
     },
     sendForm() {
       this.formSend = true;
+    },
+
+    getOverlayImage() {
+      this.overlayImage = true;
+    },
+
+    closeOverlayImage() {
+      this.overlayImage = false;
     },
   },
 };
@@ -189,7 +204,7 @@ ul {
 
 @media only screen and (max-width: 768px) {
   .right_info {
-    border-top: 2px solid #001355;
+    border-top: 2px solid #001533;
     margin-top: 50px;
     padding-top: 20px;
   }
@@ -197,7 +212,7 @@ ul {
 
 @media only screen and (min-width: 769px) {
   .right_info {
-    border-left: 2px solid #001355;
+    border-left: 2px solid #001533;
   }
 }
 </style>
