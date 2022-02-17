@@ -90,7 +90,7 @@
                         <li class="mb-4">
                             
                             <p class="fw-bold mb-1">Vuoi Eliminare il tuo annuncio ?</p>
-                            <form action="{{ route('admin.apartment.destroy', $apartment->id) }}" method="post" class="">
+                            <form action="{{ route('admin.apartment.destroy', $apartment->id) }}" method="post" onsubmit="return confirm('Vuoi Eliminare Il tuo Annuncio ?')">
                                 @csrf
                                 @method('delete')
                                 <button type="submit" class="btn btn-danger btn-sm text-white">Elimina Annuncio</button>
