@@ -4,18 +4,20 @@
 
 @section('content')
 <div class="container">
-    <h2>Stai visualizzando l'appartamento <b>{{ $apartment->title }}</b></h2>
-    <div class="d-flex">
-        <a href="{{ route('admin.apartment.edit', $apartment->id) }}" class="btn btn-success">Modifica</a>
+  <h2>Stai visualizzando l'appartamento <b>{{ $apartment->title }}</b></h2>
+  <div class="d-flex">
+    <a href="{{ route('admin.apartment.edit', $apartment->id) }}" class="btn btn-success">Modifica</a>
 
-        <form action="{{ route('admin.apartment.destroy', $apartment->id) }}" method="post" class="ms-3">
+    <form action="{{ route('admin.apartment.destroy', $apartment->id) }}" method="post" class="ms-3">
 
-            @csrf
-            @method('delete')
+      @csrf
+      @method('delete')
 
-            <button type="submit" class="btn btn-danger">Elimina</button>
+      <button type="submit" class="btn btn-danger">Elimina</button>
 
-        </form>
-    </div>
+    </form>
+
+    <a href="{{route('admin.sponsor.index', $apartment)}}">Sponsorship</a>
+  </div>
 </div>
 @endsection
