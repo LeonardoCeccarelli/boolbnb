@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="col-12  col-md-6 col-lg-4 p-2  ps-md-5 pt-md-5">
-                    <div class=" d-flex flex-row flex-md-column">
+                    <div class=" d-flex flex-row flex-md-column ms-lg-5">
                         <p class="text-capitalize me-5 me-md-0"><i class="fas fa-map-marker-alt fs-5"></i> <span class="fs-5 fw-bold">Posizione: </span>  {{ $apartment->city }}</p>
                         <p><i class="fas fa-tag fs-5"></i><span class="fs-5 fw-bold"> Prezzo a notte: </span>  {{ $apartment->night_price}} Euro </p>
                     </div>
@@ -35,13 +35,13 @@
         </section>
     
         
-        <section class="infos d-flex col-11 ">
-            <div class="left col-8  bg-light p-5 pt-3">
+        <section class="infos d-flex flex-column flex-xl-row col-11  ">
+            <div class="left col-xl-7  bg-light p-5 pt-3">
     
                 {{-- immagini / carosello --}}
                 <h4 class="fw-bold mb-4">Immagini Appartamento</h4>
-                <div class="border bg-success" style="width: 580px;height:350px;">
-                    <img src="{{ asset('storage/' . $apartment->cover_img) }}"  alt=" {{$apartment->cover_img}}" class="rounded mb-4" style="width: 580px;height:350px;">    
+                <div class=" bg-success img-fluid" style="min-width: 100px;max-width: 580px;min-height:200px;">
+                    <img src="{{ asset('storage/' . $apartment->cover_img) }}"  alt=" {{$apartment->cover_img}}" class="rounded mb-4 img-fluid" style="min-width: 100px;max-width: 580px;min-height:200px;">    
 
                 </div>
                 <hr>
@@ -60,8 +60,8 @@
                 
             </div>
 
-            <div class="right col-4 bg-light p-5 ">
-                <div class="shadow p-3  pt-4 mb-5 bg-body rounded d-flex flex-column align-items-center" style="background-color: red">
+            <div class="right  col-xl-5 bg-light p-5 ">
+                <div class="shadow p-3  pt-4 mb-5 bg-body rounded d-flex flex-column align-items-center" >
                    
                     
                     <ul style="background-color: #094679; " class="rounded text-white list-unstyled p-3 ">
