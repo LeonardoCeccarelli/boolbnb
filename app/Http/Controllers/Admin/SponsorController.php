@@ -11,6 +11,6 @@ class SponsorController extends Controller
     public function index() {
         $sponsor = Sponsor::all();
 
-        return view("admin.apartment.sponsor.index", compact('sponsor'));
+        return view("admin.sponsor.index", compact('sponsor'));
     }
 }
