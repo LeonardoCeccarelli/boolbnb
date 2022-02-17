@@ -80,7 +80,7 @@
             {{-- sponsor button --}}
             <li class="mb-4">
               <p class="fw-bold mb-1">Dai Un Boost Alle Tue Prenotazioni</p>
-              <a href="{{ route('admin.sponsor') }}" class="btn btn-light btn-sm text-dark">
+              <a href="{{ route('admin.sponsor.index', $apartment) }}" class="btn btn-light btn-sm text-dark">
                 Prova Un Piano Di Sponsorship <i class="fas fa-arrow-alt-circle-right"></i>
               </a>
             </li>

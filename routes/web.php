@@ -27,6 +27,7 @@ Route::middleware("auth")
     Route::get("/sponsor/{apartment}", "SponsorController@index")->name("sponsor.index");
     Route::post("/sponsor/{apartment}/checkout", "SponsorController@checkout")->name("sponsor.checkout");
     Route::get("/sponsor/{apartment}/transaction", "SponsorController@transaction")->name("sponsor.transaction");
+    Route::get("/message", "MessageController@index")->name("message");
   });
 
 Route::get("{any?}", function () {
