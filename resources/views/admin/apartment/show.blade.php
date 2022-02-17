@@ -95,12 +95,36 @@
             <li class="mb-4">
 
               <p class="fw-bold mb-1">Vuoi Eliminare il tuo annuncio ?</p>
-              <form action="{{ route('admin.apartment.destroy', $apartment->id) }}" method="post"
-                onsubmit="return confirm('Vuoi Eliminare Il tuo Annuncio ?')">
-                @csrf
-                @method('delete')
-                <button type="submit" class="btn btn-danger btn-sm text-white">Elimina Annuncio</button>
-              </form>
+              <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger btn-sm text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Elimina Annuncio
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-dark" id="exampleModalLabel">Vuoi Eliminare Il tuo Annuncio?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-dark">
+                Selezionando Conferma Il tuo Annuncio Verrà Elimnato.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary text-white" data-bs-dismiss="modal">Annulla</button>
+                <form action="{{ route('admin.apartment.destroy', $apartment->id) }}" method="post"
+                  {{-- onsubmit="return confirm('Vuoi Eliminare Il tuo Annuncio ?')" --}}>
+                  @csrf
+                  @method('delete')
+                  <button type="submit" class="btn btn-danger text-white">Conferma</button>
+            
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
             </li>
           </ul>
 
@@ -108,7 +132,8 @@
 
       </div>
     </section>
-
+  
+    
 
     {{-- statistiche --}}
     <section class="bg-light col-11 mb-5 p-5 pt-0 rounded-bottom">
