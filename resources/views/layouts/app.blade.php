@@ -77,10 +77,12 @@
             </div>
         </nav>
 
-        <main>
-            @yield('content')
-        </main>
-    </div>
+
+    <main>
+      @yield('content')
+    </main>
+  </div>
+
 
     @include('partials.the_footer')
 
