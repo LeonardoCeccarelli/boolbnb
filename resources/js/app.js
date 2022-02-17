@@ -27,7 +27,7 @@ Vue.component('card-container', require('./components/show/CardContainer.vue').d
 Vue.component('form-contacts', require('./components/show/FormContacts.vue').default);
 Vue.component('overlay-image', require('./components/show/OverlayImage.vue').default);
 Vue.component('map-geocode', require('./components/show/MapGeocode.vue').default);
-
+Vue.component('search-bar', require('./components/index/SearchBar.vue').default);
 
 
 
@@ -38,5 +38,5 @@ Vue.component('map-geocode', require('./components/show/MapGeocode.vue').default
  */
 
 const app = new Vue({
-    el: '#app',
+  el: '#app',
 });
