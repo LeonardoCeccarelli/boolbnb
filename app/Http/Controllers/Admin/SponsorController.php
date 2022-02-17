@@ -70,7 +70,7 @@ class SponsorController extends Controller
         'submitForSettlement' => true
       ]
     ]);
-    dd($amount, $nonce, $request, $apartment->id, $result->success);
+    
 
 
     // Executed Transaction

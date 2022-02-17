@@ -1,9 +1,6 @@
 @extends('layouts.app')
-
 @section('page_title', 'Dashboard | BoolBnB')
-
 @section('content')
-
 <div class="container-fluid"
   style="background: rgb(2,0,36);background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,70,121,1) 35%, rgba(161,232,246,1) 100%);">
   <div class="container  ">
@@ -20,8 +17,6 @@
                   class="fas fa-plus"></i></a></button>
           </div>
         </div>
-
-
         <div class="row row-cols-1 justify-content-center">
           @foreach ($apartments as $apartment)
           <div class="col-11">
@@ -33,7 +28,6 @@
                 </div>
                 <div class="col-md-9 ">
                   <div class="card-body d-flex p-0">
-
                     <div class="a col-10 p-2">
                       <h5 class="card-title mb-3">
                         <a class="fw-bold text-decoration-none text-uppercase" style="color: #094679;"
@@ -51,31 +45,30 @@
                         <small class="text-muted">Ultima modifica {{$apartment->updated_at }}</small>
                       </p>
                     </div>
-                    <<<<<<< HEAD <div class="b col-2 d-flex align-items-center ">
+                    <div class="b col-2 d-flex align-items-center ">
                       <button type="button" class="btn btn-dark text-white mb-2">
                         <a class="text-white fw-bold text-decoration-none "
                           href="{{ route('admin.apartment.show', $apartment->id) }}">
                           Visualizza
                         </a>
                       </button>
+                    </div>
                   </div>
-
                 </div>
-
               </div>
             </div>
-            =======
           </div>
           @endforeach
-
-          >>>>>>> features/VUE-guest-show
         </div>
       </div>
-      @endforeach
-
     </div>
   </div>
 </div>
-</div>
-</div>
 @endsection
+
+
+
+
+
+
+

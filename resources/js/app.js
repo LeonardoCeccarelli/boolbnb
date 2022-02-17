@@ -23,7 +23,6 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('hero', require('./components/welcome/Hero.vue').default);
 Vue.component('sponsored', require('./components/welcome/Sponsored.vue').default);
 Vue.component('cities', require('./components/welcome/Cities.vue').default);
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('card-container', require('./components/show/CardContainer.vue').default);
 Vue.component('form-contacts', require('./components/show/FormContacts.vue').default);
 Vue.component('overlay-image', require('./components/show/OverlayImage.vue').default);
