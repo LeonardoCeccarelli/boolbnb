@@ -11,8 +11,9 @@
     <section class="bg-light col-11 mt-5 p-5 pb-0  rounded-top">
       <div class="row  row-cols-md-2 flex-column flex-md-row">
 
-        <div class="div col-8">
-          <h3 class="fw-bold pb-3 text-uppercase" style="color: #094679;">{{ $apartment->title }}</h3>
+        <div class="div col-12 col-md-7 ">
+  
+          <h3 class="fw-bold pb-3 text-uppercase" style="color: #094679; word-wrap: break-word;">{{ $apartment->title }}</h3>
           <div class=" mt-4 ">
             <h4 class="fw-bold">Informazioni Generali</h4>
             <ul class=" d-flex flex-wrap">
@@ -24,7 +25,7 @@
           </div>
         </div>
 
-        <div class="col-12  col-md-6 col-lg-4 p-2  ps-md-5 pt-md-5">
+        <div class="col-12  col-md-5   p-2  ps-lg-5 pt-md-5">
           <div class=" d-flex flex-row flex-md-column ms-lg-5">
             <p class="text-capitalize me-5 me-md-0"><i class="fas fa-map-marker-alt fs-5"></i> <span
                 class="fs-5 fw-bold">Posizione: </span> {{ $apartment->city }}</p>
@@ -43,15 +44,18 @@
 
         {{-- immagini / carosello --}}
         <h4 class="fw-bold mb-4">Immagini Appartamento</h4>
-        <div class=" bg-success img-fluid" style="min-width: 100px;max-width: 580px;min-height:200px;">
-          <img src="{{ asset('storage/' . $apartment->cover_img) }}" alt=" {{$apartment->cover_img}}"
-            class="rounded mb-4 img-fluid" style="min-width: 100px;max-width: 580px;min-height:200px;">
+        
+        <img src="{{ asset('storage/' . $apartment->cover_img) }}" alt=" {{$apartment->cover_img}}"
+          class="rounded mb-4 img-fluid" style="width: 580px;height:350px;">
 
-        </div>
+        
         <hr>
         {{-- descrizione appartamento --}}
-        <h4 class="fw-bold mt-4 mb-4">Descrizione</h4>
-        <p class="mb-4">{{ $apartment->description }}</p>
+        <h4 class="fw-bold mt-4 mb-4 ">Descrizione</h4>
+        <div class="mb-4 ">
+          <p  style="word-wrap: break-word;">{{ $apartment->description }}</p>
+
+        </div>
         <hr>
         {{-- Servizi --}}
         <h4 class="fw-bold mt-4 mb-4">Servizi</h4>
@@ -65,69 +69,73 @@
       </div>
 
       <div class="right  col-xl-5 bg-light p-5 ">
-        <div class="shadow p-3  pt-4 mb-5 bg-body rounded d-flex flex-column align-items-center">
 
-
-          <ul style="background-color: #094679; " class="rounded text-white list-unstyled p-3 ">
+        <div class="rounded shadow col-10  p-3 pb-5" style="background-color: #094679; " >
+          <ul class="rounded text-white list-unstyled p-3 ">
             {{-- messages button --}}
-            <li class="mb-3 d-flex">
+            <li class="mb-4 d-flex fs-5">
 
               <a href="{{ route('admin.message', $apartment->id) }}"
                 class="fw-bold mb-1 text-white text-decoration-none">
                 Visualizza I Tuoi Messaggi <i class="fas fa-arrow-alt-circle-right"></i>
               </a>
             </li>
+            <hr>
             {{-- sponsor button --}}
-            <li class="mb-4">
-              <p class="fw-bold mb-1">Dai Un Boost Alle Tue Prenotazioni</p>
-              <a href="{{ route('admin.sponsor.index', $apartment) }}" class="btn btn-light btn-sm text-dark">
-                Prova Un Piano Di Sponsorship <i class="fas fa-arrow-alt-circle-right"></i>
+            <li class="mb-4 fs-5 mt-4">
+              
+              <a href="{{ route('admin.sponsor.index', $apartment) }}"
+                class="fw-bold mb-1 text-white text-decoration-none">
+                Prova Un Piano Di Sponsorship  <i class="fas fa-arrow-alt-circle-right"></i>
               </a>
+              
             </li>
+            <hr>
             {{-- edit button --}}
-            <li class="mb-4">
-              <p class="fw-bold mb-1">Vuoi Modificare Il Tuo Annuncio ?</p>
-              <a href="{{ route('admin.apartment.edit', $apartment->id) }}" class="btn btn-light btn-sm text-dark">
+            <li class="mb-4 fs-5 mt-4">
+              <a href="{{ route('admin.apartment.edit', $apartment->id) }}"
+                class="fw-bold mb-1 text-white text-decoration-none">
                 Modifica Il Tuo Annuncio <i class="fas fa-arrow-alt-circle-right"></i>
               </a>
+              
             </li>
+            <hr>
             {{-- delete button --}}
-            <li class="mb-4">
+            <li class="mb-4 fs-5 mt-4">
 
               <p class="fw-bold mb-1">Vuoi Eliminare il tuo annuncio ?</p>
               <!-- Button trigger modal -->
-        <button type="button" class="btn btn-danger btn-sm text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Elimina Annuncio
-        </button>
+              <button type="button" class="btn btn-danger btn-sm text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Elimina Annuncio
+              </button>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title text-dark" id="exampleModalLabel">Vuoi Eliminare Il tuo Annuncio?</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body text-dark">
-                Selezionando Conferma Il tuo Annuncio Verrà Elimnato.
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary text-white" data-bs-dismiss="modal">Annulla</button>
-                <form action="{{ route('admin.apartment.destroy', $apartment->id) }}" method="post"
-                  {{-- onsubmit="return confirm('Vuoi Eliminare Il tuo Annuncio ?')" --}}>
-                  @csrf
-                  @method('delete')
-                  <button type="submit" class="btn btn-danger text-white">Conferma</button>
-            
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title text-dark" id="exampleModalLabel">Vuoi Eliminare Il tuo Annuncio?</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-dark">
+                      Selezionando Conferma Il tuo Annuncio Verrà Elimnato.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary text-white" data-bs-dismiss="modal">Annulla</button>
+                      <form action="{{ route('admin.apartment.destroy', $apartment->id) }}" method="post"
+                        {{-- onsubmit="return confirm('Vuoi Eliminare Il tuo Annuncio ?')" --}}>
+                        @csrf
+                        @method('delete')
+                        <button type="submit" class="btn btn-danger text-white">Conferma</button>
                   
-                </form>
+                        
+                      </form>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
             </li>
           </ul>
-
         </div>
 
       </div>
