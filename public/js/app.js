@@ -5376,28 +5376,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       classMap: "show",
       apiKey: "74G2HVlLeNW6ZnVG4yzsaMj20OxuW1sJ",
       lon: "12.48945",
-      lat: "41.89358",
-      mapZoom: ""
+      lat: "41.89358"
     };
   },
   methods: {
@@ -40276,25 +40261,7 @@ var render = function () {
         class: _vm.classMap,
         attrs: { id: "collapseExample" },
       },
-      [
-        _c("div", { staticClass: "card card-body" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-1 col-md-2" }, [_vm._v("sx")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-10 col-md-8" }, [
-              _c("input", {
-                staticClass: "form-range",
-                attrs: { type: "range", min: "1", max: "24", step: "1" },
-                domProps: { value: _vm.mapZoom },
-              }),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-1 col-md-2" }, [_vm._v("dx")]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "map", attrs: { id: "myMap" } }),
-        ]),
-      ]
+      [_vm._m(1)]
     ),
   ])
 }
@@ -40316,8 +40283,16 @@ var staticRenderFns = [
             "aria-controls": "collapseExample",
           },
         },
-        [_vm._v("\n      Visualizza Mappa\n    ")]
+        [_vm._v("\n      Dove ti troverai\n    ")]
       ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card card-body" }, [
+      _c("div", { staticClass: "map", attrs: { id: "myMap" } }),
     ])
   },
 ]

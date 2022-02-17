@@ -9,25 +9,11 @@
         aria-expanded="false"
         aria-controls="collapseExample"
       >
-        Visualizza Mappa
+        Dove ti troverai
       </a>
     </p>
     <div class="collapse" :class="classMap" id="collapseExample">
       <div class="card card-body">
-        <div class="row">
-          <div class="col-1 col-md-2">sx</div>
-          <div class="col-10 col-md-8">
-            <input
-              type="range"
-              class="form-range"
-              min="1"
-              max="24"
-              step="1"
-              :value="mapZoom"
-            />
-          </div>
-          <div class="col-1 col-md-2">dx</div>
-        </div>
         <div class="map" id="myMap"></div>
       </div>
     </div>
@@ -42,7 +28,6 @@ export default {
       apiKey: "74G2HVlLeNW6ZnVG4yzsaMj20OxuW1sJ",
       lon: "12.48945",
       lat: "41.89358",
-      mapZoom: "",
     };
   },
   methods: {
