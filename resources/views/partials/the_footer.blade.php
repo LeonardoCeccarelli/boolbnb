@@ -1,9 +1,11 @@
 
 <footer class="mb-5">
   <div class="container ">
-    <div class="footer_a row row-cols-4 py-5  border-top">
-      <div class="col">
-        <h5 class="fw-bold mb-3">Informazioni</h5>
+    <div class="footer_a row row-cols-1 row-cols-md-2 row-cols-lg-4 py-5 border-top justify-content-evenly">
+
+
+      <div class="col mb-3 text-center text-md-start">
+        <h5 class="fw-bold mb-2">Informazioni</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Newsroom</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Scopri le nuove funzionalità</a></li>
@@ -13,8 +15,8 @@
         </ul>
       </div>
   
-      <div class="col">
-        <h5 class="fw-bold mb-3">Ospitare</h5>
+      <div class="col mb-3 text-center text-md-start">
+        <h5 class="fw-bold mb-2">Ospitare</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Prova a ospitare</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Esplora le risorse per host</a></li>
@@ -23,8 +25,8 @@
         </ul>
       </div>
   
-      <div class="col">
-        <h5 class="fw-bold mb-3">Community</h5>
+      <div class="col mb-3 text-center text-md-start">
+        <h5 class="fw-bold mb-2">Community</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Boolbnb un rifugio sicuro</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contro la discriminazione</a></li>
@@ -32,26 +34,27 @@
         </ul>
       </div>
   
-      <div class="col">
-        <h5 class="fw-bold mb-3">Assistenza</h5>
+      <div class="col text-center text-md-start">
+        <h5 class="fw-bold mb-2">Assistenza</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">centro Assistenza</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Centro Assistenza</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Informazioni di sicurezza</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Opzioni di cancellazione</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Segnala problemi nel quartiere</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">La nostra risposta all'emergenza COVID-19</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer_b  d-flex align-items-center flex-column">
-      <div class="mb-3">
-        <a href="#" class="me-3">
+
+
+    <div class="footer_b d-flex align-items-center flex-column">
+      <div class="mb-3 d-flex">
+        <a href="#" class="nav-link me-2">
           <i class="fab fa-facebook text-dark fs-3"></i>
         </a>
-        <a href="#" class="me-3">
+        <a href="#" class="nav-link me-2">
             <i class="fab fa-twitter text-dark fs-3"></i>
         </a>
-        <a href="#" class="me-3">
+        <a href="#" class="nav-link me-2">
             <i class="fab fa-instagram text-dark fs-3"></i>
         </a>
       </div>
