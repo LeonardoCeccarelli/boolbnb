@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page_title', 'Visualizza Annuncio | BoolBnB')
+@section('page_title', mb_strimwidth($apartment->title, 0, 25, "...") . ' - Informazioni')
 
 @section('content')
 <div class="container-fluid"
@@ -117,5 +117,4 @@
     </section>
   </div>
 </div>
-
 @endsection

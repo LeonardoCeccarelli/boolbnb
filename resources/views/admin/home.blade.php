@@ -51,28 +51,31 @@
                         <small class="text-muted">Ultima modifica {{$apartment->updated_at }}</small>
                       </p>
                     </div>
-
-                    <div class="b col-2 d-flex align-items-center ">
+                    <<<<<<< HEAD <div class="b col-2 d-flex align-items-center ">
                       <button type="button" class="btn btn-dark text-white mb-2">
                         <a class="text-white fw-bold text-decoration-none "
                           href="{{ route('admin.apartment.show', $apartment->id) }}">
                           Visualizza
                         </a>
                       </button>
-                    </div>
-
                   </div>
 
                 </div>
+
               </div>
             </div>
+            =======
           </div>
           @endforeach
 
+          >>>>>>> features/VUE-guest-show
         </div>
       </div>
+      @endforeach
+
     </div>
   </div>
 </div>
-
+</div>
+</div>
 @endsection
