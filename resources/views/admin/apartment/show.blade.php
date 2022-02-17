@@ -105,7 +105,7 @@
 
               <p class="fw-bold mb-1">Vuoi Eliminare il tuo annuncio ?</p>
               <!-- Button trigger modal -->
-              <button type="button" class="btn btn-danger btn-sm text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <button type="button" class="btn btn-danger  text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Elimina Annuncio
               </button>
 
