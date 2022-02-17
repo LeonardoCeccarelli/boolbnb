@@ -81,9 +81,15 @@ export default {
 .close_form {
   i {
     padding: 5px;
-    color: #001533;
+    color: #00153379;
     font-size: 20px;
     cursor: pointer;
+    transition: all 0.1s linear;
+
+    &:hover {
+      transform: scale(1.2) rotate(360deg);
+      color: #001533;
+    }
   }
 }
 </style>

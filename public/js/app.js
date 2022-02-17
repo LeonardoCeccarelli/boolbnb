@@ -5376,13 +5376,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       classMap: "show",
       apiKey: "74G2HVlLeNW6ZnVG4yzsaMj20OxuW1sJ",
       lon: "12.48945",
-      lat: "41.89358"
+      lat: "41.89358",
+      mapZoom: ""
     };
   },
   methods: {
@@ -10471,7 +10486,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "ul[data-v-f7bf6cac] {\n  list-style: none;\n}\n.image_container div[data-v-f7bf6cac] {\n  border-radius: 10px;\n  overflow: hidden;\n}\n.image_container img[data-v-f7bf6cac] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 10px;\n}\n.image_container .cover_img[data-v-f7bf6cac] {\n  cursor: pointer;\n  height: 100%;\n}\n.image_container .other_img[data-v-f7bf6cac] {\n  height: 100%;\n  position: relative;\n  overflow: hidden;\n}\n.image_container .overlay_image[data-v-f7bf6cac] {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.55);\n  opacity: 0;\n  -webkit-backdrop-filter: none;\n          backdrop-filter: none;\n  transition: all 0.2s linear;\n}\n.image_container .overlay_image .button_overlay_image[data-v-f7bf6cac] {\n  position: absolute;\n  bottom: 110%;\n  left: 50%;\n  transform: translate(-50%, 50%);\n  transition: all 0.3s 0.2s ease-in-out;\n}\n.image_container .other_img:hover .overlay_image[data-v-f7bf6cac] {\n  opacity: 1;\n  -webkit-backdrop-filter: blur(4px);\n          backdrop-filter: blur(4px);\n}\n.image_container .other_img:hover .overlay_image .button_overlay_image[data-v-f7bf6cac] {\n  bottom: 50%;\n}\n.right_info .price[data-v-f7bf6cac] {\n  font-weight: bold;\n  font-size: 20px;\n  margin-right: 5px;\n  color: #ff5a5f;\n}\n@media only screen and (max-width: 768px) {\n.right_info[data-v-f7bf6cac] {\n    border-top: 2px solid #001533;\n    margin-top: 50px;\n    padding-top: 20px;\n}\n}\n@media only screen and (min-width: 769px) {\n.right_info[data-v-f7bf6cac] {\n    border-left: 2px solid #001533;\n}\n}", ""]);
+exports.push([module.i, "ul[data-v-f7bf6cac] {\n  list-style: none;\n}\n.image_container div[data-v-f7bf6cac] {\n  border-radius: 10px;\n  overflow: hidden;\n}\n.image_container img[data-v-f7bf6cac] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 10px;\n}\n.image_container .cover_img[data-v-f7bf6cac] {\n  cursor: pointer;\n  height: 100%;\n}\n.image_container .other_img[data-v-f7bf6cac] {\n  height: 100%;\n  position: relative;\n  overflow: hidden;\n}\n.image_container .overlay_image[data-v-f7bf6cac] {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.55);\n  opacity: 0;\n  -webkit-backdrop-filter: none;\n          backdrop-filter: none;\n  transition: all 0.2s linear;\n}\n.image_container .overlay_image .button_overlay_image[data-v-f7bf6cac] {\n  position: absolute;\n  bottom: 110%;\n  left: 50%;\n  transform: translate(-50%, 50%);\n  transition: all 0.3s 0.2s ease-in-out;\n}\n.image_container .other_img:hover .overlay_image[data-v-f7bf6cac] {\n  opacity: 1;\n  -webkit-backdrop-filter: blur(4px);\n          backdrop-filter: blur(4px);\n}\n.image_container .other_img:hover .button_overlay_image[data-v-f7bf6cac] {\n  bottom: 50%;\n}\n.right_info .price[data-v-f7bf6cac] {\n  font-weight: bold;\n  font-size: 20px;\n  margin-right: 5px;\n  color: #ff5a5f;\n}\n@media only screen and (max-width: 768px) {\n.right_info[data-v-f7bf6cac] {\n    border-top: 2px solid #001533;\n    margin-top: 50px;\n    padding-top: 20px;\n}\n}\n@media only screen and (min-width: 769px) {\n.right_info[data-v-f7bf6cac] {\n    border-left: 2px solid #001533;\n}\n}", ""]);
 
 // exports
 
@@ -10490,7 +10505,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".form-control[data-v-9ae28824]:focus {\n  color: #212529;\n  background-color: #f8fafc;\n  border-color: #ff5a5f;\n  outline: 0;\n  box-shadow: 0 0 0 0.25rem #ff5a608c;\n}\n.close_form i[data-v-9ae28824] {\n  padding: 5px;\n  color: #001533;\n  font-size: 20px;\n  cursor: pointer;\n}", ""]);
+exports.push([module.i, ".form-control[data-v-9ae28824]:focus {\n  color: #212529;\n  background-color: #f8fafc;\n  border-color: #ff5a5f;\n  outline: 0;\n  box-shadow: 0 0 0 0.25rem #ff5a608c;\n}\n.close_form i[data-v-9ae28824] {\n  padding: 5px;\n  color: #00153379;\n  font-size: 20px;\n  cursor: pointer;\n  transition: all 0.1s linear;\n}\n.close_form i[data-v-9ae28824]:hover {\n  transform: scale(1.2) rotate(360deg);\n  color: #001533;\n}", ""]);
 
 // exports
 
@@ -10509,7 +10524,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".map[data-v-66b6acb9] {\n  width: 100%;\n  height: 70vh;\n  max-height: 600px;\n}", ""]);
+exports.push([module.i, ".map[data-v-66b6acb9] {\n  width: 100%;\n  height: 70vh;\n  max-height: 600px;\n  border: 2px solid #001533;\n  border-radius: 10px;\n}\n.card[data-v-66b6acb9] {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  min-width: 0;\n  word-wrap: break-word;\n  background-color: transparent;\n  background-clip: border-box;\n  border: none;\n  border-radius: 0.25rem;\n  overflow: hidden;\n}", ""]);
 
 // exports
 
@@ -40261,7 +40276,25 @@ var render = function () {
         class: _vm.classMap,
         attrs: { id: "collapseExample" },
       },
-      [_vm._m(1)]
+      [
+        _c("div", { staticClass: "card card-body" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-1 col-md-2" }, [_vm._v("sx")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-10 col-md-8" }, [
+              _c("input", {
+                staticClass: "form-range",
+                attrs: { type: "range", min: "1", max: "24", step: "1" },
+                domProps: { value: _vm.mapZoom },
+              }),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-1 col-md-2" }, [_vm._v("dx")]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "map", attrs: { id: "myMap" } }),
+        ]),
+      ]
     ),
   ])
 }
@@ -40285,14 +40318,6 @@ var staticRenderFns = [
         },
         [_vm._v("\n      Visualizza Mappa\n    ")]
       ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card card-body" }, [
-      _c("div", { staticClass: "map", attrs: { id: "myMap" } }),
     ])
   },
 ]

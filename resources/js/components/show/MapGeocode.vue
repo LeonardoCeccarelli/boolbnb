@@ -14,6 +14,20 @@
     </p>
     <div class="collapse" :class="classMap" id="collapseExample">
       <div class="card card-body">
+        <div class="row">
+          <div class="col-1 col-md-2">sx</div>
+          <div class="col-10 col-md-8">
+            <input
+              type="range"
+              class="form-range"
+              min="1"
+              max="24"
+              step="1"
+              :value="mapZoom"
+            />
+          </div>
+          <div class="col-1 col-md-2">dx</div>
+        </div>
         <div class="map" id="myMap"></div>
       </div>
     </div>
@@ -28,6 +42,7 @@ export default {
       apiKey: "74G2HVlLeNW6ZnVG4yzsaMj20OxuW1sJ",
       lon: "12.48945",
       lat: "41.89358",
+      mapZoom: "",
     };
   },
   methods: {
@@ -58,5 +73,20 @@ export default {
   width: 100%;
   height: 70vh;
   max-height: 600px;
+  border: 2px solid #001533;
+  border-radius: 10px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: transparent;
+  background-clip: border-box;
+  border: none;
+  border-radius: 0.25rem;
+  overflow: hidden;
 }
 </style>

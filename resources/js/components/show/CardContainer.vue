@@ -180,10 +180,11 @@ ul {
     }
   }
 
-  .other_img:hover .overlay_image {
-    opacity: 1;
-    backdrop-filter: blur(4px);
-
+  .other_img:hover {
+    .overlay_image {
+      opacity: 1;
+      backdrop-filter: blur(4px);
+    }
     .button_overlay_image {
       bottom: 50%;
     }
