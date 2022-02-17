@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('page_title', 'Sponsor | BoolBnB')
 @section('other_meta')
     <script src='https://js.braintreegateway.com/web/dropin/1.33.0/js/dropin.min.js'></script>
 @endsection
