@@ -5,5 +5,5 @@
 @section('content')
 
 {{-- Qui Va il componente Vue --}}
-
+<search-bar></search-bar>
 @endsection
