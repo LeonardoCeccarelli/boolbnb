@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 /*
@@ -11,9 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the 'web' middleware group. Now create something great!
 |
 */
+
 Auth::routes();
-Route::get('/show_view', function() {
+Route::get('/show_view', function () {
   return view('guests.apartments.show');
+});
+
+Route::get('/index_view', function () {
+  return view('guests.apartments.index');
 });
 
 
@@ -32,12 +38,3 @@ Route::middleware('auth')
 Route::get('{any?}', function () {
   return view('guests.welcome');
 })->where('any', '.*');
-
-
-
-
-
-
-
-
-
