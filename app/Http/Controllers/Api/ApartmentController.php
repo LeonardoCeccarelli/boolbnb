@@ -16,7 +16,6 @@ class ApartmentController extends Controller
         $city = $request->city;
         $range = $request->range;
         $services = $request->services;
-
         $apartment = Apartment::with(["services", "user:id,name"]);
 
         if (!$beds && !$rooms && !$city && !$services) return $apartment->get();
