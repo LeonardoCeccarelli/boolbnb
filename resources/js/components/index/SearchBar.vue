@@ -6,14 +6,13 @@
         <div class="col-12 searchbox d-flex">
           <div class="col d-flex flex-column">
             <label for="">Città</label>
-            <input type="text" name="" id="" placeholder="Es. Milano" />
+            <input v-model="filterCity" type="text" placeholder="Es. Milano" />
           </div>
           <div class="col d-flex flex-column">
             <label for="">Letti</label>
             <input
+              v-model="filterBeds"
               type="number"
-              name=""
-              id=""
               min="1"
               max="50"
               placeholder="Es. 1"
@@ -22,9 +21,8 @@
           <div class="col d-flex flex-column">
             <label for="">Stanze</label>
             <input
+              v-model="filterRooms"
               type="number"
-              name=""
-              id=""
               min="1"
               max="50"
               placeholder="Es. 3"
@@ -32,14 +30,13 @@
           </div>
           <div class="col d-flex flex-column">
             <div>
-              <label for="">Distanza:</label><span> {{ valore }}</span>
+              <label for="">Distanza:</label><span> {{ filterRange }}</span>
             </div>
             <input
               type="range"
               min="1"
               max="100"
-              value="50"
-              v-model="valore"
+              v-model="filterRange"
               class="slider"
               id="myRange"
             />
@@ -60,21 +57,24 @@
               <div v-if="expanded === true" class="serviceList">
                 <div
                   class="form-check"
-                  v-for="(service, i) in services"
-                  :key="i"
+                  v-for="service in services"
+                  :key="service.id"
                 >
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
+                    :value="service.name"
+                    v-model="filterServices"
                   />
-                  <label class="form-check-label" for="flexCheckDefault">
-                    {{ service.nome }}
+                  <label class="form-check-label">
+                    {{ service.name }}
                   </label>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="col text-end">
+            <button @click="getFiltered" class="btn btn-success">Cerca</button>
           </div>
         </div>
       </div>
@@ -82,23 +82,26 @@
     <!-- End Searchbox -->
 
     <div class="container">
+      <h1 class="my-5">Scopri tutti gli alloggi</h1>
       <div class="row">
         <!-- Sezione Appartamenti -->
         <div class="col">
-          <h1 class="my-5">Scopri tutti gli alloggi</h1>
-          <div class="d-flex flex-column">
-            <!-- Singolo Appartamento -->
-            <div class="row">
-              <div class="col-4">
-                <img src="" alt="" class="img-fluid" />
-              </div>
-              <div class="col-8">
-                <h4 class="card-title mb-3"></h4>
-                <ul class="d-flex flex-wrap p-0 list-unstyled">
-                  <li class="me-3"><span class="me-1"></span></li>
-                </ul>
+          <div class="row">
+            <!-- Singolo appartamento -->
+            <div
+              v-for="apartment in filteredApartments"
+              :key="apartment.id"
+              class="col"
+            >
+              <div class="card" style="width: 18rem">
+                <img src="" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">{{ apartment.title }}</h5>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
               </div>
             </div>
+            <!-- Finte singolo appartamento -->
           </div>
         </div>
 
@@ -112,16 +115,21 @@
 
 <script>
 export default {
+  props: {
+    services: {
+      type: Array,
+      default: () => [],
+    },
+  },
   data() {
     return {
-      valore: 50,
+      filterRange: 50,
+      filterCity: "",
+      filterBeds: "",
+      filterRooms: "",
+      filterServices: [],
       expanded: false,
-      services: [
-        { nome: "cucina" },
-        { nome: "bagno" },
-        { nome: "palestra" },
-        { nome: "wifi" },
-      ],
+      filteredApartments: [],
     };
   },
   methods: {
@@ -131,6 +139,21 @@ export default {
       } else {
         this.expanded = false;
       }
+    },
+    getFiltered() {
+      window.axios
+        .get("api/search/apartment", {
+          params: {
+            city: this.filterCity,
+            beds: this.filterBeds,
+            rooms: this.filterRooms,
+            range: this.filterRange,
+            services: this.filterServices.join(),
+          },
+        })
+        .then((resp) => {
+          console.log(resp.data);
+        });
     },
   },
 };
@@ -160,7 +183,6 @@ export default {
   input {
     border: none;
     height: 20px;
-    background: none;
     &:focus-visible {
       outline: none;
     }
@@ -181,7 +203,6 @@ export default {
   border: 1px solid rgb(187, 185, 185);
   border-radius: 10px;
   .form-check-input {
-    background-color: rgb(255, 255, 255);
     border: 1px solid rgb(187, 185, 185);
   }
 }
