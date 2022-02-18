@@ -19,20 +19,20 @@ class ApartmentController extends Controller
 
         $apartment = Apartment::with(["services", "user:id,name"]);
 
-        if ($beds && $rooms && $city && $services) return $apartment->get();
+        if (!$beds && !$rooms && !$city && !$services) return $apartment->get();
 
         if ($beds) $apartment = $apartment->where("beds", $beds);
         if ($rooms) $apartment = $apartment->where("rooms", $rooms);
         if ($city) $apartment = $apartment->where("city", $city);
 
-        // if ($services) {
-        //     $services = explode(",", $services);
-        //     foreach ($services as $service) {
-        //         $apartment->whereHas('services', function (Builder $query) use ($service) {
-        //             $query->where('services.name', $service);
-        //         });
-        //     }
-        // };
+        if ($services) {
+            $services = explode(",", $services);
+            foreach ($services as $service) {
+                $apartment = $apartment->whereHas('services', function (Builder $query) use ($service) {
+                    $query->where('services.name', $service);
+                });
+            }
+        };
 
         return $apartment->get();
     }
