@@ -3,6 +3,9 @@
 @section('page_title', 'Visualizza | BoolBnB')
 
 @section('content')
+
+@if ($apartment->user_id == $user->id)
+
 <div class="container-fluid"
   style="background: rgb(2,0,36);background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,70,121,1) 35%, rgba(161,232,246,1) 100%);">
   <div class="container pt-5 d-flex flex-column align-items-center ">
@@ -12,8 +15,9 @@
       <div class="row  row-cols-md-2 flex-column flex-md-row">
 
         <div class="div col-12 col-md-7 ">
-  
-          <h3 class="fw-bold pb-3 text-uppercase" style="color: #094679; word-wrap: break-word;">{{ $apartment->title }}</h3>
+
+          <h3 class="fw-bold pb-3 text-uppercase" style="color: #094679; word-wrap: break-word;">{{ $apartment->title }}
+          </h3>
           <div class=" mt-4 ">
             <h4 class="fw-bold">Informazioni Generali</h4>
             <ul class=" d-flex flex-wrap">
@@ -44,16 +48,16 @@
 
         {{-- immagini / carosello --}}
         <h4 class="fw-bold mb-4">Immagini Appartamento</h4>
-        
+
         <img src="{{ asset('storage/' . $apartment->cover_img) }}" alt=" {{$apartment->cover_img}}"
           class="rounded mb-4 img-fluid" style="width: 580px;height:350px;">
 
-        
+
         <hr>
         {{-- descrizione appartamento --}}
         <h4 class="fw-bold mt-4 mb-4 ">Descrizione</h4>
         <div class="mb-4 ">
-          <p  style="word-wrap: break-word;">{{ $apartment->description }}</p>
+          <p style="word-wrap: break-word;">{{ $apartment->description }}</p>
 
         </div>
         <hr>
@@ -70,7 +74,7 @@
 
       <div class="right  col-xl-5 bg-light p-5 ">
 
-        <div class="rounded shadow col-10  p-3 pb-5" style="background-color: #094679; " >
+        <div class="rounded shadow col-10  p-3 pb-5" style="background-color: #094679; ">
           <ul class="rounded text-white list-unstyled p-3 ">
             {{-- messages button --}}
             <li class="mb-4 d-flex fs-5">
@@ -83,12 +87,12 @@
             <hr>
             {{-- sponsor button --}}
             <li class="mb-4 fs-5 mt-4">
-              
+
               <a href="{{ route('admin.sponsor.index', $apartment) }}"
                 class="fw-bold mb-1 text-white text-decoration-none">
-                Prova Un Piano Di Sponsorship  <i class="fas fa-arrow-alt-circle-right"></i>
+                Prova Un Piano Di Sponsorship <i class="fas fa-arrow-alt-circle-right"></i>
               </a>
-              
+
             </li>
             <hr>
             {{-- edit button --}}
@@ -97,7 +101,7 @@
                 class="fw-bold mb-1 text-white text-decoration-none">
                 Modifica Il Tuo Annuncio <i class="fas fa-arrow-alt-circle-right"></i>
               </a>
-              
+
             </li>
             <hr>
             {{-- delete button --}}
@@ -105,12 +109,14 @@
 
               <p class="fw-bold mb-1">Vuoi Eliminare il tuo annuncio ?</p>
               <!-- Button trigger modal -->
-              <button type="button" class="btn btn-danger  text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <button type="button" class="btn btn-danger  text-white" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
                 Elimina Annuncio
               </button>
 
               <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -122,13 +128,13 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-primary text-white" data-bs-dismiss="modal">Annulla</button>
-                      <form action="{{ route('admin.apartment.destroy', $apartment->id) }}" method="post"
-                        {{-- onsubmit="return confirm('Vuoi Eliminare Il tuo Annuncio ?')" --}}>
+                      <form action="{{ route('admin.apartment.destroy', $apartment->id) }}" method="post" {{--
+                        onsubmit="return confirm('Vuoi Eliminare Il tuo Annuncio ?')" --}}>
                         @csrf
                         @method('delete')
                         <button type="submit" class="btn btn-danger text-white">Conferma</button>
-                  
-                        
+
+
                       </form>
                     </div>
                   </div>
@@ -140,8 +146,8 @@
 
       </div>
     </section>
-  
-    
+
+
 
     {{-- statistiche --}}
     <section class="bg-light col-11 mb-5 p-5 pt-0 rounded-bottom">
@@ -150,4 +156,29 @@
     </section>
   </div>
 </div>
+
+@else
+
+<div class="container">
+  <div class="row justify-content-center my-5">
+    <div class="col-6">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{ asset('storage/' . $apartment->cover_img) }}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8 d-flex align-items-center">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-2">Lappartamento selezionato non è visualizzabile.</h5>
+              <a href="{{ route('admin.home') }}" class="btn btn-primary text-light">I miei appartamenti</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+@endif
+
+
 @endsection
