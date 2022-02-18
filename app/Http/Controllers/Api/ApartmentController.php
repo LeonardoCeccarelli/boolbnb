@@ -25,14 +25,14 @@ class ApartmentController extends Controller
         if ($rooms) $apartment = $apartment->where("rooms", $rooms);
         if ($city) $apartment = $apartment->where("city", $city);
 
-        if ($services) {
-            $services = explode(",", $services);
-            foreach ($services as $service) {
-                $apartment->whereHas('services', function (Builder $query) use ($service) {
-                    $query->where('services.name', $service);
-                });
-            }
-        };
+        // if ($services) {
+        //     $services = explode(",", $services);
+        //     foreach ($services as $service) {
+        //         $apartment->whereHas('services', function (Builder $query) use ($service) {
+        //             $query->where('services.name', $service);
+        //         });
+        //     }
+        // };
 
         return $apartment->get();
     }
