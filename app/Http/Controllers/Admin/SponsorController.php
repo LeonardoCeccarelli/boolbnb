@@ -61,7 +61,7 @@ class SponsorController extends Controller
 
     $selected_sponsor = Sponsor::where('id', $request->sponsor_select)->first();
     $amount = $selected_sponsor->price;
-    $nonce = $request->payment_method_nonce;
+    $nonce = 'fake-valid-nonce';
 
     $result = $gateway->transaction()->sale([
       'amount' => $amount,
@@ -70,12 +70,10 @@ class SponsorController extends Controller
         'submitForSettlement' => true
       ]
     ]);
-    
-
 
     // Executed Transaction
     if ($result->success || !is_null($result->transaction)) {
-      $transaction = $result->transaction;
+      // $transaction = $result->transaction;
 
       if (isset($request->sponsor_select)) {
         $expiring_date = Carbon::now('Europe/Rome')->addHours($selected_sponsor->duration);
