@@ -103,6 +103,7 @@ class ApartmentController extends Controller
    */
   public function show(Apartment $apartment)
   {
+
     $user = Auth::user();
 
     return view("admin.apartment.show", [

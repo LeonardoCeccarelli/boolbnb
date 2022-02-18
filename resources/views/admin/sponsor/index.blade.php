@@ -7,6 +7,12 @@
 <h3 class='text-center my-4'>Aggiungi la sponsorizzazione all'appartamento
   <span class='fs-2 fw-bold fst-italic'>{{ $apartment->title }}</span>
 </h3>
+
+
+
+
+@if ($end_date < $now)
+    
 <div class='container'>
   <div class='row row-cols-3'>
     @foreach ($sponsor as $single_sponsor)
@@ -53,6 +59,11 @@
     </div>
   </div>
 </div>
+
+@else
+    <h1 class="text-center">Sei già sponsorizzato</h1>
+@endif
+
 <script>
   const form = document.querySelector('#payment-form');
         var client_token = '{{ $clientToken }}';

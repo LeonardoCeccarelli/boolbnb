@@ -21,6 +21,7 @@ class SponsorController extends Controller
     $end_date = false;
 
     if (count((array)$apartment->sponsor) != 0) {
+
       foreach ($apartment->sponsor as $sponsor) {
         $end_date = $sponsor->pivot->end_date;
         if ($end_date < $now) {
@@ -29,7 +30,7 @@ class SponsorController extends Controller
       }
       $expiring = new Carbon($end_date);
     }
-
+    
     $gateway = new Braintree\Gateway([
       'environment' => env('BTREE_ENVIRONMENT'),
       'merchantId' => env('BTREE_MERCHANT_ID'),
