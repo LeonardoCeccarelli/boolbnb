@@ -8,7 +8,7 @@
       <div class="col-11 m-5">
         <div class="d-flex mb-4">
           <div class="col-8 py-3 text-white">
-            <h3 class="mb-3">Buongiorno {{ Auth::user()->first_name }} <i class="far fa-wifi"></i></h3>
+            <h3 class="mb-3">Buongiorno {{ Auth::user()->name }} <i class="far fa-wifi"></i></h3>
             <h2 class="fw-bold ">Benvenuto Nella Tua Area Riservata</h2>
           </div>
           <div class="col-4 d-flex justify-content-end align-items-center">
