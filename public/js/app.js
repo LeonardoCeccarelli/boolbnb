@@ -5243,20 +5243,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    services: {
+      type: Array,
+      "default": function _default() {
+        return [];
+      }
+    }
+  },
   data: function data() {
     return {
-      valore: 50,
+      filterRange: 50,
+      filterCity: "",
+      filterBeds: "",
+      filterRooms: "",
+      filterServices: [],
       expanded: false,
-      services: [{
-        nome: "cucina"
-      }, {
-        nome: "bagno"
-      }, {
-        nome: "palestra"
-      }, {
-        nome: "wifi"
-      }]
+      filteredApartments: []
     };
   },
   methods: {
@@ -5266,6 +5273,19 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         this.expanded = false;
       }
+    },
+    getFiltered: function getFiltered() {
+      window.axios.get("api/search/apartment", {
+        params: {
+          city: this.filterCity,
+          beds: this.filterBeds,
+          rooms: this.filterRooms,
+          range: this.filterRange,
+          services: this.filterServices.join()
+        }
+      }).then(function (resp) {
+        console.log(resp.data);
+      });
     }
   }
 });
@@ -10806,7 +10826,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "/* searchbox */\n.searchbox[data-v-900dec9a] {\n  border: 1px solid black;\n  padding: 4px 15px;\n  border-radius: 20px;\n  background-color: white;\n  height: 50px;\n  transition: 1s;\n}\n.searchbox[data-v-900dec9a]:hover {\n  border: 1px solid #6bb2f5;\n}\n.searchbox label[data-v-900dec9a] {\n  color: #aaaaaa;\n  font-size: 12px;\n}\n.searchbox span[data-v-900dec9a] {\n  font-size: 12px;\n}\n.searchbox input[data-v-900dec9a] {\n  border: none;\n  height: 20px;\n  background: none;\n}\n.searchbox input[data-v-900dec9a]:focus-visible {\n  outline: none;\n}\n.slider[data-v-900dec9a]:hover {\n  cursor: pointer;\n}\n\n/* Dropdown menu */\n.serviceList[data-v-900dec9a] {\n  position: absolute;\n  top: 100%;\n  background-color: white;\n  width: 120px;\n  border: 1px solid #bbb9b9;\n  border-radius: 10px;\n}\n.serviceList .form-check-input[data-v-900dec9a] {\n  background-color: white;\n  border: 1px solid #bbb9b9;\n}\n.serviceListLink[data-v-900dec9a] {\n  text-decoration: none;\n  color: black;\n}\n\n/* End Searchbox */", ""]);
+exports.push([module.i, "/* searchbox */\n.searchbox[data-v-900dec9a] {\n  border: 1px solid black;\n  padding: 4px 15px;\n  border-radius: 20px;\n  background-color: white;\n  height: 50px;\n  transition: 1s;\n}\n.searchbox[data-v-900dec9a]:hover {\n  border: 1px solid #6bb2f5;\n}\n.searchbox label[data-v-900dec9a] {\n  color: #aaaaaa;\n  font-size: 12px;\n}\n.searchbox span[data-v-900dec9a] {\n  font-size: 12px;\n}\n.searchbox input[data-v-900dec9a] {\n  border: none;\n  height: 20px;\n}\n.searchbox input[data-v-900dec9a]:focus-visible {\n  outline: none;\n}\n.slider[data-v-900dec9a]:hover {\n  cursor: pointer;\n}\n\n/* Dropdown menu */\n.serviceList[data-v-900dec9a] {\n  position: absolute;\n  top: 100%;\n  background-color: white;\n  width: 120px;\n  border: 1px solid #bbb9b9;\n  border-radius: 10px;\n}\n.serviceList .form-check-input[data-v-900dec9a] {\n  border: 1px solid #bbb9b9;\n}\n.serviceListLink[data-v-900dec9a] {\n  text-decoration: none;\n  color: black;\n}\n\n/* End Searchbox */", ""]);
 
 // exports
 
@@ -10901,7 +10921,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.city-card {\r\n  cursor:pointer ;\r\n  margin: 5px auto;\r\n  position: relative;\r\n  overflow: hidden;\n}\n.city-card:hover .overlay {\r\n  opacity: 0.7;\r\n  transform: scale(1);\n}\n.overlay {\r\n  position: absolute;\r\n  background-color: #FF5A5F;\r\n  width: 100%;\r\n  height: 100%;\r\n  top: 0;\r\n  transform: scale(1.3);\r\n  opacity: 0;\r\n  transition: transform 0.4s ease 0s;\n}\n.overlay span {\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 50%;\r\n  transform: translate(-50%, -50%);\r\n  font-weight: bold;\r\n  font-size: 5em;\r\n  color: #fff;\r\n  font-family: Sans-serif;\n}\n.city-card img {\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  transition: transform 0.8s ease;\n}\n.city-card:hover img {\r\n  transform: scale(1.1);\n}\r\n", ""]);
+exports.push([module.i, "\n.city-card {\n  cursor:pointer ;\n  margin: 5px auto;\n  position: relative;\n  overflow: hidden;\n}\n.city-card:hover .overlay {\n  opacity: 0.7;\n  transform: scale(1);\n}\n.overlay {\n  position: absolute;\n  background-color: #FF5A5F;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  transform: scale(1.3);\n  opacity: 0;\n  transition: transform 0.4s ease 0s;\n}\n.overlay span {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  font-weight: bold;\n  font-size: 5em;\n  color: #fff;\n  font-family: Sans-serif;\n}\n.city-card img {\n  -o-object-fit: cover;\n     object-fit: cover;\n  transition: transform 0.8s ease;\n}\n.city-card:hover img {\n  transform: scale(1.1);\n}\n", ""]);
 
 // exports
 
@@ -10920,7 +10940,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n\r\n/* utilities */\n.white[data-v-b4eb6a1c] {\r\n  color: white;\n}\n.radius-30[data-v-b4eb6a1c] {\r\n  border-radius: 30px;\n}\n.bg-blue[data-v-b4eb6a1c] {\r\n  background-color: #001533;\n}\n.hero-bg[data-v-b4eb6a1c] {\r\n  background-image: url(\"/img/hero-img.jpg\");\r\n  background-size: cover;\r\n  background-position-y: center;\r\n  height: 600px;\r\n  border-radius: 30px;\n}\ninput[data-v-b4eb6a1c] {\r\n  border-radius: 30px;\n}\n.h100[data-v-b4eb6a1c] {\r\n  height: 100%;\n}\r\n/* style bottoni */\n.button[data-v-b4eb6a1c] {\r\n  padding: 8px 13px;\r\n  font-size: 15px;\r\n  text-decoration: none;\n}\n.button_1[data-v-b4eb6a1c] {\r\n  cursor: pointer;\r\n  color: white;\r\n  background-color: #001533;\r\n  border: 2px solid #001533;\r\n  transition: all 0.2s linear;\n}\n.button_1[data-v-b4eb6a1c]:hover {\r\n  box-shadow: 0px 10px 13px -7px #000000,\r\n    0px 0px 10px 5px rgba(255, 90, 95, 0.8);\n}\r\n\r\n\r\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* utilities */\n.white[data-v-b4eb6a1c] {\n  color: white;\n}\n.radius-30[data-v-b4eb6a1c] {\n  border-radius: 30px;\n}\n.bg-blue[data-v-b4eb6a1c] {\n  background-color: #001533;\n}\n.hero-bg[data-v-b4eb6a1c] {\n  background-image: url(\"/img/hero-img.jpg\");\n  background-size: cover;\n  background-position-y: center;\n  height: 600px;\n  border-radius: 30px;\n}\ninput[data-v-b4eb6a1c] {\n  border-radius: 30px;\n}\n.h100[data-v-b4eb6a1c] {\n  height: 100%;\n}\n/* style bottoni */\n.button[data-v-b4eb6a1c] {\n  padding: 8px 13px;\n  font-size: 15px;\n  text-decoration: none;\n}\n.button_1[data-v-b4eb6a1c] {\n  cursor: pointer;\n  color: white;\n  background-color: #001533;\n  border: 2px solid #001533;\n  transition: all 0.2s linear;\n}\n.button_1[data-v-b4eb6a1c]:hover {\n  box-shadow: 0px 10px 13px -7px #000000,\n    0px 0px 10px 5px rgba(255, 90, 95, 0.8);\n}\n\n\n", ""]);
 
 // exports
 
@@ -10939,7 +10959,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.sponsored-card {\r\n  position: relative;\r\n  border-radius: 5px;\r\n  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);\r\n  border-radius: 5px;\r\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card::after {\r\n  content: \"\";\r\n  border-radius: 5px;\r\n  position: absolute;\r\n  z-index: -1;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);\r\n  opacity: 0;\r\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card:hover {\r\n  transform: scale(1.05, 1.05);\n}\n.sponsored-card:hover::after {\r\n    opacity: 1;\n}\r\n", ""]);
+exports.push([module.i, "\n.sponsored-card {\n  position: relative;\n  border-radius: 5px;\n  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);\n  border-radius: 5px;\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card::after {\n  content: \"\";\n  border-radius: 5px;\n  position: absolute;\n  z-index: -1;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);\n  opacity: 0;\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card:hover {\n  transform: scale(1.05, 1.05);\n}\n.sponsored-card:hover::after {\n    opacity: 1;\n}\n", ""]);
 
 // exports
 
@@ -40422,16 +40442,95 @@ var render = function () {
     _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-12 searchbox d-flex" }, [
-          _vm._m(0),
+          _c("div", { staticClass: "col d-flex flex-column" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Città")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.filterCity,
+                  expression: "filterCity",
+                },
+              ],
+              attrs: { type: "text", placeholder: "Es. Milano" },
+              domProps: { value: _vm.filterCity },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.filterCity = $event.target.value
+                },
+              },
+            }),
+          ]),
           _vm._v(" "),
-          _vm._m(1),
+          _c("div", { staticClass: "col d-flex flex-column" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Letti")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.filterBeds,
+                  expression: "filterBeds",
+                },
+              ],
+              attrs: {
+                type: "number",
+                min: "1",
+                max: "50",
+                placeholder: "Es. 1",
+              },
+              domProps: { value: _vm.filterBeds },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.filterBeds = $event.target.value
+                },
+              },
+            }),
+          ]),
           _vm._v(" "),
-          _vm._m(2),
+          _c("div", { staticClass: "col d-flex flex-column" }, [
+            _c("label", { attrs: { for: "" } }, [_vm._v("Stanze")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.filterRooms,
+                  expression: "filterRooms",
+                },
+              ],
+              attrs: {
+                type: "number",
+                min: "1",
+                max: "50",
+                placeholder: "Es. 3",
+              },
+              domProps: { value: _vm.filterRooms },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.filterRooms = $event.target.value
+                },
+              },
+            }),
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "col d-flex flex-column" }, [
             _c("div", [
               _c("label", { attrs: { for: "" } }, [_vm._v("Distanza:")]),
-              _c("span", [_vm._v(" " + _vm._s(_vm.valore))]),
+              _c("span", [_vm._v(" " + _vm._s(_vm.filterRange))]),
             ]),
             _vm._v(" "),
             _c("input", {
@@ -40439,22 +40538,16 @@ var render = function () {
                 {
                   name: "model",
                   rawName: "v-model",
-                  value: _vm.valore,
-                  expression: "valore",
+                  value: _vm.filterRange,
+                  expression: "filterRange",
                 },
               ],
               staticClass: "slider",
-              attrs: {
-                type: "range",
-                min: "1",
-                max: "100",
-                value: "50",
-                id: "myRange",
-              },
-              domProps: { value: _vm.valore },
+              attrs: { type: "range", min: "1", max: "100", id: "myRange" },
+              domProps: { value: _vm.filterRange },
               on: {
                 __r: function ($event) {
-                  _vm.valore = $event.target.value
+                  _vm.filterRange = $event.target.value
                 },
               },
             }),
@@ -40485,34 +40578,60 @@ var render = function () {
                   ? _c(
                       "div",
                       { staticClass: "serviceList" },
-                      _vm._l(_vm.services, function (service, i) {
+                      _vm._l(_vm.services, function (service) {
                         return _c(
                           "div",
-                          { key: i, staticClass: "form-check" },
+                          { key: service.id, staticClass: "form-check" },
                           [
                             _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.filterServices,
+                                  expression: "filterServices",
+                                },
+                              ],
                               staticClass: "form-check-input",
-                              attrs: {
-                                type: "checkbox",
-                                value: "",
-                                id: "flexCheckDefault",
+                              attrs: { type: "checkbox" },
+                              domProps: {
+                                value: service.name,
+                                checked: Array.isArray(_vm.filterServices)
+                                  ? _vm._i(_vm.filterServices, service.name) >
+                                    -1
+                                  : _vm.filterServices,
+                              },
+                              on: {
+                                change: function ($event) {
+                                  var $$a = _vm.filterServices,
+                                    $$el = $event.target,
+                                    $$c = $$el.checked ? true : false
+                                  if (Array.isArray($$a)) {
+                                    var $$v = service.name,
+                                      $$i = _vm._i($$a, $$v)
+                                    if ($$el.checked) {
+                                      $$i < 0 &&
+                                        (_vm.filterServices = $$a.concat([$$v]))
+                                    } else {
+                                      $$i > -1 &&
+                                        (_vm.filterServices = $$a
+                                          .slice(0, $$i)
+                                          .concat($$a.slice($$i + 1)))
+                                    }
+                                  } else {
+                                    _vm.filterServices = $$c
+                                  }
+                                },
                               },
                             }),
                             _vm._v(" "),
-                            _c(
-                              "label",
-                              {
-                                staticClass: "form-check-label",
-                                attrs: { for: "flexCheckDefault" },
-                              },
-                              [
-                                _vm._v(
-                                  "\n                  " +
-                                    _vm._s(service.nome) +
-                                    "\n                "
-                                ),
-                              ]
-                            ),
+                            _c("label", { staticClass: "form-check-label" }, [
+                              _vm._v(
+                                "\n                  " +
+                                  _vm._s(service.name) +
+                                  "\n                "
+                              ),
+                            ]),
                           ]
                         )
                       }),
@@ -40522,106 +40641,68 @@ var render = function () {
               ]),
             ]
           ),
+          _vm._v(" "),
+          _c("div", { staticClass: "col text-end" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-success",
+                on: { click: _vm.getFiltered },
+              },
+              [_vm._v("Cerca")]
+            ),
+          ]),
         ]),
       ]),
     ]),
     _vm._v(" "),
-    _vm._m(3),
-  ])
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col d-flex flex-column" }, [
-      _c("label", { attrs: { for: "" } }, [_vm._v("Città")]),
+    _c("div", { staticClass: "container" }, [
+      _c("h1", { staticClass: "my-5" }, [_vm._v("Scopri tutti gli alloggi")]),
       _vm._v(" "),
-      _c("input", {
-        attrs: { type: "text", name: "", id: "", placeholder: "Es. Milano" },
-      }),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col d-flex flex-column" }, [
-      _c("label", { attrs: { for: "" } }, [_vm._v("Letti")]),
-      _vm._v(" "),
-      _c("input", {
-        attrs: {
-          type: "number",
-          name: "",
-          id: "",
-          min: "1",
-          max: "50",
-          placeholder: "Es. 1",
-        },
-      }),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col d-flex flex-column" }, [
-      _c("label", { attrs: { for: "" } }, [_vm._v("Stanze")]),
-      _vm._v(" "),
-      _c("input", {
-        attrs: {
-          type: "number",
-          name: "",
-          id: "",
-          min: "1",
-          max: "50",
-          placeholder: "Es. 3",
-        },
-      }),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col" }, [
-          _c("h1", { staticClass: "my-5" }, [
-            _vm._v("Scopri tutti gli alloggi"),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "d-flex flex-column" }, [
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-4" }, [
-                _c("img", {
-                  staticClass: "img-fluid",
-                  attrs: { src: "", alt: "" },
-                }),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-8" }, [
-                _c("h4", { staticClass: "card-title mb-3" }),
-                _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "row" },
+            _vm._l(_vm.filteredApartments, function (apartment) {
+              return _c("div", { key: apartment.id, staticClass: "col" }, [
                 _c(
-                  "ul",
-                  { staticClass: "d-flex flex-wrap p-0 list-unstyled" },
+                  "div",
+                  { staticClass: "card", staticStyle: { width: "18rem" } },
                   [
-                    _c("li", { staticClass: "me-3" }, [
-                      _c("span", { staticClass: "me-1" }),
+                    _c("img", {
+                      staticClass: "card-img-top",
+                      attrs: { src: "", alt: "..." },
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card-body" }, [
+                      _c("h5", { staticClass: "card-title" }, [
+                        _vm._v(_vm._s(apartment.title)),
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { href: "#" },
+                        },
+                        [_vm._v("Go somewhere")]
+                      ),
                     ]),
                   ]
                 ),
-              ]),
-            ]),
-          ]),
+              ])
+            }),
+            0
+          ),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col d-sm-none" }),
       ]),
-    ])
-  },
-]
+    ]),
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -54544,8 +54625,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\MAMP\Esercizi Php\boolbnb\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\MAMP\Esercizi Php\boolbnb\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/leonardo/Scrivania/Boolean/boolbnb/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/leonardo/Scrivania/Boolean/boolbnb/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
