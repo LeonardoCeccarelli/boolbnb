@@ -1,5 +1,6 @@
 <?php
 
+use App\Service;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 /*
@@ -19,7 +20,10 @@ Route::get('/show_view', function () {
 });
 
 Route::get('/index_view', function () {
-  return view('guests.apartments.index');
+  $services = Service::all();
+  return view('guests.apartments.index', [
+    "services" => $services,
+  ]);
 });
 
 
