@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Apartment extends Model
 {
@@ -23,6 +24,7 @@ class Apartment extends Model
         "visible",
     ];
 
+    use SoftDeletes;
     public function user()
     {
         return $this->belongsTo("App\User");
