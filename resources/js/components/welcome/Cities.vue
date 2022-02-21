@@ -11,35 +11,41 @@
     >
       <!-- FIRENZE CITY-CARD  -->
       <div class="col">
-        <div class="city-card ratio ratio-1x1">
-          <img src="/img/firenze.jpg" alt="florence wallpaper" />
+        <router-link :to="{ name: 'search', params: { name: 'Firenze' } }">
+          <div class="city-card ratio ratio-1x1">
+            <img src="/img/firenze.jpg" alt="florence wallpaper" />
 
-          <div class="overlay">
-            <span>Firenze</span>
+            <div class="overlay">
+              <span>Firenze</span>
+            </div>
           </div>
-        </div>
+        </router-link>
       </div>
 
       <!-- ROMA CITY-CARD  -->
       <div class="col">
-        <div class="city-card city-card ratio ratio-1x1">
-          <img src="/img/roma.jpg" alt="florence wallpaper" />
+        <router-link :to="{ name: 'search', params: { name: 'Roma' } }">
+          <div class="city-card city-card ratio ratio-1x1">
+            <img src="/img/roma.jpg" alt="florence wallpaper" />
 
-          <div class="overlay">
-            <span>Roma</span>
+            <div class="overlay">
+              <span>Roma</span>
+            </div>
           </div>
-        </div>
+        </router-link>
       </div>
 
       <!-- MILANO CITY-CARD  -->
       <div class="col">
-        <div class="city-card city-card ratio ratio-1x1">
-          <img src="/img/milano.jpg" alt="florence wallpaper" />
+        <router-link :to="{ name: 'search', params: { name: 'Milano' } }">
+          <div class="city-card city-card ratio ratio-1x1">
+            <img src="/img/milano.jpg" alt="florence wallpaper" />
 
-          <div class="overlay">
-            <span>Milano</span>
+            <div class="overlay">
+              <span>Milano</span>
+            </div>
           </div>
-        </div>
+        </router-link>
       </div>
     </div>
   </div>
@@ -51,7 +57,7 @@ export default {};
 
 <style>
 .city-card {
-  cursor:pointer ;
+  cursor: pointer;
   margin: 5px auto;
   position: relative;
   overflow: hidden;
@@ -64,7 +70,7 @@ export default {};
 
 .overlay {
   position: absolute;
-  background-color: #FF5A5F;
+  background-color: #ff5a5f;
   width: 100%;
   height: 100%;
   top: 0;

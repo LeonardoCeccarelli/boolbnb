@@ -19,17 +19,18 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('hero', require('./components/welcome/Hero.vue').default);
-Vue.component('sponsored', require('./components/welcome/Sponsored.vue').default);
-Vue.component('cities', require('./components/welcome/Cities.vue').default);
-Vue.component('card-container', require('./components/show/CardContainer.vue').default);
-Vue.component('form-contacts', require('./components/show/FormContacts.vue').default);
-Vue.component('overlay-image', require('./components/show/OverlayImage.vue').default);
-Vue.component('map-geocode', require('./components/show/MapGeocode.vue').default);
-Vue.component('search-bar', require('./components/index/SearchBar.vue').default);
+// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+// Vue.component('hero', require('./components/welcome/Hero.vue').default);
+// Vue.component('sponsored', require('./components/welcome/Sponsored.vue').default);
+// Vue.component('cities', require('./components/welcome/Cities.vue').default);
+// Vue.component('card-container', require('./components/show/CardContainer.vue').default);
+// Vue.component('form-contacts', require('./components/show/FormContacts.vue').default);
+// Vue.component('overlay-image', require('./components/show/OverlayImage.vue').default);
+// Vue.component('map-geocode', require('./components/show/MapGeocode.vue').default);
+// Vue.component('search-bar', require('./components/index/SearchBar.vue').default);
 
-
+import App from "./App.vue";
+import router from "./router";
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -39,4 +40,6 @@ Vue.component('search-bar', require('./components/index/SearchBar.vue').default)
 
 const app = new Vue({
   el: '#app',
+  router,
+  render: h => h(App)
 });

@@ -137,12 +137,6 @@
 
 <script>
 export default {
-  props: {
-    services: {
-      type: Array,
-      default: () => [],
-    },
-  },
   data() {
     return {
       filterRange: 20,
@@ -155,6 +149,7 @@ export default {
       filteredSponsorApartments: [],
       cityLat: "",
       cityLon: "",
+      services: [],
     };
   },
   methods: {
@@ -184,10 +179,26 @@ export default {
           this.cityLon = resp.data[3];
         });
     },
-    getImage(url) {
-      const src = "@/public/storage/" + url;
-      return src;
+    getServices() {
+      window.axios.get("api/search/services").then((resp) => {
+        this.services = resp.data;
+      });
     },
+    getData() {
+      if (this.$route.params.name) {
+        this.filterCity = this.$route.params.name;
+      }
+
+      if (this.$route.params.beds) {
+        this.filterBeds = this.$route.params.beds;
+      }
+
+      this.getFiltered();
+    },
+  },
+  mounted() {
+    this.getServices();
+    this.getData();
   },
 };
 </script>

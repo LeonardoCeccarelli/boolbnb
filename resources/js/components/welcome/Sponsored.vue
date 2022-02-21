@@ -5,7 +5,7 @@
       class="
         row row-cols-1 row-cols-md-2 row-cols-lg-4
         g-md-3 g-lg-1
-        gy-4 
+        gy-4
         justify-content-center
       "
     >
@@ -59,7 +59,23 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      sponsoredApartment: [],
+    };
+  },
+  methods: {
+    getData() {
+      window.axios.get("api/welcome/sponsored").then((resp) => {
+        this.sponsoredApartment = resp.data;
+      });
+    },
+  },
+  mounted() {
+    // this.getData();
+  },
+};
 </script>
 
 <style>
@@ -91,6 +107,6 @@ export default {};
   transform: scale(1.05, 1.05);
 }
 .sponsored-card:hover::after {
-    opacity: 1;
+  opacity: 1;
 }
 </style>

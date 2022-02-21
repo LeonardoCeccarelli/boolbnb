@@ -11,6 +11,18 @@ use Illuminate\Support\Facades\Http;
 
 class ApartmentController extends Controller
 {
+
+    public function getSponsored()
+    {
+        // $data = Apartment::with(["services", "user:id,name"])
+        //     ->where("visible", 1)
+        //     ->whereHas("sponsor", function ($query) {
+        //         $query->whereDate("end_date", ">", Carbon::now()->toDateString());
+        //     });
+
+        // return $data;
+    }
+
     public function getFiltered(Request $request)
     {
         $beds = $request->beds;
@@ -54,11 +66,6 @@ class ApartmentController extends Controller
             $minLat = $lat - rad2deg($range / $R);
             $maxLon = $lon + rad2deg(asin($range / $R) / cos(deg2rad($lat)));
             $minLon = $lon - rad2deg(asin($range / $R) / cos(deg2rad($lat)));
-
-            // $maxLat = $response->json()['results'][0]['viewport']['topLeftPoint']['lat'];
-            // $maxLon = $response->json()['results'][0]['viewport']['topLeftPoint']['lon'];
-            // $minLat = $response->json()['results'][0]['viewport']['btmRightPoint']['lat'];
-            // $minLon = $response->json()['results'][0]['viewport']['btmRightPoint']['lon'];
 
             // Filtro appartamento
             $apartment = $apartment->where("city", $city);

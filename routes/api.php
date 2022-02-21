@@ -18,4 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get("/welcome/sponsored", "Api\ApartmentController@getSponsored");
 Route::get("/search/apartment", "Api\ApartmentController@getFiltered");
+Route::get("/search/services", "Api\ServiceController@getAll");

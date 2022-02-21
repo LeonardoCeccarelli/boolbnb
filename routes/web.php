@@ -19,12 +19,12 @@ Route::get('/show_view', function () {
   return view('guests.apartments.show');
 });
 
-Route::get('/index_view', function () {
-  $services = Service::all();
-  return view('guests.apartments.index', [
-    "services" => $services,
-  ]);
-});
+// Route::get('/index_view', function () {
+//   $services = Service::all();
+//   return view('guests.apartments.index', [
+//     "services" => $services,
+//   ]);
+// });
 
 
 Route::middleware('auth')
