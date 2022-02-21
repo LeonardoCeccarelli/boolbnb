@@ -88,17 +88,38 @@
         <!-- Sezione Appartamenti -->
         <div class="col-12 col-sm-6">
           <div class="row g-5">
-            <!-- Singolo appartamento -->
-            <div
-              v-for="apartment in filteredApartments"
-              :key="apartment.id"
-              class="col-12"
-            >
-              <div class="card">
-                <img src="" class="card-img-top" alt="" />
-                <div class="card-body">
-                  <h5 class="card-title">{{ apartment.title }}</h5>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+            <!-- Singolo appartamento sponsor -->
+            <div>
+              <h5>Alloggi in evidenza</h5>
+              <div
+                v-for="apartment in filteredSponsorApartments"
+                :key="apartment.id"
+                class="col-12"
+              >
+                <div class="card">
+                  <img src="" class="card-img-top" alt="" />
+                  <div class="card-body">
+                    <h5 class="card-title">{{ apartment.title }}</h5>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Singolo appartamento base -->
+            <div>
+              <h5>Altri alloggi</h5>
+              <div
+                v-for="apartment in filteredBasicApartments"
+                :key="apartment.id"
+                class="col-12"
+              >
+                <div class="card">
+                  <img src="" class="card-img-top" alt="" />
+                  <div class="card-body">
+                    <h5 class="card-title">{{ apartment.title }}</h5>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -130,7 +151,8 @@ export default {
       filterRooms: "",
       filterServices: [],
       expanded: false,
-      filteredApartments: [],
+      filteredBasicApartments: [],
+      filteredSponsorApartments: [],
       cityLat: "",
       cityLon: "",
     };
@@ -156,9 +178,10 @@ export default {
         })
         .then((resp) => {
           console.log(resp.data);
-          this.filteredApartments = resp.data[0];
-          this.cityLat = resp.data[1];
-          this.cityLon = resp.data[2];
+          this.filteredBasicApartments = resp.data[0];
+          this.filteredSponsorApartments = resp.data[1];
+          this.cityLat = resp.data[2];
+          this.cityLon = resp.data[3];
         });
     },
     getImage(url) {

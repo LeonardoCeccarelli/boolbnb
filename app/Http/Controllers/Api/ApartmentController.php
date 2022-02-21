@@ -19,19 +19,25 @@ class ApartmentController extends Controller
         $range = $request->range;
         $services = $request->services;
 
-        $currentTime = Carbon::now();
-
         $apartment = Apartment::with(["services", "user:id,name"])->where("visible", "like", 1);
+        $basicApartment = $apartment->get();
 
 
         $lat = 42.3011;
         $lon = 12.3424;
-
         if (!$beds && !$rooms && !$city && !$services) {
-            return [$apartment->get(), $lat, $lon];
+            $sponsorApartment = $apartment->whereHas("sponsor", function ($query) {
+                $query->where([
+                    ["starting_date", "<", Carbon::now()],
+                    ["end_date", ">", Carbon::now()]
+                ]);
+            })->get();
+            return [$basicApartment, $sponsorApartment, $lat, $lon];
         };
 
-        if ($beds) $apartment = $apartment->where("beds", $beds);
+        if ($beds) {
+            $apartment = $apartment->where("beds", $beds);
+        }
         if ($rooms) $apartment = $apartment->where("rooms", $rooms);
 
         if ($city) {
@@ -53,10 +59,16 @@ class ApartmentController extends Controller
             foreach ($services as $service) {
                 $apartment = $apartment->whereHas('services', function (Builder $query) use ($service) {
                     $query->where('services.name', $service);
-                });
+                })->get();
             }
         };
-
-        return [$apartment->get(), $lat, $lon];
+        $basicApartment = $apartment->get();
+        $sponsorApartment = $apartment->whereHas("sponsor", function ($query) {
+            $query->where([
+                ["starting_date", "<", Carbon::now()],
+                ["end_date", ">", Carbon::now()]
+            ]);
+        })->get();
+        return [$basicApartment, $sponsorApartment, $lat, $lon];
     }
 }
