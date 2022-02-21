@@ -5712,7 +5712,48 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      city: '',
+      beds: ''
+    };
+  },
+  methods: {
+    getData: function getData() {
+      var city = this.city;
+      var beds = this.beds;
+      window.axios({
+        method: 'post',
+        url: "/api/ApartmentController",
+        data: {
+          city: city,
+          beds: beds
+        },
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8'
+        }
+      }) // .post("/api/ApartmentController", {
+      //   params: {
+      //     city,
+      //     beds,
+      //   },
+      // })
+      .then(function (resp) {
+        console.log(resp);
+      })["catch"](function (e) {
+        alert("Non è stato possibile scaricare gli appartamenti.");
+        console.log("Appartamento non trovato");
+      });
+    }
+  },
+  mounted: function mounted() {}
+});
 
 /***/ }),
 
@@ -10940,7 +10981,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* utilities */\n.white[data-v-b4eb6a1c] {\n  color: white;\n}\n.radius-30[data-v-b4eb6a1c] {\n  border-radius: 30px;\n}\n.bg-blue[data-v-b4eb6a1c] {\n  background-color: #001533;\n}\n.hero-bg[data-v-b4eb6a1c] {\n  background-image: url(\"/img/hero-img.jpg\");\n  background-size: cover;\n  background-position-y: center;\n  height: 600px;\n  border-radius: 30px;\n}\ninput[data-v-b4eb6a1c] {\n  border-radius: 30px;\n}\n.h100[data-v-b4eb6a1c] {\n  height: 100%;\n}\n/* style bottoni */\n.button[data-v-b4eb6a1c] {\n  padding: 8px 13px;\n  font-size: 15px;\n  text-decoration: none;\n}\n.button_1[data-v-b4eb6a1c] {\n  cursor: pointer;\n  color: white;\n  background-color: #001533;\n  border: 2px solid #001533;\n  transition: all 0.2s linear;\n}\n.button_1[data-v-b4eb6a1c]:hover {\n  box-shadow: 0px 10px 13px -7px #000000,\n    0px 0px 10px 5px rgba(255, 90, 95, 0.8);\n}\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* utilities */\n.white[data-v-b4eb6a1c] {\n  color: white;\n}\n.radius-30[data-v-b4eb6a1c] {\n  border-radius: 30px;\n}\n.bg-blue[data-v-b4eb6a1c] {\n  background-color: #001533;\n}\n.hero-bg[data-v-b4eb6a1c] {\n  background-image: url(\"/img/hero-img.jpg\");\n  background-size: cover;\n  background-position-y: center;\n  height: 600px;\n  border-radius: 30px;\n}\ninput[data-v-b4eb6a1c] {\n  border-radius: 30px;\n}\n.h100[data-v-b4eb6a1c] {\n  height: 100%;\n}\n/* style bottoni */\n.button[data-v-b4eb6a1c] {\n  padding: 8px 13px;\n  font-size: 15px;\n  text-decoration: none;\n}\n.button_1[data-v-b4eb6a1c] {\n  cursor: pointer;\n  color: white;\n  background-color: #001533;\n  border: 2px solid #001533;\n  transition: all 0.2s linear;\n}\n.button_1[data-v-b4eb6a1c]:hover {\n  box-shadow: 0px 10px 13px -7px #000000,\n    0px 0px 10px 5px rgba(255, 90, 95, 0.8);\n}\n\n\n", ""]);
 
 // exports
 
@@ -41283,82 +41324,129 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "hero bg-blue py-5" }, [
+    _c("div", { staticClass: "container hero-bg" }, [
+      _c("div", { staticClass: "row row-cols-1 row-cols-lg-2 g-lg-3 h100" }, [
+        _c("div", { staticClass: "col h100" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "d-flex justify-content-center align-items-center h100",
+            },
+            [
+              _c("div", { staticClass: "white text-center py-4 w-50" }, [
+                _c("h3", { staticClass: "mb-4" }, [
+                  _vm._v("Qual'è la tua prossima avventura?"),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "my-3" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.city,
+                        expression: "city",
+                      },
+                    ],
+                    staticClass: "py-1 ps-3",
+                    attrs: {
+                      type: "text",
+                      name: "luogo",
+                      placeholder: "Inserisci luogo",
+                    },
+                    domProps: { value: _vm.city },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.city = $event.target.value
+                      },
+                    },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "my-3" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.beds,
+                        expression: "beds",
+                      },
+                    ],
+                    staticClass: "py-1 ps-3",
+                    attrs: {
+                      type: "text",
+                      name: "ospiti",
+                      placeholder: "Aggiungi ospiti",
+                    },
+                    domProps: { value: _vm.beds },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.beds = $event.target.value
+                      },
+                    },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "button button_1 radius-30",
+                    attrs: { href: "" },
+                    on: {
+                      click: function ($event) {
+                        return _vm.getData()
+                      },
+                    },
+                  },
+                  [_vm._v("Cerca Alloggio")]
+                ),
+              ]),
+            ]
+          ),
+        ]),
+        _vm._v(" "),
+        _vm._m(0),
+      ]),
+    ]),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "hero bg-blue py-5" }, [
-      _c("div", { staticClass: "container hero-bg" }, [
-        _c("div", { staticClass: "row row-cols-1 row-cols-lg-2 g-lg-3 h100" }, [
-          _c("div", { staticClass: "col h100" }, [
+    return _c("div", { staticClass: "col h100 d-none d-lg-block" }, [
+      _c(
+        "div",
+        {
+          staticClass: "d-flex justify-content-center align-items-center h100",
+        },
+        [
+          _c("div", { staticClass: "text-center py-4 w-50" }, [
+            _c("h3", { staticClass: "mb-5 white" }, [
+              _vm._v("Non sai dove andare?"),
+            ]),
+            _vm._v(" "),
             _c(
-              "div",
+              "a",
               {
-                staticClass:
-                  "d-flex justify-content-center align-items-center h100",
+                staticClass: "button button_1 radius-30",
+                attrs: { href: "http://127.0.0.1:8000/index_view" },
               },
-              [
-                _c("div", { staticClass: "white text-center py-4 w-50" }, [
-                  _c("h3", { staticClass: "mb-4" }, [
-                    _vm._v("Qual'è la tua prossima avventura?"),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "my-3" }, [
-                    _c("input", {
-                      staticClass: "py-1 ps-3",
-                      attrs: {
-                        type: "text",
-                        name: "luogo",
-                        placeholder: "Inserisci luogo",
-                      },
-                    }),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "my-3" }, [
-                    _c("input", {
-                      staticClass: "py-1 ps-3",
-                      attrs: {
-                        type: "text",
-                        name: "ospiti",
-                        placeholder: "Aggiungi ospiti",
-                      },
-                    }),
-                  ]),
-                ]),
-              ]
+              [_vm._v("Lasciati ispirare")]
             ),
           ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col h100 d-none d-lg-block" }, [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "d-flex justify-content-center align-items-center h100",
-              },
-              [
-                _c("div", { staticClass: "text-center py-4 w-50" }, [
-                  _c("h3", { staticClass: "mb-5 white" }, [
-                    _vm._v("Non sai dove andare?"),
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "button button_1 radius-30",
-                      attrs: { href: "" },
-                    },
-                    [_vm._v("Lasciati ispirare")]
-                  ),
-                ]),
-              ]
-            ),
-          ]),
-        ]),
-      ]),
+        ]
+      ),
     ])
   },
 ]
@@ -54625,8 +54713,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/leonardo/Scrivania/Boolean/boolbnb/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/leonardo/Scrivania/Boolean/boolbnb/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/giovanniconti/Desktop/Boolean Course/Boolean #43/boolbnb/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/giovanniconti/Desktop/Boolean Course/Boolean #43/boolbnb/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

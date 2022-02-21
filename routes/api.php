@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get("/search/apartment", "Api\ApartmentController@getFiltered");
+Route::post("/search/adventure", "Api\ApartmentController@serchApartment");

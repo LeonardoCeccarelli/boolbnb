@@ -9,7 +9,7 @@
               <h3 class="mb-4">Qual'è la tua prossima avventura?</h3>
               <div class="my-3">
                 
-                <input class="py-1 ps-3" type="text" name="luogo" placeholder="Inserisci luogo" />
+                <input class="py-1 ps-3" type="text" name="luogo" placeholder="Inserisci luogo" v-model="city" />
               </div>
               <div class="my-3">
                 
@@ -18,8 +18,13 @@
                   type="text"
                   name="ospiti"
                   placeholder="Aggiungi ospiti"
+                  v-model="beds"
                 />
+
               </div>
+
+              <a href="" class="button button_1 radius-30" @click="getData()" >Cerca Alloggio</a>
+
             </div>
           </div>
         </div>
@@ -28,7 +33,7 @@
           <div class="d-flex justify-content-center align-items-center h100">
             <div class="text-center py-4 w-50">
               <h3 class="mb-5 white">Non sai dove andare?</h3>
-              <a href="" class="button button_1 radius-30">Lasciati ispirare</a>
+              <a href="http://127.0.0.1:8000/index_view" class="button button_1 radius-30">Lasciati ispirare</a>
             </div>
           </div>
         </div>
@@ -38,7 +43,50 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data(){
+    return{
+      city: '',
+      beds: '',
+    };
+  },
+  methods:{
+
+    getData(){
+      const city = this.city;
+      const beds = this.beds;
+
+      window.axios({
+        method: 'post',
+        url: "/api/ApartmentController",
+        data: {
+            city,
+            beds,
+        },
+        headers: {
+            'Content-Type': 'text/plain;charset=utf-8',
+        },
+      })
+        // .post("/api/ApartmentController", {
+        //   params: {
+        //     city,
+        //     beds,
+        //   },
+        // })
+        .then((resp) => {
+          console.log(resp);
+        })
+        .catch((e) => {
+          alert("Non è stato possibile scaricare gli appartamenti.")
+          console.log("Appartamento non trovato");
+        });
+    }
+
+  },
+  mounted(){
+
+  }
+};
 </script>
 
 <style scoped>

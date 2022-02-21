@@ -36,4 +36,11 @@ class ApartmentController extends Controller
 
         return $apartment->get();
     }
+
+    public function serchApartment(Request $request)
+    {
+
+      dd($request->all());
+      return ;
+    }
 }
