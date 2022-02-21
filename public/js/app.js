@@ -40516,7 +40516,7 @@ var render = function () {
               ],
               attrs: {
                 type: "number",
-                min: "5",
+                min: "1",
                 max: "50",
                 placeholder: "Es. 1",
               },
@@ -40565,7 +40565,7 @@ var render = function () {
           _c("div", { staticClass: "col d-flex flex-column" }, [
             _c("div", [
               _c("label", { attrs: { for: "" } }, [_vm._v("Distanza:")]),
-              _c("span", [_vm._v(" " + _vm._s(_vm.filterRange))]),
+              _c("span", [_vm._v(" " + _vm._s(_vm.filterRange) + " Km")]),
             ]),
             _vm._v(" "),
             _c("input", {
@@ -40580,9 +40580,9 @@ var render = function () {
               staticClass: "slider",
               attrs: {
                 type: "range",
-                min: "5",
-                step: "5",
-                max: "50",
+                min: "1",
+                step: "1",
+                max: "20",
                 id: "myRange",
               },
               domProps: { value: _vm.filterRange },
