@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Api;
 
 use App\Apartment;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class ApartmentController extends Controller
 {
@@ -17,13 +19,34 @@ class ApartmentController extends Controller
         $range = $request->range;
         $services = $request->services;
 
-        $apartment = Apartment::with(["services", "user:id,name"]);
+        $currentTime = Carbon::now();
 
-        if (!$beds && !$rooms && !$city && !$services) return $apartment->get();
+        $apartment = Apartment::with(["services", "user:id,name"])->where("visible", "like", 1);
+
+
+        $lat = 42.3011;
+        $lon = 12.3424;
+
+        if (!$beds && !$rooms && !$city && !$services) {
+            return [$apartment->get(), $lat, $lon];
+        };
 
         if ($beds) $apartment = $apartment->where("beds", $beds);
         if ($rooms) $apartment = $apartment->where("rooms", $rooms);
-        if ($city) $apartment = $apartment->where("city", $city);
+
+        if ($city) {
+            // trovo coordinate città
+            $baseUrl = 'https://api.tomtom.com/search/2/geocode/';
+            $key = '74G2HVlLeNW6ZnVG4yzsaMj20OxuW1sJ';
+            $endUrl = '.json?key=';
+            $url = $baseUrl . $city . $endUrl . $key;
+            $response = Http::get($url);
+            $lat = $response->json()['results'][0]['position']['lat'];
+            $lon = $response->json()['results'][0]['position']['lon'];
+
+            // Filtro appartamento
+            $apartment = $apartment->where("city", $city);
+        }
 
         if ($services) {
             $services = explode(",", $services);
@@ -34,6 +57,6 @@ class ApartmentController extends Controller
             }
         };
 
-        return $apartment->get();
+        return [$apartment->get(), $lat, $lon];
     }
 }
