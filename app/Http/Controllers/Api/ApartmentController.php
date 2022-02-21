@@ -59,7 +59,7 @@ class ApartmentController extends Controller
             foreach ($services as $service) {
                 $apartment = $apartment->whereHas('services', function (Builder $query) use ($service) {
                     $query->where('services.name', $service);
-                })->get();
+                });
             }
         };
         $basicApartment = $apartment->get();
