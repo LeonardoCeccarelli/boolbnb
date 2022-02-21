@@ -13,7 +13,7 @@
             <input
               v-model="filterBeds"
               type="number"
-              min="1"
+              min="5"
               max="50"
               placeholder="Es. 1"
             />
@@ -34,8 +34,9 @@
             </div>
             <input
               type="range"
-              min="1"
-              max="100"
+              min="5"
+              step="5"
+              max="50"
               v-model="filterRange"
               class="slider"
               id="myRange"
@@ -85,16 +86,16 @@
       <h1 class="my-5">Scopri tutti gli alloggi</h1>
       <div class="row">
         <!-- Sezione Appartamenti -->
-        <div class="col">
-          <div class="row">
+        <div class="col-12 col-sm-6">
+          <div class="row g-5">
             <!-- Singolo appartamento -->
             <div
               v-for="apartment in filteredApartments"
               :key="apartment.id"
-              class="col"
+              class="col-12"
             >
-              <div class="card" style="width: 18rem">
-                <img src="" class="card-img-top" alt="..." />
+              <div class="card">
+                <img src="" class="card-img-top" alt="" />
                 <div class="card-body">
                   <h5 class="card-title">{{ apartment.title }}</h5>
                   <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -106,7 +107,7 @@
         </div>
 
         <!-- Mappa -->
-        <div class="col d-sm-none"></div>
+        <div class="col-sm-6 d-sm-none"></div>
       </div>
     </div>
   </div>
@@ -123,13 +124,15 @@ export default {
   },
   data() {
     return {
-      filterRange: 50,
+      filterRange: 20,
       filterCity: "",
       filterBeds: "",
       filterRooms: "",
       filterServices: [],
       expanded: false,
       filteredApartments: [],
+      cityLat: "",
+      cityLon: "",
     };
   },
   methods: {
@@ -153,7 +156,14 @@ export default {
         })
         .then((resp) => {
           console.log(resp.data);
+          this.filteredApartments = resp.data[0];
+          this.cityLat = resp.data[1];
+          this.cityLon = resp.data[2];
         });
+    },
+    getImage(url) {
+      const src = "@/public/storage/" + url;
+      return src;
     },
   },
 };
