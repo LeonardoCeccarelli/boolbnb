@@ -5246,6 +5246,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     services: {
@@ -5257,13 +5279,16 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      filterRange: 50,
+      filterRange: 20,
       filterCity: "",
       filterBeds: "",
       filterRooms: "",
       filterServices: [],
       expanded: false,
-      filteredApartments: []
+      filteredBasicApartments: [],
+      filteredSponsorApartments: [],
+      cityLat: "",
+      cityLon: ""
     };
   },
   methods: {
@@ -5275,6 +5300,8 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     getFiltered: function getFiltered() {
+      var _this = this;
+
       window.axios.get("api/search/apartment", {
         params: {
           city: this.filterCity,
@@ -5285,7 +5312,15 @@ __webpack_require__.r(__webpack_exports__);
         }
       }).then(function (resp) {
         console.log(resp.data);
+        _this.filteredBasicApartments = resp.data[0];
+        _this.filteredSponsorApartments = resp.data[1];
+        _this.cityLat = resp.data[2];
+        _this.cityLon = resp.data[3];
       });
+    },
+    getImage: function getImage(url) {
+      var src = "@/public/storage/" + url;
+      return src;
     }
   }
 });
@@ -40481,7 +40516,7 @@ var render = function () {
               ],
               attrs: {
                 type: "number",
-                min: "1",
+                min: "5",
                 max: "50",
                 placeholder: "Es. 1",
               },
@@ -40543,7 +40578,13 @@ var render = function () {
                 },
               ],
               staticClass: "slider",
-              attrs: { type: "range", min: "1", max: "100", id: "myRange" },
+              attrs: {
+                type: "range",
+                min: "5",
+                step: "5",
+                max: "50",
+                id: "myRange",
+              },
               domProps: { value: _vm.filterRange },
               on: {
                 __r: function ($event) {
@@ -40660,44 +40701,87 @@ var render = function () {
       _c("h1", { staticClass: "my-5" }, [_vm._v("Scopri tutti gli alloggi")]),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col" }, [
-          _c(
-            "div",
-            { staticClass: "row" },
-            _vm._l(_vm.filteredApartments, function (apartment) {
-              return _c("div", { key: apartment.id, staticClass: "col" }, [
-                _c(
-                  "div",
-                  { staticClass: "card", staticStyle: { width: "18rem" } },
-                  [
-                    _c("img", {
-                      staticClass: "card-img-top",
-                      attrs: { src: "", alt: "..." },
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "card-body" }, [
-                      _c("h5", { staticClass: "card-title" }, [
-                        _vm._v(_vm._s(apartment.title)),
+        _c("div", { staticClass: "col-12 col-sm-6" }, [
+          _c("div", { staticClass: "row g-5" }, [
+            _c(
+              "div",
+              [
+                _c("h5", [_vm._v("Alloggi in evidenza")]),
+                _vm._v(" "),
+                _vm._l(_vm.filteredSponsorApartments, function (apartment) {
+                  return _c(
+                    "div",
+                    { key: apartment.id, staticClass: "col-12" },
+                    [
+                      _c("div", { staticClass: "card" }, [
+                        _c("img", {
+                          staticClass: "card-img-top",
+                          attrs: { src: "", alt: "" },
+                        }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "card-body" }, [
+                          _c("h5", { staticClass: "card-title" }, [
+                            _vm._v(_vm._s(apartment.title)),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "btn btn-primary",
+                              attrs: { href: "#" },
+                            },
+                            [_vm._v("Go somewhere")]
+                          ),
+                        ]),
                       ]),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass: "btn btn-primary",
-                          attrs: { href: "#" },
-                        },
-                        [_vm._v("Go somewhere")]
-                      ),
-                    ]),
-                  ]
-                ),
-              ])
-            }),
-            0
-          ),
+                    ]
+                  )
+                }),
+              ],
+              2
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              [
+                _c("h5", [_vm._v("Altri alloggi")]),
+                _vm._v(" "),
+                _vm._l(_vm.filteredBasicApartments, function (apartment) {
+                  return _c(
+                    "div",
+                    { key: apartment.id, staticClass: "col-12" },
+                    [
+                      _c("div", { staticClass: "card" }, [
+                        _c("img", {
+                          staticClass: "card-img-top",
+                          attrs: { src: "", alt: "" },
+                        }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "card-body" }, [
+                          _c("h5", { staticClass: "card-title" }, [
+                            _vm._v(_vm._s(apartment.title)),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "btn btn-primary",
+                              attrs: { href: "#" },
+                            },
+                            [_vm._v("Go somewhere")]
+                          ),
+                        ]),
+                      ]),
+                    ]
+                  )
+                }),
+              ],
+              2
+            ),
+          ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col d-sm-none" }),
+        _c("div", { staticClass: "col-sm-6 d-sm-none" }),
       ]),
     ]),
   ])
