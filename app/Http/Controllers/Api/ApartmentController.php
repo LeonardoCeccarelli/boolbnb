@@ -17,9 +17,10 @@ class ApartmentController extends Controller
         $rooms = $request->rooms;
         $city = $request->city;
         $range = $request->range;
+        if ($range < 1 || $range > 20) $range = 20;
         $services = $request->services;
 
-        $apartment = Apartment::with(["services", "user:id,name"])->where("visible", "like", 1);
+        $apartment = Apartment::with(["services", "user:id,name"])->where("visible", 1);
         $basicApartment = $apartment->get();
 
 
@@ -27,10 +28,7 @@ class ApartmentController extends Controller
         $lon = 12.3424;
         if (!$beds && !$rooms && !$city && !$services) {
             $sponsorApartment = $apartment->whereHas("sponsor", function ($query) {
-                $query->where([
-                    ["starting_date", "<", Carbon::now()],
-                    ["end_date", ">", Carbon::now()]
-                ]);
+                $query->whereDate("end_date", ">", Carbon::now()->toDateString());
             })->get();
             return [$basicApartment, $sponsorApartment, $lat, $lon];
         };
@@ -50,8 +48,22 @@ class ApartmentController extends Controller
             $lat = $response->json()['results'][0]['position']['lat'];
             $lon = $response->json()['results'][0]['position']['lon'];
 
+            // Calcolo l'area di ricerca convertendi i km in gradi
+            $R = 6371;
+            $maxLat = $lat + rad2deg($range / $R);
+            $minLat = $lat - rad2deg($range / $R);
+            $maxLon = $lon + rad2deg(asin($range / $R) / cos(deg2rad($lat)));
+            $minLon = $lon - rad2deg(asin($range / $R) / cos(deg2rad($lat)));
+
+            // $maxLat = $response->json()['results'][0]['viewport']['topLeftPoint']['lat'];
+            // $maxLon = $response->json()['results'][0]['viewport']['topLeftPoint']['lon'];
+            // $minLat = $response->json()['results'][0]['viewport']['btmRightPoint']['lat'];
+            // $minLon = $response->json()['results'][0]['viewport']['btmRightPoint']['lon'];
+
             // Filtro appartamento
             $apartment = $apartment->where("city", $city);
+            $apartment = $apartment->whereBetween("lat", [$minLat, $maxLat]);
+            $apartment = $apartment->whereBetween("lon", [$minLon, $maxLon]);
         }
 
         if ($services) {

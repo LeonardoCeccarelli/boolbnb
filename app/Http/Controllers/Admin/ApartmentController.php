@@ -184,6 +184,7 @@ class ApartmentController extends Controller
   public function destroy(Apartment $apartment)
   {
     $apartment->services()->detach();
+    $apartment->sponsor()->detach();
 
     if ($apartment->cover_img != "apartments/default.png") {
       Storage::delete($apartment->cover_img);

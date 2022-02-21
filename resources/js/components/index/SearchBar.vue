@@ -13,7 +13,7 @@
             <input
               v-model="filterBeds"
               type="number"
-              min="5"
+              min="1"
               max="50"
               placeholder="Es. 1"
             />
@@ -30,13 +30,13 @@
           </div>
           <div class="col d-flex flex-column">
             <div>
-              <label for="">Distanza:</label><span> {{ filterRange }}</span>
+              <label for="">Distanza:</label><span> {{ filterRange }} Km</span>
             </div>
             <input
               type="range"
-              min="5"
-              step="5"
-              max="50"
+              min="1"
+              step="1"
+              max="20"
               v-model="filterRange"
               class="slider"
               id="myRange"
