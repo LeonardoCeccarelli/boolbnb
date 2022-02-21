@@ -13,7 +13,7 @@
             <input
               v-model="filterBeds"
               type="number"
-              min="1"
+              min="5"
               max="50"
               placeholder="Es. 1"
             />
@@ -34,8 +34,9 @@
             </div>
             <input
               type="range"
-              min="1"
-              max="100"
+              min="5"
+              step="5"
+              max="50"
               v-model="filterRange"
               class="slider"
               id="myRange"
@@ -85,19 +86,40 @@
       <h1 class="my-5">Scopri tutti gli alloggi</h1>
       <div class="row">
         <!-- Sezione Appartamenti -->
-        <div class="col">
-          <div class="row">
-            <!-- Singolo appartamento -->
-            <div
-              v-for="apartment in filteredApartments"
-              :key="apartment.id"
-              class="col"
-            >
-              <div class="card" style="width: 18rem">
-                <img src="" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">{{ apartment.title }}</h5>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="col-12 col-sm-6">
+          <div class="row g-5">
+            <!-- Singolo appartamento sponsor -->
+            <div>
+              <h5>Alloggi in evidenza</h5>
+              <div
+                v-for="apartment in filteredSponsorApartments"
+                :key="apartment.id"
+                class="col-12"
+              >
+                <div class="card">
+                  <img src="" class="card-img-top" alt="" />
+                  <div class="card-body">
+                    <h5 class="card-title">{{ apartment.title }}</h5>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Singolo appartamento base -->
+            <div>
+              <h5>Altri alloggi</h5>
+              <div
+                v-for="apartment in filteredBasicApartments"
+                :key="apartment.id"
+                class="col-12"
+              >
+                <div class="card">
+                  <img src="" class="card-img-top" alt="" />
+                  <div class="card-body">
+                    <h5 class="card-title">{{ apartment.title }}</h5>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -106,7 +128,7 @@
         </div>
 
         <!-- Mappa -->
-        <div class="col d-sm-none"></div>
+        <div class="col-sm-6 d-sm-none"></div>
       </div>
     </div>
   </div>
@@ -123,13 +145,16 @@ export default {
   },
   data() {
     return {
-      filterRange: 50,
+      filterRange: 20,
       filterCity: "",
       filterBeds: "",
       filterRooms: "",
       filterServices: [],
       expanded: false,
-      filteredApartments: [],
+      filteredBasicApartments: [],
+      filteredSponsorApartments: [],
+      cityLat: "",
+      cityLon: "",
     };
   },
   methods: {
@@ -153,7 +178,15 @@ export default {
         })
         .then((resp) => {
           console.log(resp.data);
+          this.filteredBasicApartments = resp.data[0];
+          this.filteredSponsorApartments = resp.data[1];
+          this.cityLat = resp.data[2];
+          this.cityLon = resp.data[3];
         });
+    },
+    getImage(url) {
+      const src = "@/public/storage/" + url;
+      return src;
     },
   },
 };
