@@ -1,16 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container-fluid p-5"
+  style="background: rgb(2,0,36);background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,70,121,1) 35%, rgba(161,232,246,1) 100%);">
 
-<div class="container">
+    <div class="container bg-light rounded p-5 text-center">
 
-  @dump($user, $apartment);
-
-
-  <h1 class="text-center color-success py-5">Congratulation {{$user->first_name}} Hai attivato la sponsorizzazzione per
-    l'appartamento {{ $apartment->title }}
-  </h1>
-
+      <h1 class="fw-bold">Congratulazioni {{ Auth::user()->name }}</h1>
+      <h3>Hai attivato la sponsorizzazzione perl'appartamento <br> {{ $apartment->title }}</h3>
+      <a href="{{ route('admin.home') }}">Torna Nella Tua Dashboard</a>
+    </div>
 </div>
 
 
