@@ -5448,6 +5448,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -5556,6 +5557,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     apartmentId: {
       type: Number
+    },
+    apartmentTitle: {
+      type: String
     }
   },
   data: function data() {
@@ -5563,8 +5567,9 @@ __webpack_require__.r(__webpack_exports__);
       form: {
         name: "",
         email: "",
-        object: "Appartamento Vista mare",
-        content: ""
+        object: this.apartmentTitle,
+        content: "",
+        id: this.apartmentId
       }
     };
   },
@@ -5572,7 +5577,7 @@ __webpack_require__.r(__webpack_exports__);
     onFormSubmit: function onFormSubmit() {
       var _this = this;
 
-      window.axios.post("/api/message" + this.apartmentId).then(function (resp) {
+      window.axios.post("/api/message", this.form).then(function (resp) {
         _this.$emit("sendForm");
       });
     }
@@ -41067,7 +41072,11 @@ var render = function () {
         _vm._v(" "),
         _vm.formActive
           ? _c("FormContacts", {
-              attrs: { formSend: _vm.formSend, apartmentId: _vm.apartment.id },
+              attrs: {
+                formSend: _vm.formSend,
+                apartmentId: _vm.apartment.id,
+                apartmentTitle: _vm.apartment.title,
+              },
               on: { closeForm: _vm.closeForm, sendForm: _vm.sendForm },
             })
           : _vm._e(),
