@@ -20,4 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get("/welcome/sponsored", "Api\ApartmentController@getSponsored");
 Route::get("/search/apartment", "Api\ApartmentController@getFiltered");
+Route::get("/apartment/{id}", "Api\ApartmentController@getSingle");
 Route::get("/search/services", "Api\ServiceController@getAll");

@@ -12,6 +12,13 @@ use Illuminate\Support\Facades\Http;
 class ApartmentController extends Controller
 {
 
+    public function getSingle($id)
+    {
+        $data = Apartment::where("id", $id)->with(["services", "user:id,name"])->first();
+        $data["cover_img"] = url("storage/" . $data["cover_img"]);
+        return $data;
+    }
+
     public function getSponsored()
     {
         // $data = Apartment::with(["services", "user:id,name"])

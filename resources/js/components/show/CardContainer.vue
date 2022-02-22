@@ -26,12 +26,12 @@
           </div>
         </div>
       </div>
-      <map-geocode></map-geocode>
+      <MapGeocode></MapGeocode>
       <div class="row my-5">
         <div class="col-12 col-md-8">
           <div class="left_info">
             <div class="title_container mb-4">
-              <h2>Appartamento vista mare</h2>
+              <h2>{{ apartment.title }}</h2>
               <p>Roma - Piazza Venezia</p>
               <p>4 stanze/a - 4 posti/o letto - 1 bagni/o</p>
             </div>
@@ -86,23 +86,33 @@
         </div>
       </div>
 
-      <form-contacts
+      <FormContacts
         v-if="formActive"
         :formSend="formSend"
         @closeForm="closeForm"
         @sendForm="sendForm"
-      ></form-contacts>
+      ></FormContacts>
 
-      <overlay-image
+      <OverlayImage
         v-if="overlayImage"
         @closeOverlayImage="closeOverlayImage"
-      ></overlay-image>
+      ></OverlayImage>
     </div>
   </div>
 </template>
 
 <script>
+import FormContacts from "./FormContacts.vue";
+import MapGeocode from "./MapGeocode.vue";
+import OverlayImage from "./OverlayImage.vue";
 export default {
+  components: { MapGeocode, FormContacts, OverlayImage },
+  props: {
+    apartment: {
+      type: Object,
+      default: () => ({}),
+    },
+  },
   data() {
     return {
       formActive: false,

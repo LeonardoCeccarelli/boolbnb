@@ -100,7 +100,11 @@
                   <img src="" class="card-img-top" alt="" />
                   <div class="card-body">
                     <h5 class="card-title">{{ apartment.title }}</h5>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <router-link
+                      :to="{ name: 'apartment', params: { id: apartment.id } }"
+                      class="btn btn-primary"
+                      >Go somewhere</router-link
+                    >
                   </div>
                 </div>
               </div>
@@ -118,7 +122,11 @@
                   <img src="" class="card-img-top" alt="" />
                   <div class="card-body">
                     <h5 class="card-title">{{ apartment.title }}</h5>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <router-link
+                      :to="{ name: 'apartment', params: { id: apartment.id } }"
+                      class="btn btn-primary"
+                      >Go somewhere</router-link
+                    >
                   </div>
                 </div>
               </div>
