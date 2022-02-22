@@ -23,4 +23,4 @@ Route::get("/search/apartment", "Api\ApartmentController@getFiltered");
 Route::get("/apartment/{id}", "Api\ApartmentController@getSingle");
 Route::get("/search/services", "Api\ServiceController@getAll");
 Route::post("/visualisation/{id}", "Api\VisualisationController@addToDb");
-Route::post("/message/{id}", "Api\MessageController@onFormSubmit");
+Route::post("/message", "Api\MessageController@onFormSubmit");

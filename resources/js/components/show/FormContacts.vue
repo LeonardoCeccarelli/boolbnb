@@ -53,20 +53,24 @@ export default {
     apartmentId: {
       type: Number,
     },
+    apartmentTitle: {
+      type: String,
+    },
   },
   data() {
     return {
       form: {
         name: "",
         email: "",
-        object: "Appartamento Vista mare",
+        object: this.apartmentTitle,
         content: "",
+        id: this.apartmentId,
       },
     };
   },
   methods: {
     onFormSubmit() {
-      window.axios.post("/api/message" + this.apartmentId).then((resp) => {
+      window.axios.post("/api/message", this.form).then((resp) => {
         this.$emit("sendForm");
       });
     },
