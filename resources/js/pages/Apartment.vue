@@ -24,6 +24,9 @@ export default {
           this.apartment = resp.data;
         });
     },
+    addVisualisation() {
+      window.axios.post("/api/visualisation/" + this.$route.params.id);
+    },
   },
   mounted() {
     this.getData();

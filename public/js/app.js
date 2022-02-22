@@ -5447,6 +5447,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -5552,6 +5553,9 @@ __webpack_require__.r(__webpack_exports__);
   props: {
     formSend: {
       type: Boolean
+    },
+    apartmentId: {
+      type: Number
     }
   },
   data: function data() {
@@ -5566,8 +5570,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     onFormSubmit: function onFormSubmit() {
-      // Fare chiamata Api
-      this.$emit("sendForm");
+      var _this = this;
+
+      window.axios.post("/api/message" + this.apartmentId).then(function (resp) {
+        _this.$emit("sendForm");
+      });
     }
   }
 });
@@ -5936,6 +5943,9 @@ __webpack_require__.r(__webpack_exports__);
       window.axios.get("/api/apartment/" + this.$route.params.id).then(function (resp) {
         _this.apartment = resp.data;
       });
+    },
+    addVisualisation: function addVisualisation() {
+      window.axios.post("/api/visualisation/" + this.$route.params.id);
     }
   },
   mounted: function mounted() {
@@ -41057,7 +41067,7 @@ var render = function () {
         _vm._v(" "),
         _vm.formActive
           ? _c("FormContacts", {
-              attrs: { formSend: _vm.formSend },
+              attrs: { formSend: _vm.formSend, apartmentId: _vm.apartment.id },
               on: { closeForm: _vm.closeForm, sendForm: _vm.sendForm },
             })
           : _vm._e(),

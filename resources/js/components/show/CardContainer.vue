@@ -89,6 +89,7 @@
       <FormContacts
         v-if="formActive"
         :formSend="formSend"
+        :apartmentId="apartment.id"
         @closeForm="closeForm"
         @sendForm="sendForm"
       ></FormContacts>

@@ -50,6 +50,9 @@ export default {
     formSend: {
       type: Boolean,
     },
+    apartmentId: {
+      type: Number,
+    },
   },
   data() {
     return {
@@ -63,8 +66,9 @@ export default {
   },
   methods: {
     onFormSubmit() {
-      // Fare chiamata Api
-      this.$emit("sendForm");
+      window.axios.post("/api/message" + this.apartmentId).then((resp) => {
+        this.$emit("sendForm");
+      });
     },
   },
 };
