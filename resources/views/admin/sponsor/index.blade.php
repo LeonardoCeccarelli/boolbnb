@@ -12,11 +12,11 @@
     @if ($end_date < $now)
 
     <div class="  row text-center my-4">
-      <h1 class='mb-4 fw-bold'>SPONSORIZZA IL TUO ANNUNCIO </h1>
+      <h1 class='mb-4 fw-bold' style="word-wrap: break-word;">SPONSORIZZA IL TUO ANNUNCIO </h1>
       <p style="word-wrap: break-word;" class="fs-3 fw-bold">{{ $apartment->title }}</p>
     </div>
 
-    <div class=' row row-cols-3 justify-content-around text-center py-4 '>
+    <div class=' row row-cols-1 row-col-lg-3 justify-content-around text-center py-4 '>
 
       @foreach ($sponsor as $single_sponsor)
     
@@ -41,7 +41,7 @@
       
     </div>
 
-    <div class=' row row-cols-2 justify-content-center my-3'>
+    <div class='row row-cols-2 justify-content-center my-3'>
       <div class='col'>
 
         {{-- Payment Form --}}
