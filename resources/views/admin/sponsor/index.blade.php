@@ -41,8 +41,8 @@
       
     </div>
 
-    <div class='row row-cols-2 justify-content-center my-3'>
-      <div class='col'>
+    <div class="row justify-content-md-center">
+      <div class='col-12 col-md-8 col-lg-6 '>
 
         {{-- Payment Form --}}
         <form class="" id='payment-form' autocomplete='off' action='{{ route('admin.sponsor.checkout', $apartment) }}'
@@ -66,10 +66,10 @@
           <hr>
 
           {{-- payment --}}
-          <section class="col-12">
+          <section class="col-12 text-center">
 
             {{-- CREDIT CARD --}}
-            <div id='dropin-container'></div>
+            <div id='dropin-container' ></div>
 
             {{-- Submit Payment Button --}}
             <div class='submit-btn-continer text-center'>
@@ -81,7 +81,9 @@
         </form>
         {{-- End Payment Form --}}
       </div>
+
     </div>
+    
 
 
     @else
