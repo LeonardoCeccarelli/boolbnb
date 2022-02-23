@@ -46,7 +46,7 @@
                     </div>
                     <div class="col-12 col-md-10 col-lg-8">
                         <div class="form-label fw-bold fs-4">Ulteriori Informazioni:</div>
-                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-5 g-3">
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
                             <div class="col">
                                 <label for="field_rooms" class="form-label fw-bold">N° Stanze</label>
                                 <input type="number" min="1" max="20"
