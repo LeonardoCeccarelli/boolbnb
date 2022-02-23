@@ -7,7 +7,7 @@
 @if ($apartment->user_id == $user->id)
 
 <div class="container-fluid">
-  <div class="container d-flex flex-column align-items-center border position-relative">
+  <div class="container d-flex flex-column align-items-center position-relative">
 
     {{-- titolo / info base --}}
     <section class="bg-light col-11 mt-5 p-5 pb-0  rounded-top">
@@ -84,13 +84,77 @@
     <section class="bg-light col-11 mb-5 p-5 pt-0 rounded-bottom">
       <hr>
       <h4 class="fw-bold mt-4">Statistiche Del Tuo Annuncio</h4>
+      <hr>
     </section>
 
-    <div class="position-absolute" style="right: 0;top:500px;">
-      <p><i class="fas fa-envelope fs-1"></i></p>
-      <p><i class="fas fa-crown fs-1"></i></p>
-      <p><i class="fas fa-pen fs-1"></i></p>
-      <p><i class="fas fa-trash fs-1"></i></p>
+    {{-- delete button --}}
+    <div>
+          
+      <p class="fw-bold mb-1 d-inline me-4"><i class="fas fa-trash fs-1 me-3"></i> Vuoi Eliminare il tuo annuncio ?</p>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-danger btn-sm text-white" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">
+        Elimina Annuncio
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-dark" id="exampleModalLabel">Vuoi Eliminare Il tuo Annuncio?</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-dark">
+              Selezionando Conferma Il tuo Annuncio Verrà Elimnato.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary text-white" data-bs-dismiss="modal">Annulla</button>
+              <form action="{{ route('admin.apartment.destroy', $apartment->id) }}" method="post" {{--
+                onsubmit="return confirm('Vuoi Eliminare Il tuo Annuncio ?')" --}}>
+                @csrf
+                @method('delete')
+                <button type="submit" class="btn btn-danger text-white">Conferma</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <div class="position-fixed" style="right: 50px; top:200px;">
+      <ul class="list-unstyled text-center ">
+        <li class="mb-4">
+          
+          <a href="{{ route('admin.message', $apartment->id) }}"
+            class="fw-bold mb-1 text-decoration-none sms text-dark">
+            <i class="fas fa-envelope fs-1 mb-2 sms-icon"></i>
+            <p>Messaggi </p>
+          </a>
+        </li>
+        <li  class="mb-4">
+          
+          <a href="{{ route('admin.sponsor.index', $apartment) }}"
+                class="fw-bold mb-1  text-decoration-none text-dark ">
+                <i class="fas fa-crown fs-1 mb-2"></i>
+                <p>Sponsor</p>                
+          </a>
+        </li>
+        <li  class="mb-4">
+          
+          <a href="{{ route('admin.apartment.edit', $apartment->id) }}"
+            class="fw-bold mb-1 text-decoration-none text-dark ">
+            <i class="fas fa-pen fs-1 mb-2"></i>
+            <p>Modifica</p>
+             
+          </a>
+        </li>
+        
+      </ul>
+      
     </div>
   </div>
 </div>
