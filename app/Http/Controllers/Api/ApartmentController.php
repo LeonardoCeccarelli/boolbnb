@@ -49,6 +49,15 @@ class ApartmentController extends Controller
             $sponsorApartment = $apartment->whereHas("sponsor", function ($query) {
                 $query->whereDate("end_date", ">", Carbon::now()->toDateString());
             })->get();
+
+            foreach ($basicApartment as $apartment) {
+                $apartment['cover_img'] = url("storage/" . $apartment['cover_img']);
+            }
+
+            foreach ($sponsorApartment as $apartment) {
+                $apartment['cover_img'] = url("storage/" . $apartment['cover_img']);
+            }
+
             return [$basicApartment, $sponsorApartment, $lat, $lon];
         };
 
@@ -95,6 +104,14 @@ class ApartmentController extends Controller
                 ["end_date", ">", Carbon::now()]
             ]);
         })->get();
+
+        foreach ($basicApartment as $apartment) {
+            $apartment['cover_img'] = url("storage/" . $apartment['cover_img']);
+        }
+
+        foreach ($sponsorApartment as $apartment) {
+            $apartment['cover_img'] = url("storage/" . $apartment['cover_img']);
+        }
         return [$basicApartment, $sponsorApartment, $lat, $lon];
     }
 }
