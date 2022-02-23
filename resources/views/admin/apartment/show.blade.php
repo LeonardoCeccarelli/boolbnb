@@ -48,9 +48,15 @@
 
         {{-- immagini / carosello --}}
         <h4 class="fw-bold mb-4">Immagini Appartamento</h4>
-
-        <img src="{{ asset('storage/' . $apartment->cover_img) }}" alt=" {{$apartment->cover_img}}"
-          class="rounded mb-4 img-fluid" style="width: 580px;height:350px;">
+        <div class="rounded"  style="position: relative;">
+          <img src="{{ asset('storage/' . $apartment->cover_img) }}" class="img-fluid rounded border" alt="...">
+          @foreach($apartment->sponsor as $sp)
+            <button type="button" class="btn btn-warning mb-2 text-uppercase fw-bold" style="position: absolute;top:0;left:0;">
+              {{$sp->type}}                   
+            </button>                                            
+          @endforeach
+        </div>
+        
 
 
         <hr>
