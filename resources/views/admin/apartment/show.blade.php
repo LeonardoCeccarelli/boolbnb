@@ -51,7 +51,7 @@
         <div class="rounded"  style="position: relative;">
           <img src="{{ asset('storage/' . $apartment->cover_img) }}" class="img-fluid rounded border" alt="...">
           @foreach($apartment->sponsor as $sp)
-            <button type="button" class="btn btn-warning mb-2 text-uppercase fw-bold" style="position: absolute;top:0;left:0;">
+            <button type="button" class="btn btn-warning mb-2 text-uppercase fw-bold" style="position: absolute;top:15px;left:20px;">
               {{$sp->type}}                   
             </button>                                            
           @endforeach
