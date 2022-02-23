@@ -134,7 +134,7 @@
                         @foreach ($services as $service)
                             <label class="mx-2 my-2">
                                 {{ $service->name }}
-                                <input name="services[]" type="checkbox" value="{{ $service->id }}">
+                                <input class="form-check-input" name="services[]" type="checkbox" value="{{ $service->id }}">
                             </label>
                         @endforeach
                         </select>
@@ -149,7 +149,7 @@
                     </div>
                     <div class="col-12 col-md-10 col-lg-8 d-flex justify-content-center">
                         {{-- STILI BUTTON DA DEFINIRE --}}
-                        <button type="submit" class="btn btn-primary text-white">Aggiungi</button>
+                        <button type="submit" class="btn btn-primary  button button_2">Aggiungi</button>
                     </div>
                 </form>
             </div>

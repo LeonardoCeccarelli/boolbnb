@@ -115,7 +115,7 @@
                         @foreach ($services as $service)
                             <label class="mx-2 my-2">
                                 {{ $service->name }}
-                                <input name="services[]" type="checkbox"
+                                <input class="form-check-input" name="services[]" type="checkbox"
                                     value="{{ $service->id }}" @if ($apartment->services->contains($service)) checked @endif>
                             </label>
                         @endforeach
@@ -131,7 +131,7 @@
                     </div>
                     <div class="col-12 col-md-10 col-lg-8 d-flex justify-content-center">
                         {{-- STILI BUTTON DA DEFINIRE --}}
-                        <button type="submit" class="btn btn-primary text-white">Modifica</button>
+                        <button type="submit" class="btn btn-primary button button_2">Modifica</button>
                     </div>
                 </form>
             </div>
