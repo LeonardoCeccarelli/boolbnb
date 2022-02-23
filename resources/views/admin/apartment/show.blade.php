@@ -6,9 +6,8 @@
 
 @if ($apartment->user_id == $user->id)
 
-<div class="container-fluid"
-  style="background: rgb(2,0,36);background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,70,121,1) 35%, rgba(161,232,246,1) 100%);">
-  <div class="container pt-5 d-flex flex-column align-items-center ">
+<div class="container-fluid">
+  <div class="container d-flex flex-column align-items-center border position-relative">
 
     {{-- titolo / info base --}}
     <section class="bg-light col-11 mt-5 p-5 pb-0  rounded-top">
@@ -43,15 +42,16 @@
     </section>
 
 
-    <section class="infos d-flex flex-column flex-xl-row col-11  ">
-      <div class="left col-xl-7  bg-light p-5 pt-3">
+    <section class="infos d-flex justify-content-center col-11  my-4">
+      <div class="left col-9  bg-light p-5 pt-3  shadow rounded ">
 
         {{-- immagini / carosello --}}
-        <h4 class="fw-bold mb-4">Immagini Appartamento</h4>
-        <div class="rounded"  style="position: relative;">
+      
+        <div class="rounded py-4"  style="position: relative;">
+          
           <img src="{{ asset('storage/' . $apartment->cover_img) }}" class="img-fluid rounded border" alt="...">
           @foreach($apartment->sponsor as $sp)
-            <button type="button" class="btn btn-warning mb-2 text-uppercase fw-bold" style="position: absolute;top:15px;left:20px;">
+            <button type="button" class="btn btn-warning mb-2 text-uppercase fw-bold" style="position: absolute;top:40px;left:20px;">
               {{$sp->type}}                   
             </button>                                            
           @endforeach
@@ -76,83 +76,8 @@
           @endforeach
         </ul>
 
-      </div>
-
-      <div class="right  col-xl-5 bg-light p-5 ">
-
-        <div class="rounded shadow col-10  p-3 pb-5" style="background-color: #094679; ">
-          <ul class="rounded text-white list-unstyled p-3 ">
-            {{-- messages button --}}
-            <li class="mb-4 d-flex fs-5">
-
-              <a href="{{ route('admin.message', $apartment->id) }}"
-                class="fw-bold mb-1 text-white text-decoration-none">
-                Visualizza I Tuoi Messaggi <i class="fas fa-arrow-alt-circle-right"></i>
-              </a>
-            </li>
-            <hr>
-            {{-- sponsor button --}}
-            <li class="mb-4 fs-5 mt-4">
-
-              <a href="{{ route('admin.sponsor.index', $apartment) }}"
-                class="fw-bold mb-1 text-white text-decoration-none">
-                Prova Un Piano Di Sponsorship <i class="fas fa-arrow-alt-circle-right"></i>
-              </a>
-
-            </li>
-            <hr>
-            {{-- edit button --}}
-            <li class="mb-4 fs-5 mt-4">
-              <a href="{{ route('admin.apartment.edit', $apartment->id) }}"
-                class="fw-bold mb-1 text-white text-decoration-none">
-                Modifica Il Tuo Annuncio <i class="fas fa-arrow-alt-circle-right"></i>
-              </a>
-
-            </li>
-            <hr>
-            {{-- delete button --}}
-            <li class="mb-4 fs-5 mt-4">
-
-              <p class="fw-bold mb-1">Vuoi Eliminare il tuo annuncio ?</p>
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-danger  text-white" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">
-                Elimina Annuncio
-              </button>
-
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title text-dark" id="exampleModalLabel">Vuoi Eliminare Il tuo Annuncio?</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body text-dark">
-                      Selezionando Conferma Il tuo Annuncio Verrà Elimnato.
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-primary text-white" data-bs-dismiss="modal">Annulla</button>
-                      <form action="{{ route('admin.apartment.destroy', $apartment->id) }}" method="post" {{--
-                        onsubmit="return confirm('Vuoi Eliminare Il tuo Annuncio ?')" --}}>
-                        @csrf
-                        @method('delete')
-                        <button type="submit" class="btn btn-danger text-white">Conferma</button>
-
-
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-      </div>
+      </div>   
     </section>
-
 
 
     {{-- statistiche --}}
@@ -160,8 +85,16 @@
       <hr>
       <h4 class="fw-bold mt-4">Statistiche Del Tuo Annuncio</h4>
     </section>
+
+    <div class="position-absolute" style="right: 0;top:500px;">
+      <p><i class="fas fa-envelope fs-1"></i></p>
+      <p><i class="fas fa-crown fs-1"></i></p>
+      <p><i class="fas fa-pen fs-1"></i></p>
+      <p><i class="fas fa-trash fs-1"></i></p>
+    </div>
   </div>
 </div>
+
 
 @else
 
@@ -175,7 +108,7 @@
           </div>
           <div class="col-md-8 d-flex align-items-center">
             <div class="card-body text-center">
-              <h5 class="card-title mb-2">Lappartamento selezionato non è visualizzabile.</h5>
+              <h5 class="card-title mb-2">L'appartamento selezionato non è visualizzabile.</h5>
               <a href="{{ route('admin.home') }}" class="btn btn-primary text-light">I miei appartamenti</a>
             </div>
           </div>
