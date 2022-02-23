@@ -1,15 +1,15 @@
 @extends('layouts.app')
 @section('page_title', 'Dashboard | BoolBnB')
 @section('content')
-<div class="container-fluid"
-  style="background: rgb(2,0,36);background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,70,121,1) 35%, rgba(161,232,246,1) 100%);">
+<div class="container-fluid home-admin"
+ {{--  style="background: rgb(2,0,36);background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,70,121,1) 35%, rgba(161,232,246,1) 100%);" --}}>
   <div class="container  ">
     <div class="row justify-content-center">
       <div class="col-11 m-5">
         <div class="d-flex flex-column flex-md-row mb-4">
           <div class=" col col-md-7 py-3 text-white">
-            <h3 class="mb-3">Buongiorno {{ Auth::user()->name }} <i class="far fa-wifi"></i></h3>
-            <h2 class="fw-bold ">Benvenuto Nella Tua Area Riservata</h2>
+            <h3 class="mb-3 text-dark">Buongiorno {{ Auth::user()->name }} <i class="far fa-wifi"></i></h3>
+            <h2 class="fw-bold text-dark">Benvenuto Nella Tua Area Riservata</h2>
           </div>
           <div class=" col col-md-5 d-flex justify-content-end align-items-center">
             <button type="button" class="btn btn-dark btn-lg col col-md-10 "><a href="{{ route('admin.apartment.create') }}"
