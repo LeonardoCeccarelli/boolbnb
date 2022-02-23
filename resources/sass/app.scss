@@ -6,3 +6,65 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+
+.form-control:focus {
+    color: #212529;
+    background-color: #f8fafc;
+    border-color: #ff5a5f;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #ff5a608c;
+}
+
+.form-check-input {
+    background-color: white;
+}
+
+.form-check-input:focus {
+    background-color: #ff5a5f;
+    border-color: #ff5a5f;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #ff5a608c;
+}
+
+.form-check-input:checked {
+    background-color: #ff5a5f;
+    border-color: #ff5a5f;
+    outline: 0;
+}
+
+.button {
+    padding: 8px 13px;
+    font-size: 15px;
+}
+
+.button_2 {
+    cursor: pointer;
+    color: #ff5a5f;
+    background-color: white;
+    border: 2px solid #ff5a5f;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+}
+
+.button_2:hover {
+    color: white;
+    background-color: #ff5a5f;
+}
+
+.auth {
+.bg-format {
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    height:100vh;
+    
+}
+
+.card {
+    margin-top: 100px;
+    opacity: 0.9;
+    border-radius: 20px;
+}
+}
