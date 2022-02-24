@@ -12222,3 +12222,16 @@ fieldset:disabled .btn {
   background-color: #FF5A5F;
 }
 
+.icone {
+  right: 20px;
+  top: 200px;
+  font-size: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  .icone {
+    font-size: 13px;
+    right: 40px;
+  }
+}
+
