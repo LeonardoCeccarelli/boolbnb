@@ -36,7 +36,7 @@ class ApartmentController extends Controller
         $rooms = $request->rooms;
         $city = $request->city;
         $range = $request->range;
-        if ($range < 1 || $range > 20) $range = 20;
+        if ($range < 1 || $range > 35) $range = 20;
         $services = $request->services;
 
         $apartment = Apartment::with(["services", "user:id,name"])->where("visible", 1);
@@ -49,6 +49,15 @@ class ApartmentController extends Controller
             $sponsorApartment = $apartment->whereHas("sponsor", function ($query) {
                 $query->whereDate("end_date", ">", Carbon::now()->toDateString());
             })->get();
+
+            foreach ($basicApartment as $apartment) {
+                $apartment['cover_img'] = url("storage/" . $apartment['cover_img']);
+            }
+
+            foreach ($sponsorApartment as $apartment) {
+                $apartment['cover_img'] = url("storage/" . $apartment['cover_img']);
+            }
+
             return [$basicApartment, $sponsorApartment, $lat, $lon];
         };
 
@@ -95,6 +104,14 @@ class ApartmentController extends Controller
                 ["end_date", ">", Carbon::now()]
             ]);
         })->get();
+
+        foreach ($basicApartment as $apartment) {
+            $apartment['cover_img'] = url("storage/" . $apartment['cover_img']);
+        }
+
+        foreach ($sponsorApartment as $apartment) {
+            $apartment['cover_img'] = url("storage/" . $apartment['cover_img']);
+        }
         return [$basicApartment, $sponsorApartment, $lat, $lon];
     }
 }

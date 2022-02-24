@@ -1,7 +1,6 @@
-
 <footer class="mb-5">
   <div class="container ">
-    <div class="footer_a row row-cols-1 row-cols-md-2 row-cols-lg-4 py-5 border-top justify-content-evenly">
+    <div class="footer_a row row-cols-1 row-cols-md-2 row-cols-lg-4 py-5 justify-content-evenly">
       <div class="col mb-3 text-center text-md-start">
         <h5 class="fw-bold mb-2">Informazioni</h5>
         <ul class="nav flex-column">
@@ -45,10 +44,10 @@
           <i class="fab fa-facebook text-dark fs-3"></i>
         </a>
         <a href="#" class="nav-link me-2">
-            <i class="fab fa-twitter text-dark fs-3"></i>
+          <i class="fab fa-twitter text-dark fs-3"></i>
         </a>
         <a href="#" class="nav-link me-2">
-            <i class="fab fa-instagram text-dark fs-3"></i>
+          <i class="fab fa-instagram text-dark fs-3"></i>
         </a>
       </div>
       <div class="copyright ">
