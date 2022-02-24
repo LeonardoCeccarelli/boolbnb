@@ -5933,7 +5933,9 @@ __webpack_require__.r(__webpack_exports__);
         "default": function _default() {
           return {};
         }
-      }
+      },
+      apartment_id: this.$route.params.id,
+      ip_address: ''
     };
   },
   methods: {
@@ -5945,11 +5947,28 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     addVisualisation: function addVisualisation() {
-      window.axios.post("/api/visualisation/" + this.$route.params.id);
+      var _this2 = this;
+
+      window.axios.post("/api/visualisation", [this.apartment_id, this.ip_address]).then(function (resp) {
+        console.log(_this2.apartment_id, _this2.ip_address);
+      });
+    },
+    fetchIpAddress: function fetchIpAddress() {
+      var _this3 = this;
+
+      fetch('https://api.ipify.org?format=json').then(function (response) {
+        return response.json();
+      }).then(function (response) {
+        _this3.clientIp = response.ip;
+        _this3.ip_address = _this3.clientIp;
+
+        _this3.addVisualisation();
+      });
     }
   },
   mounted: function mounted() {
     this.getData();
+    this.fetchIpAddress();
   }
 });
 
@@ -58492,8 +58511,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/leonardo/Scrivania/Boolean/boolbnb/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/leonardo/Scrivania/Boolean/boolbnb/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/giovanniconti/Desktop/Boolean Course/Boolean #43/boolbnb/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/giovanniconti/Desktop/Boolean Course/Boolean #43/boolbnb/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

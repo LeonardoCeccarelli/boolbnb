@@ -22,5 +22,10 @@ Route::get("/welcome/sponsored", "Api\ApartmentController@getSponsored");
 Route::get("/search/apartment", "Api\ApartmentController@getFiltered");
 Route::get("/apartment/{id}", "Api\ApartmentController@getSingle");
 Route::get("/search/services", "Api\ServiceController@getAll");
+
+// Visualisation routes
 Route::post("/visualisation", "Api\VisualisationController@addToDb");
+Route::get("/visualisation/statistics/{id}", "Api\VisualisationController@getVisualisationsData")->name("api.chart");
+
+//  Messages routes
 Route::post("/message/{id}", "Api\MessageController@onFormSubmit");
