@@ -12219,20 +12219,6 @@ fieldset:disabled .btn {
 
 .button_2:hover {
   color: white;
-  background-color: #ff5a5f;
-}
-
-.auth .bg-format {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: center;
-  height: 100vh;
-}
-
-.auth .card {
-  margin-top: 100px;
-  opacity: 0.9;
-  border-radius: 20px;
   background-color: #FF5A5F;
 }
 
