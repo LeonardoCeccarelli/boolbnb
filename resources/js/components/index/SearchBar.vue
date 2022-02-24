@@ -36,7 +36,7 @@
               type="range"
               min="1"
               step="1"
-              max="20"
+              max="35"
               v-model="filterRange"
               class="slider"
               id="myRange"
@@ -129,7 +129,7 @@
           </div>
           <!-- Mappa -->
           <div class="col-6 d-none d-md-block">
-            <div class="map_container"></div>
+            <div class="map_container" id="myMap"></div>
           </div>
         </div>
       </div>
@@ -156,6 +156,7 @@ export default {
       cityLon: "",
       services: [],
       switchPage: false,
+      apiKey: "74G2HVlLeNW6ZnVG4yzsaMj20OxuW1sJ",
     };
   },
   methods: {
@@ -178,11 +179,12 @@ export default {
           },
         })
         .then((resp) => {
-          console.log(resp.data);
+          // console.log(resp.data);
           this.filteredBasicApartments = resp.data[0];
           this.filteredSponsorApartments = resp.data[1];
           this.cityLat = resp.data[2];
           this.cityLon = resp.data[3];
+          this.getMap();
         });
     },
     getServices() {
@@ -200,8 +202,29 @@ export default {
       }
 
       this.getFiltered();
+      this.getMap();
     },
+    getMap() {
+      let mapZoom = 10;
+      if (this.cityLat === 42.3011 && this.cityLon === 12.3424) {
+        mapZoom = 5;
+      }
+      const map = tt.map({
+        key: this.apiKey,
+        container: myMap,
+        center: [this.cityLon, this.cityLat],
+        zoom: mapZoom,
+        style: {
+          map: "basic_main",
+        },
+      });
 
+      this.filteredBasicApartments.forEach((apartment) => {
+        const marker = new tt.Marker()
+          .setLngLat([apartment.lon, apartment.lat])
+          .addTo(map);
+      });
+    },
     switchApartment(value) {
       if (value === "sponsor") this.switchPage = false;
       else if (value === "all") this.switchPage = true;
