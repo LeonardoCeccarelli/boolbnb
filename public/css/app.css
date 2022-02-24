@@ -12178,6 +12178,13 @@ fieldset:disabled .btn {
   }
 }
 
+.narrow-font {
+  text-transform: uppercase;
+  letter-spacing: 0;
+  transform: scale(0.9, 1);
+  font-weight: 700;
+}
+
 .form-control:focus {
   color: #212529;
   background-color: #f8fafc;
@@ -12206,6 +12213,7 @@ fieldset:disabled .btn {
 .button {
   padding: 8px 13px;
   font-size: 15px;
+  text-decoration: none !important;
 }
 
 .button_2 {
@@ -12222,6 +12230,20 @@ fieldset:disabled .btn {
   background-color: #ff5a5f;
 }
 
+.button_4 {
+  cursor: pointer;
+  color: #001533;
+  background-color: white;
+  border: 2px solid #001533;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+}
+
+.button_4:hover {
+  color: white;
+  background-color: #001533;
+}
+
 .auth .bg-format {
   background-size: cover;
   background-repeat: no-repeat;
@@ -12233,5 +12255,13 @@ fieldset:disabled .btn {
   margin-top: 100px;
   opacity: 0.9;
   border-radius: 20px;
+}
+
+.admin-form .input-70 {
+  width: 70px;
+}
+
+.admin-form .input-150 {
+  width: 150px;
 }
 
