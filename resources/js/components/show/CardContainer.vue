@@ -4,14 +4,11 @@
       <div class="row g-4 image_container mb-5">
         <div class="col-12 col-md-6">
           <div class="cover_img" @click="getOverlayImage">
-            <img
-              src="https://www.classcountryhomes.it/wp-content/uploads/2019/05/appartamenti-in-vendita-roma-nord-38.jpg"
-              alt=""
-            />
+            <img :src="apartment.cover_img" alt="" />
           </div>
         </div>
         <div class="col-12 col-md-6">
-          <div class="other_img" @click="getOverlayImage">
+          <div class="other_img" @click="getOverlayImage()">
             <div class="overlay_image">
               <div class="button_overlay_image">
                 <button class="btn btn-primary" type="button">
@@ -69,16 +66,27 @@
           </p>
           <p class="mb-5">
             Proprietario/a:
-            <span class="fw-bold">{{ apartment.user.name }}</span>
+            <span v-if="this.apartment.user" class="fw-bold">{{
+              apartment.user.name
+            }}</span>
           </p>
           <h5 class="mb-4">Servizi disponibili</h5>
-          <div class="row row-cols-2 row-cols-sm-1 row-cols-md-2 gy-3">
-            <div v-if="apartment.services" class="col">
-              <p><i class="fas fa-wifi"></i><span class="ms-2">Wi-Fi</span></p>
+          <div
+            v-if="apartment.services && apartment.services.length"
+            class="row row-cols-2 row-cols-sm-1 row-cols-md-2 gy-3"
+          >
+            <div
+              v-for="service in apartment.services"
+              :key="service.id"
+              class="col"
+            >
+              <p v-html="service.icon">
+                <span class="ms-2">{{ service.name }}</span>
+              </p>
             </div>
-            <div v-else class="col">
-              <p>Nessun servizio</p>
-            </div>
+          </div>
+          <div v-else>
+            <h5>Nessun servizio</h5>
           </div>
         </div>
       </div>
@@ -139,6 +147,7 @@ export default {
       this.overlayImage = false;
     },
   },
+  mounted() {},
 };
 </script>
 
