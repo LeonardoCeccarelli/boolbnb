@@ -195,7 +195,7 @@
       data: {
           labels: [],
           datasets: [{
-              label: '# of Votes',
+              label: '# of Visualisations',
               data: [],
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
@@ -213,13 +213,18 @@
                   'rgba(153, 102, 255, 1)',
                   'rgba(255, 159, 64, 1)'
               ],
-              borderWidth: 1
+              borderWidth: 1,
+              pointStyle: 'circle',
+              pointRadius: 5,
           }]
       },
       options: {
           scales: {
               y: {
-                  beginAtZero: true
+                  beginAtZero: true,
+                  ticks: {
+                    stepSize: 1
+                  }
               }
           }
       }
