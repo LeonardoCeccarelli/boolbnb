@@ -36,7 +36,7 @@ class ApartmentController extends Controller
         $rooms = $request->rooms;
         $city = $request->city;
         $range = $request->range;
-        if ($range < 1 || $range > 20) $range = 20;
+        if ($range < 1 || $range > 35) $range = 20;
         $services = $request->services;
 
         $apartment = Apartment::with(["services", "user:id,name"])->where("visible", 1);
