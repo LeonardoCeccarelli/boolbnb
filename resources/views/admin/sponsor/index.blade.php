@@ -101,6 +101,21 @@
             braintree.dropin.create({
                 authorization: client_token,
                 container: '#dropin-container',
+                card:{
+                  overrides: {
+                    fields: {
+                      number: {
+                        placeholder: '4111 1111 1111 1111',
+                      },
+                      expirationDate:{
+                        placeholder: '12/22',
+                      },
+                      cvv:{
+                        placeholder: '123',
+                      },
+                    }
+                  }
+                }
                 // ...plus remaining configuration
             }, function(createErr, instance) {
                 // Use `dropinInstance` here
