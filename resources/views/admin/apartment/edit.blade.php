@@ -46,7 +46,7 @@
                     </div>
                     <div class="col-12 col-md-10 col-lg-8">
                         <div class="form-label fw-bold fs-4">Ulteriori Informazioni:</div>
-                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-5 g-3">
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
                             <div class="col">
                                 <label for="field_rooms" class="form-label fw-bold">N° Stanze</label>
                                 <input type="number" min="1" max="20"
@@ -115,7 +115,7 @@
                         @foreach ($services as $service)
                             <label class="mx-2 my-2">
                                 {{ $service->name }}
-                                <input name="services[]" type="checkbox"
+                                <input class="form-check-input" name="services[]" type="checkbox"
                                     value="{{ $service->id }}" @if ($apartment->services->contains($service)) checked @endif>
                             </label>
                         @endforeach
@@ -131,7 +131,7 @@
                     </div>
                     <div class="col-12 col-md-10 col-lg-8 d-flex justify-content-center">
                         {{-- STILI BUTTON DA DEFINIRE --}}
-                        <button type="submit" class="btn btn-primary text-white">Modifica</button>
+                        <button type="submit" class="btn btn-primary button button_2">Modifica</button>
                     </div>
                 </form>
             </div>

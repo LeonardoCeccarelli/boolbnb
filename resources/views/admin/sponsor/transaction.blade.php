@@ -7,7 +7,8 @@
     <div class="container bg-light rounded p-5 text-center">
 
       <h1 class="fw-bold">Congratulazioni {{ Auth::user()->name }}</h1>
-      <h3>Hai attivato la sponsorizzazzione perl'appartamento <br> {{ $apartment->title }}</h3>
+      <h3 class="mb-4">Hai attivato la sponsorizazzione per il tuo annuncio </h3>
+      <h3 class="mb-4" >{{ $apartment->title }}</h3>
       <a href="{{ route('admin.home') }}">Torna Nella Tua Dashboard</a>
     </div>
 </div>
