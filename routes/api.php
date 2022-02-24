@@ -28,4 +28,4 @@ Route::post("/visualisation", "Api\VisualisationController@addToDb");
 Route::get("/visualisation/statistics/{id}", "Api\VisualisationController@getVisualisationsData")->name("api.chart");
 
 //  Messages routes
-Route::post("/message/{id}", "Api\MessageController@onFormSubmit");
+Route::post("/message", "Api\MessageController@onFormSubmit");
