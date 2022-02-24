@@ -14,7 +14,9 @@ export default {
         type: Object,
         default: () => ({}),
       },
-    };
+      apartment_id: this.$route.params.id,
+      ip_address: '',
+      }
   },
   methods: {
     getData() {
@@ -25,11 +27,27 @@ export default {
         });
     },
     addVisualisation() {
-      window.axios.post("/api/visualisation/" + this.$route.params.id);
+      window.axios.post("/api/visualisation", [
+        this.apartment_id,
+        this.ip_address,
+      ])
+      .then((resp)=> {
+        console.log(this.apartment_id, this.ip_address);
+      });
+    },
+
+    fetchIpAddress(){fetch('https://api.ipify.org?format=json')
+      .then(response => response.json())
+      .then(response => {
+      this.clientIp = response.ip;
+      this.ip_address = this.clientIp;
+      this.addVisualisation();
+      });
     },
   },
   mounted() {
     this.getData();
+    this.fetchIpAddress();
   },
 };
 </script>
