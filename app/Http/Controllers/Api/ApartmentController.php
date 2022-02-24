@@ -73,8 +73,10 @@ class ApartmentController extends Controller
             $endUrl = '.json?key=';
             $url = $baseUrl . $city . $endUrl . $key;
             $response = Http::get($url);
-            $lat = $response->json()['results'][0]['position']['lat'];
-            $lon = $response->json()['results'][0]['position']['lon'];
+            if ($response->json()['results']) {
+                $lat = $response->json()['results'][0]['position']['lat'];
+                $lon = $response->json()['results'][0]['position']['lon'];
+            }
 
             // Calcolo l'area di ricerca convertendi i km in gradi
             $R = 6371;
