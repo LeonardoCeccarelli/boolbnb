@@ -88,11 +88,11 @@
     </section>
 
     {{-- delete button --}}
-    <div>
+    <div class="text-center">
           
-      <p class="fw-bold mb-1 d-inline me-4"><i class="fas fa-trash fs-1 me-3"></i> Vuoi Eliminare il tuo annuncio ?</p>
+      <p class="fw-bold mb-1  me-4"><i class="fas fa-trash fs-3 me-3 mb-3"></i> Vuoi Eliminare il tuo annuncio ?</p>
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-danger btn-sm text-white" data-bs-toggle="modal"
+      <button type="button" class="btn btn-danger btn-sm text-white text mb-4" data-bs-toggle="modal"
         data-bs-target="#exampleModal">
         Elimina Annuncio
       </button>
@@ -125,13 +125,13 @@
     
 
 
-    <div class="position-fixed" style="right: 50px; top:200px;">
+    <div class="position-fixed icone" style="">
       <ul class="list-unstyled text-center ">
         <li class="mb-4">
           
           <a href="{{ route('admin.message', $apartment->id) }}"
             class="fw-bold mb-1 text-decoration-none sms text-dark">
-            <i class="fas fa-envelope fs-1 mb-2 sms-icon"></i>
+            <i class="fas fa-envelope fs-2 mb-2 sms-icon"></i>
             <p>Messaggi </p>
           </a>
         </li>
@@ -139,7 +139,7 @@
           
           <a href="{{ route('admin.sponsor.index', $apartment) }}"
                 class="fw-bold mb-1  text-decoration-none text-dark ">
-                <i class="fas fa-crown fs-1 mb-2"></i>
+                <i class="fas fa-crown fs-2 mb-2"></i>
                 <p>Sponsor</p>                
           </a>
         </li>
@@ -147,7 +147,7 @@
           
           <a href="{{ route('admin.apartment.edit', $apartment->id) }}"
             class="fw-bold mb-1 text-decoration-none text-dark ">
-            <i class="fas fa-pen fs-1 mb-2"></i>
+            <i class="fas fa-pen fs-2 mb-2"></i>
             <p>Modifica</p>
              
           </a>
