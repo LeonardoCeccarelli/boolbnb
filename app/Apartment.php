@@ -4,12 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use CyrildeWit\EloquentViewable\Contracts\Viewable;
-use CyrildeWit\EloquentViewable\InteractsWithViews;
 
-class Apartment extends Model implements Viewable
+class Apartment extends Model
 {
-  use InteractsWithViews;
 
     protected $fillable = [
         "title",
