@@ -22,7 +22,7 @@ class MessageController extends Controller
 
         $data = $request->all();
 
-        // Mail::to(env("MAIL_CONTACT_DESTINATION"))->send(new SendNewMail($data));
+        Mail::to(env("MAIL_CONTACT_DESTINATION"))->send(new SendNewMail($data));
 
         $newMessage = new Message();
         $newMessage->fill($data);
