@@ -26,25 +26,24 @@
           </div>
         </div>
       </div>
-      <MapGeocode></MapGeocode>
+      <MapGeocode
+        :apartmentLat="apartment.lat"
+        :apartmentLon="apartment.lon"
+      ></MapGeocode>
       <div class="row my-5">
         <div class="col-12 col-md-8">
           <div class="left_info">
             <div class="title_container mb-4">
               <h2>{{ apartment.title }}</h2>
-              <p>Roma - Piazza Venezia</p>
-              <p>4 stanze/a - 4 posti/o letto - 1 bagni/o</p>
+              <p>{{ apartment.city }} - {{ apartment.address }}</p>
+              <p>
+                {{ apartment.rooms }} stanze - {{ apartment.beds }} posti/o
+                letto - {{ apartment.bathrooms }} bagni/o
+              </p>
             </div>
             <div class="description_container mb-5">
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Provident, ducimus itaque? Expedita saepe praesentium provident,
-                eaque fuga rerum accusamus optio est repudiandae voluptate sint
-                reiciendis consequatur laboriosam veniam, incidunt nisi. Non
-                dolore alias quam fuga nisi doloribus commodi ut? Quisquam
-                consequuntur facilis hic, in, illum ipsum beatae quo nulla
-                tenetur sed perferendis expedita animi similique eius recusandae
-                tempore molestiae? Tempora!
+                {{ apartment.description }}
               </p>
             </div>
             <div class="form_button">
@@ -60,27 +59,25 @@
           </div>
         </div>
         <div class="col-12 col-md-4 right_info">
-          <p class="mb-2"><span class="price">€50</span>/notte</p>
+          <p class="mb-2">
+            <span class="price">€{{ apartment.night_price }}</span
+            >/notte
+          </p>
+          <p class="mb-2">
+            <span class="price">{{ apartment.square_metres }}</span
+            >/metri²
+          </p>
           <p class="mb-5">
-            Proprietario/a: <span class="fw-bold">Leonardo</span>
+            Proprietario/a:
+            <span class="fw-bold">{{ apartment.user.name }}</span>
           </p>
           <h5 class="mb-4">Servizi disponibili</h5>
           <div class="row row-cols-2 row-cols-sm-1 row-cols-md-2 gy-3">
-            <div class="col">
+            <div v-if="apartment.services" class="col">
               <p><i class="fas fa-wifi"></i><span class="ms-2">Wi-Fi</span></p>
             </div>
-            <div class="col">
-              <p>
-                <i class="fas fa-wifi"></i><span class="ms-2">Portineria</span>
-              </p>
-            </div>
-            <div class="col">
-              <p><i class="fas fa-wifi"></i><span class="ms-2">Sauna</span></p>
-            </div>
-            <div class="col">
-              <p>
-                <i class="fas fa-wifi"></i><span class="ms-2">Piscina</span>
-              </p>
+            <div v-else class="col">
+              <p>Nessun servizio</p>
             </div>
           </div>
         </div>

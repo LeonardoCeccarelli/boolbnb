@@ -22,12 +22,16 @@
 
 <script>
 export default {
+  // props: {
+  //   apartmentLat,
+  //   apartmentLon,
+  // },
   data() {
     return {
       classMap: "show",
       apiKey: "74G2HVlLeNW6ZnVG4yzsaMj20OxuW1sJ",
-      lon: "12.48945",
-      lat: "41.89358",
+      lon: 40.84567,
+      lat: 12.5643,
     };
   },
   methods: {
