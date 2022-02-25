@@ -11,23 +11,24 @@
   <div class="container my-5 p-5 shadow">
     <h1 class="text-center mb-3">Area Messaggi</h1>
     <h4 class="text-center mb-4">Controlla i tuoi messaggi</h4>
+
     <div class="accordion rounded" id="accordionPanelsStayOpenExample">
+
         @foreach ($message as $mes)
         <div class=" accordion accordion-flush  mb-4 " id="accordionFlushExample{{$mes->id}}">
-            <div class="accordion-item">
+            <div class="accordion-item shadow">
               <h2 class="accordion-header" id="flush-headingOne">
                 <button class="accordion-button collapsed sms-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne{{$mes->id}}" aria-expanded="false" aria-controls="flush-collapseOne{{$mes->id}}">
-                    {{$mes->name}} | {{$mes->email}} | {{$mes->object}}
+                   <span class="mx-4 text-uppercase">{{$mes->object}}</span>|<span class="mx-4 text-capitalize">{{$mes->name}}</span>|<span class="mx-4">{{$mes->email}}</span>
                 </button>
               </h2>
               <div id="flush-collapseOne{{$mes->id}}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
+                <div class="accordion-body  py-3">
                     {{$mes->content}}
 
-                    <div class="text-center">
-          
-                      
-                      <button type="button" class="btn btn-danger btn-sm text-white text mb-4" data-bs-toggle="modal"
+                    <div class="text-center ">
+                   
+                      <button type="button" class="btn btn-danger btn-sm text-white text mt-4" data-bs-toggle="modal"
                         data-bs-target="#exampleModal{{$mes->id}}">
                         Elimina Messaggio
                       </button>
@@ -64,8 +65,7 @@
               </div>
             </div>
            
-        </div>
-          
+        </div>        
         @endforeach
         
         
