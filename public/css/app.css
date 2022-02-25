@@ -12228,6 +12228,11 @@ fieldset:disabled .btn {
   font-size: 10px;
 }
 
+.sms-button {
+  background-color: #FF5A5F;
+  color: white;
+}
+
 @media only screen and (min-width: 600px) {
   .icone {
     font-size: 13px;

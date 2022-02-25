@@ -11278,7 +11278,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.city-card {\n  cursor: pointer;\n  margin: 5px auto;\n  position: relative;\n  overflow: hidden;\n}\n.city-card:hover .overlay {\n  opacity: 0.7;\n  transform: scale(1);\n}\n.overlay {\n  position: absolute;\n  background-color: #ff5a5f;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  transform: scale(1.3);\n  opacity: 0;\n  transition: transform 0.4s ease 0s;\n}\n.overlay span {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  font-weight: bold;\n  font-size: 5em;\n  color: #fff;\n  font-family: Sans-serif;\n}\n.city-card img {\n  -o-object-fit: cover;\n     object-fit: cover;\n  transition: transform 0.8s ease;\n}\n.city-card:hover img {\n  transform: scale(1.1);\n}\n", ""]);
+exports.push([module.i, "\n.city-card {\r\n  cursor: pointer;\r\n  margin: 5px auto;\r\n  position: relative;\r\n  overflow: hidden;\n}\n.city-card:hover .overlay {\r\n  opacity: 0.7;\r\n  transform: scale(1);\n}\n.overlay {\r\n  position: absolute;\r\n  background-color: #ff5a5f;\r\n  width: 100%;\r\n  height: 100%;\r\n  top: 0;\r\n  transform: scale(1.3);\r\n  opacity: 0;\r\n  transition: transform 0.4s ease 0s;\n}\n.overlay span {\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 50%;\r\n  transform: translate(-50%, -50%);\r\n  font-weight: bold;\r\n  font-size: 5em;\r\n  color: #fff;\r\n  font-family: Sans-serif;\n}\n.city-card img {\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  transition: transform 0.8s ease;\n}\n.city-card:hover img {\r\n  transform: scale(1.1);\n}\r\n", ""]);
 
 // exports
 
@@ -11297,7 +11297,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* utilities */\n.white[data-v-b4eb6a1c] {\n  color: white;\n}\n.radius-30[data-v-b4eb6a1c] {\n  border-radius: 30px;\n}\n.bg-blue[data-v-b4eb6a1c] {\n  background-color: #001533;\n}\n.hero-bg[data-v-b4eb6a1c] {\n  background-image: url(\"/img/hero-img.jpg\");\n  background-size: cover;\n  background-position-y: center;\n  height: 600px;\n  border-radius: 30px;\n}\ninput[data-v-b4eb6a1c] {\n  border-radius: 30px;\n}\n.h100[data-v-b4eb6a1c] {\n  height: 100%;\n}\n/* style bottoni */\n.button[data-v-b4eb6a1c] {\n  padding: 8px 13px;\n  font-size: 15px;\n  text-decoration: none;\n}\n.button_1[data-v-b4eb6a1c] {\n  cursor: pointer;\n  color: white;\n  background-color: #001533;\n  border: 2px solid #001533;\n  transition: all 0.2s linear;\n}\n.button_1[data-v-b4eb6a1c]:hover {\n  box-shadow: 0px 10px 13px -7px #000000,\n    0px 0px 10px 5px rgba(255, 90, 95, 0.8);\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* utilities */\n.white[data-v-b4eb6a1c] {\r\n  color: white;\n}\n.radius-30[data-v-b4eb6a1c] {\r\n  border-radius: 30px;\n}\n.bg-blue[data-v-b4eb6a1c] {\r\n  background-color: #001533;\n}\n.hero-bg[data-v-b4eb6a1c] {\r\n  background-image: url(\"/img/hero-img.jpg\");\r\n  background-size: cover;\r\n  background-position-y: center;\r\n  height: 600px;\r\n  border-radius: 30px;\n}\ninput[data-v-b4eb6a1c] {\r\n  border-radius: 30px;\n}\n.h100[data-v-b4eb6a1c] {\r\n  height: 100%;\n}\r\n/* style bottoni */\n.button[data-v-b4eb6a1c] {\r\n  padding: 8px 13px;\r\n  font-size: 15px;\r\n  text-decoration: none;\n}\n.button_1[data-v-b4eb6a1c] {\r\n  cursor: pointer;\r\n  color: white;\r\n  background-color: #001533;\r\n  border: 2px solid #001533;\r\n  transition: all 0.2s linear;\n}\n.button_1[data-v-b4eb6a1c]:hover {\r\n  box-shadow: 0px 10px 13px -7px #000000,\r\n    0px 0px 10px 5px rgba(255, 90, 95, 0.8);\n}\r\n", ""]);
 
 // exports
 
@@ -11316,7 +11316,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.sponsored-card {\n  position: relative;\n  border-radius: 5px;\n  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);\n  border-radius: 5px;\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card::after {\n  content: \"\";\n  border-radius: 5px;\n  position: absolute;\n  z-index: -1;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);\n  opacity: 0;\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card:hover {\n  transform: scale(1.05, 1.05);\n}\n.sponsored-card:hover::after {\n  opacity: 1;\n}\n", ""]);
+exports.push([module.i, "\n.sponsored-card {\r\n  position: relative;\r\n  border-radius: 5px;\r\n  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);\r\n  border-radius: 5px;\r\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card::after {\r\n  content: \"\";\r\n  border-radius: 5px;\r\n  position: absolute;\r\n  z-index: -1;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);\r\n  opacity: 0;\r\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card:hover {\r\n  transform: scale(1.05, 1.05);\n}\n.sponsored-card:hover::after {\r\n  opacity: 1;\n}\r\n", ""]);
 
 // exports
 
@@ -58813,8 +58813,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/giovanniconti/Desktop/Boolean Course/Boolean #43/boolbnb/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/giovanniconti/Desktop/Boolean Course/Boolean #43/boolbnb/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\MAMP\Esercizi Php\boolbnb\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\MAMP\Esercizi Php\boolbnb\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
