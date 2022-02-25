@@ -15,6 +15,7 @@
 
     <div class="accordion accordion-flush" id="accordionFlushExample">
       @foreach ($message as $mes)
+      
       <div class="accordion-item shadow my-4">
         <h2 class="accordion-header" id="flush-headingOne">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne{{$mes->id}}" aria-expanded="false" aria-controls="flush-collapseOne{{$mes->id}}">
