@@ -1,12 +1,12 @@
 <template>
-  <div class="hero bg-blue py-5">
-    <div class="container hero-bg">
+  <div class="container-flex hero">
+    <div class="hero-bg">
       <div class="row row-cols-1 row-cols-lg-2 g-lg-3 h100">
         <div class="col h100">
           <div class="d-flex justify-content-center align-items-center h100">
             <!-- searchform -->
             <div class="white text-center py-4 w-50">
-              <h3 class="mb-4">Qual'è la tua prossima avventura?</h3>
+              <h1 class="mb-4">Qual'è la tua prossima avventura?</h1>
               <div class="my-3">
                 <input
                   class="py-1 ps-3"
@@ -43,7 +43,7 @@
         <div class="col h100 d-none d-lg-block">
           <div class="d-flex justify-content-center align-items-center h100">
             <div class="text-center py-4 w-50">
-              <h3 class="mb-5 white">Non sai dove andare?</h3>
+              <h1 class="mb-5 white">Non sai dove andare?</h1>
               <router-link
                 :to="{ name: 'search' }"
                 class="button button_1 radius-30"
@@ -74,22 +74,15 @@ export default {
   color: white;
 }
 
-.radius-30 {
-  border-radius: 30px;
-}
 
-.bg-blue {
-  background-color: #001533;
-}
 
 .hero-bg {
   background-image: url("/img/hero-img.jpg");
   background-size: cover;
   background-position-y: center;
-  height: 600px;
-  border-radius: 30px;
+  height: 1000px;
+ 
 }
-
 input {
   border-radius: 30px;
 }

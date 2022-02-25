@@ -11297,7 +11297,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* utilities */\n.white[data-v-b4eb6a1c] {\r\n  color: white;\n}\n.radius-30[data-v-b4eb6a1c] {\r\n  border-radius: 30px;\n}\n.bg-blue[data-v-b4eb6a1c] {\r\n  background-color: #001533;\n}\n.hero-bg[data-v-b4eb6a1c] {\r\n  background-image: url(\"/img/hero-img.jpg\");\r\n  background-size: cover;\r\n  background-position-y: center;\r\n  height: 600px;\r\n  border-radius: 30px;\n}\ninput[data-v-b4eb6a1c] {\r\n  border-radius: 30px;\n}\n.h100[data-v-b4eb6a1c] {\r\n  height: 100%;\n}\r\n/* style bottoni */\n.button[data-v-b4eb6a1c] {\r\n  padding: 8px 13px;\r\n  font-size: 15px;\r\n  text-decoration: none;\n}\n.button_1[data-v-b4eb6a1c] {\r\n  cursor: pointer;\r\n  color: white;\r\n  background-color: #001533;\r\n  border: 2px solid #001533;\r\n  transition: all 0.2s linear;\n}\n.button_1[data-v-b4eb6a1c]:hover {\r\n  box-shadow: 0px 10px 13px -7px #000000,\r\n    0px 0px 10px 5px rgba(255, 90, 95, 0.8);\n}\r\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* utilities */\n.white[data-v-b4eb6a1c] {\r\n  color: white;\n}\n.hero-bg[data-v-b4eb6a1c] {\r\n  background-image: url(\"/img/hero-img.jpg\");\r\n  background-size: cover;\r\n  background-position-y: center;\r\n  height: 1000px;\n}\ninput[data-v-b4eb6a1c] {\r\n  border-radius: 30px;\n}\n.h100[data-v-b4eb6a1c] {\r\n  height: 100%;\n}\r\n/* style bottoni */\n.button[data-v-b4eb6a1c] {\r\n  padding: 8px 13px;\r\n  font-size: 15px;\r\n  text-decoration: none;\n}\n.button_1[data-v-b4eb6a1c] {\r\n  cursor: pointer;\r\n  color: white;\r\n  background-color: #001533;\r\n  border: 2px solid #001533;\r\n  transition: all 0.2s linear;\n}\n.button_1[data-v-b4eb6a1c]:hover {\r\n  box-shadow: 0px 10px 13px -7px #000000,\r\n    0px 0px 10px 5px rgba(255, 90, 95, 0.8);\n}\r\n", ""]);
 
 // exports
 
@@ -41826,8 +41826,8 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "hero bg-blue py-5" }, [
-    _c("div", { staticClass: "container hero-bg" }, [
+  return _c("div", { staticClass: "container-flex hero" }, [
+    _c("div", { staticClass: "hero-bg" }, [
       _c("div", { staticClass: "row row-cols-1 row-cols-lg-2 g-lg-3 h100" }, [
         _c("div", { staticClass: "col h100" }, [
           _c(
@@ -41838,7 +41838,7 @@ var render = function () {
             },
             [
               _c("div", { staticClass: "white text-center py-4 w-50" }, [
-                _c("h3", { staticClass: "mb-4" }, [
+                _c("h1", { staticClass: "mb-4" }, [
                   _vm._v("Qual'è la tua prossima avventura?"),
                 ]),
                 _vm._v(" "),
@@ -41935,7 +41935,7 @@ var render = function () {
                 "div",
                 { staticClass: "text-center py-4 w-50" },
                 [
-                  _c("h3", { staticClass: "mb-5 white" }, [
+                  _c("h1", { staticClass: "mb-5 white" }, [
                     _vm._v("Non sai dove andare?"),
                   ]),
                   _vm._v(" "),

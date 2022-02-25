@@ -1,4 +1,4 @@
-<footer class="mb-5">
+<footer class="mt-5 py-5">
   <div class="container ">
     <div class="footer_a row row-cols-1 row-cols-md-2 row-cols-lg-4 py-5 justify-content-evenly">
       <div class="col mb-3 text-center text-md-start">

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container-fluid home-admin"
  {{--  style="background: rgb(2,0,36);background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,70,121,1) 35%, rgba(161,232,246,1) 100%);" --}}>
-  <div class="container  ">
+  <div class="container">
     <div class="row justify-content-center">
       <div class="col-11 m-5">
         <div class="d-flex flex-column flex-md-row mb-4">
