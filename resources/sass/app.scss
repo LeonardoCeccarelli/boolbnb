@@ -49,19 +49,20 @@
     top:200px;
     font-size: 10px;
 }
-
-.sms-button{
-    background-color: aqua;
-    color:white;
-    
+.accordion-item{
+    border-radius: 20px;
 }
-.sms-button:focus {
+.accordion-button:focus{
     background-color: #FF5A5F;
-    border-color: #FF5A5F;
-    outline: 0;
     box-shadow: 0 0 0 0.25rem #ff5a608c;
     color:white;
 }
+.accordion-button:not(.collapsed){
+    background-color: #FF5A5F;
+    box-shadow: 0 0 0 0.25rem #ff5a608c;
+    color:white;
+}
+
 @media only screen and (min-width: 600px) {
     .icone {
       font-size:13px;
