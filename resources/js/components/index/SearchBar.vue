@@ -103,7 +103,7 @@
         <div class="row g-0">
           <!-- Sezione Appartamenti -->
           <div class="col-12 col-md-6">
-            <div class="apartment_container">
+            <div class="apartment_container px-5">
               <div v-if="!switchPage" class="sponsor_column">
                 <div v-if="filteredSponsorApartments.length">
                   <ApartmentCard
@@ -337,13 +337,11 @@ a.custom {
 .search_container {
   border: 2px solid transparent;
   border-radius: 10px;
-  background: rgb(0, 21, 51);
-  background: linear-gradient(
-    36deg,
-    rgba(0, 21, 51, 0.20211834733893552) 0%,
-    rgba(255, 90, 95, 0.30015756302521013) 47%,
-    rgba(0, 21, 51, 0.2) 100%
-  );
+  
+
+  
+ 
+
   overflow: hidden;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 21, 51, 0.2);
   box-shadow: 0px 0px 20px 0px rgba(0, 21, 51, 0.2);

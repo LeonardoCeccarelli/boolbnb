@@ -12214,6 +12214,19 @@ fieldset:disabled .btn {
   padding: 8px 13px;
   font-size: 15px;
   text-decoration: none !important;
+  border-radius: 10px !important;
+}
+
+.button_1 {
+  cursor: pointer;
+  color: white;
+  background-color: #001533;
+  border: 2px solid #001533;
+  transition: all 0.2s linear;
+}
+
+.button_1:hover {
+  box-shadow: 0px 10px 13px -7px #000000, 0px 0px 10px 5px rgba(255, 90, 95, 0.8);
 }
 
 .button_2 {
@@ -12221,7 +12234,6 @@ fieldset:disabled .btn {
   color: #FF5A5F;
   background-color: white;
   border: 2px solid #FF5A5F;
-  border-radius: 10px;
   transition: all 0.2s linear;
 }
 
@@ -12279,6 +12291,6 @@ fieldset:disabled .btn {
 }
 
 footer {
-  background-color: #e2dcdc;
+  background-color: #e9e9e9;
 }
 

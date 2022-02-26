@@ -11164,7 +11164,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".card[data-v-98a5036c] {\n  margin: 20px 0;\n  background-color: #001533;\n  color: white;\n}\n.card .show_link[data-v-98a5036c] {\n  opacity: 0;\n  transform: scale(0.1);\n  transition: all 0.1s linear;\n}\n.card:hover .show_link[data-v-98a5036c] {\n  opacity: 1;\n  transform: scale(1);\n}\n.card .card_image[data-v-98a5036c] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  display: block;\n}\n.card .apartment_service[data-v-98a5036c] {\n  display: inline-block;\n  margin-right: 5px;\n  font-size: 10px;\n  color: #9b9b9b;\n}\n.card .apartment_address[data-v-98a5036c] {\n  font-size: 13px;\n  color: #9b9b9b;\n}", ""]);
+exports.push([module.i, ".remove-undeline[data-v-98a5036c] {\n  text-decoration: none !important;\n}\n.card[data-v-98a5036c] {\n  margin: 20px 0;\n  color: black;\n}\n.card .card_image[data-v-98a5036c] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  display: block;\n  border: 1px solid lightgrey;\n}\n.card .apartment_address[data-v-98a5036c] {\n  font-size: 13px;\n  color: #9b9b9b;\n}\n.card .card-body[data-v-98a5036c] {\n  -webkit-text-decoration-line: none !important;\n          text-decoration-line: none !important;\n}", ""]);
 
 // exports
 
@@ -11183,7 +11183,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "a.custom[data-v-900dec9a] {\n  display: inline-block;\n  font-weight: bold;\n  text-decoration: none;\n  color: black;\n  padding: 8px 14px;\n  margin-right: 5px;\n  cursor: pointer;\n}\na.custom.active[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(0);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a] {\n  position: relative;\n  overflow: hidden;\n  color: #001533 !important;\n}\n.custom_link_4[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(-100%);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a]:hover::before {\n  transform: translateX(0);\n}\n\n/* searchbox */\n.searchbox[data-v-900dec9a] {\n  border: 1px solid black;\n  padding: 4px 15px;\n  border-radius: 20px;\n  background-color: white;\n  height: 50px;\n  transition: 1s;\n}\n.searchbox[data-v-900dec9a]:hover {\n  border: 1px solid #6bb2f5;\n}\n.searchbox label[data-v-900dec9a] {\n  color: #aaaaaa;\n  font-size: 12px;\n}\n.searchbox span[data-v-900dec9a] {\n  font-size: 12px;\n}\n.searchbox input[data-v-900dec9a] {\n  border: none;\n  height: 20px;\n}\n.searchbox input[data-v-900dec9a]:focus-visible {\n  outline: none;\n}\n.slider[data-v-900dec9a]:hover {\n  cursor: pointer;\n}\n\n/* Dropdown menu */\n.serviceList[data-v-900dec9a] {\n  position: absolute;\n  top: 100%;\n  background-color: white;\n  width: 120px;\n  border: 1px solid #bbb9b9;\n  border-radius: 10px;\n}\n.serviceList .form-check-input[data-v-900dec9a] {\n  border: 1px solid #bbb9b9;\n}\n.serviceListLink[data-v-900dec9a] {\n  text-decoration: none;\n  color: black;\n}\n\n/* End Searchbox */\n.search_container[data-v-900dec9a] {\n  border: 2px solid transparent;\n  border-radius: 10px;\n  background: #001533;\n  background: linear-gradient(36deg, rgba(0, 21, 51, 0.2021183473) 0%, rgba(255, 90, 95, 0.300157563) 47%, rgba(0, 21, 51, 0.2) 100%);\n  overflow: hidden;\n  box-shadow: 0px 0px 20px 0px rgba(0, 21, 51, 0.2);\n}\n.apartment_container[data-v-900dec9a],\n.map_container[data-v-900dec9a] {\n  height: 80vh;\n  width: 100%;\n}\n.apartment_container[data-v-900dec9a] {\n  overflow-y: auto;\n  overflow-x: hidden;\n  position: relative;\n}\n.apartment_container .sponsor_column[data-v-900dec9a],\n.apartment_container .basic_column[data-v-900dec9a] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  padding: 25px 10px;\n}", ""]);
+exports.push([module.i, "a.custom[data-v-900dec9a] {\n  display: inline-block;\n  font-weight: bold;\n  text-decoration: none;\n  color: black;\n  padding: 8px 14px;\n  margin-right: 5px;\n  cursor: pointer;\n}\na.custom.active[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(0);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a] {\n  position: relative;\n  overflow: hidden;\n  color: #001533 !important;\n}\n.custom_link_4[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(-100%);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a]:hover::before {\n  transform: translateX(0);\n}\n\n/* searchbox */\n.searchbox[data-v-900dec9a] {\n  border: 1px solid black;\n  padding: 4px 15px;\n  border-radius: 20px;\n  background-color: white;\n  height: 50px;\n  transition: 1s;\n}\n.searchbox[data-v-900dec9a]:hover {\n  border: 1px solid #6bb2f5;\n}\n.searchbox label[data-v-900dec9a] {\n  color: #aaaaaa;\n  font-size: 12px;\n}\n.searchbox span[data-v-900dec9a] {\n  font-size: 12px;\n}\n.searchbox input[data-v-900dec9a] {\n  border: none;\n  height: 20px;\n}\n.searchbox input[data-v-900dec9a]:focus-visible {\n  outline: none;\n}\n.slider[data-v-900dec9a]:hover {\n  cursor: pointer;\n}\n\n/* Dropdown menu */\n.serviceList[data-v-900dec9a] {\n  position: absolute;\n  top: 100%;\n  background-color: white;\n  width: 120px;\n  border: 1px solid #bbb9b9;\n  border-radius: 10px;\n}\n.serviceList .form-check-input[data-v-900dec9a] {\n  border: 1px solid #bbb9b9;\n}\n.serviceListLink[data-v-900dec9a] {\n  text-decoration: none;\n  color: black;\n}\n\n/* End Searchbox */\n.search_container[data-v-900dec9a] {\n  border: 2px solid transparent;\n  border-radius: 10px;\n  overflow: hidden;\n  box-shadow: 0px 0px 20px 0px rgba(0, 21, 51, 0.2);\n}\n.apartment_container[data-v-900dec9a],\n.map_container[data-v-900dec9a] {\n  height: 80vh;\n  width: 100%;\n}\n.apartment_container[data-v-900dec9a] {\n  overflow-y: auto;\n  overflow-x: hidden;\n  position: relative;\n}\n.apartment_container .sponsor_column[data-v-900dec9a],\n.apartment_container .basic_column[data-v-900dec9a] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  padding: 25px 10px;\n}", ""]);
 
 // exports
 
@@ -11297,7 +11297,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* utilities */\n.white[data-v-b4eb6a1c] {\r\n  color: white;\n}\n.hero-bg[data-v-b4eb6a1c] {\r\n  background-image: url(\"/img/hero-img.jpg\");\r\n  background-size: cover;\r\n  background-position-y: center;\r\n  height: 1000px;\n}\ninput[data-v-b4eb6a1c] {\r\n  border-radius: 30px;\n}\n.h100[data-v-b4eb6a1c] {\r\n  height: 100%;\n}\r\n/* style bottoni */\n.button[data-v-b4eb6a1c] {\r\n  padding: 8px 13px;\r\n  font-size: 15px;\r\n  text-decoration: none;\n}\n.button_1[data-v-b4eb6a1c] {\r\n  cursor: pointer;\r\n  color: white;\r\n  background-color: #001533;\r\n  border: 2px solid #001533;\r\n  transition: all 0.2s linear;\n}\n.button_1[data-v-b4eb6a1c]:hover {\r\n  box-shadow: 0px 10px 13px -7px #000000,\r\n    0px 0px 10px 5px rgba(255, 90, 95, 0.8);\n}\r\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* utilities */\n.white[data-v-b4eb6a1c] {\r\n  color: white;\n}\n.hero-bg[data-v-b4eb6a1c] {\r\n  background-image: url(\"/img/hero-img.jpg\");\r\n  background-size: cover;\r\n  background-position-y: center;\r\n  height: 1000px;\n}\ninput[data-v-b4eb6a1c] {\r\n  border-radius: 30px;\n}\n.h100[data-v-b4eb6a1c] {\r\n  height: 100%;\n}\r\n/* style bottoni */\r\n\r\n\r\n", ""]);
 
 // exports
 
@@ -40802,67 +40802,66 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-12" }, [
-    _c("div", { staticClass: "card" }, [
-      _c("div", { staticClass: "row g-0" }, [
-        _c("div", { staticClass: "col-md-4" }, [
-          _c("img", {
-            staticClass: "img-fluid rounded-start card_image",
-            attrs: { src: _vm.apartment.cover_img, alt: "..." },
-          }),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card-body" }, [
-            _c("h5", { staticClass: "card-title" }, [
-              _vm._v(_vm._s(_vm.apartment.title)),
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "card-text" }, [
-              _vm._v(
-                "\n            " +
-                  _vm._s(_vm.apartment.description.substring(0, 30)) +
-                  "...\n          "
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row" }, [
-              _c(
-                "div",
-                { staticClass: "col-3" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "btn btn-primary show_link",
-                      attrs: {
-                        to: {
-                          name: "apartment",
-                          params: { id: _vm.apartment.id },
-                        },
-                      },
-                    },
-                    [_vm._v("Info")]
-                  ),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-9" }, [
-                _c("p", { staticClass: "mb-0 apartment_city" }, [
-                  _vm._v(_vm._s(_vm.apartment.city)),
+  return _c(
+    "div",
+    { staticClass: "col-12 px-2" },
+    [
+      _c(
+        "router-link",
+        {
+          staticClass: "remove-undeline",
+          attrs: {
+            to: {
+              name: "apartment",
+              params: { id: _vm.apartment.id },
+            },
+          },
+        },
+        [
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "row g-0 align-items-center" }, [
+              _c("div", { staticClass: "col-12 col-lg-4 p-2" }, [
+                _c("div", { staticClass: "ratio ratio-1x1" }, [
+                  _c("img", {
+                    staticClass: "img-fluid rounded-start card_image",
+                    attrs: { src: _vm.apartment.cover_img, alt: "..." },
+                  }),
                 ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "mb-0 apartment_address" }, [
-                  _vm._v(_vm._s(_vm.apartment.address)),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-12 col-lg-8" }, [
+                _c("div", { staticClass: "card-body" }, [
+                  _c(
+                    "h4",
+                    {
+                      staticClass: "card-title text-center text-lg-start mb-3",
+                    },
+                    [_c("strong", [_vm._v(" " + _vm._s(_vm.apartment.title))])]
+                  ),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text mb-5" }, [
+                    _vm._v(
+                      "\n              " +
+                        _vm._s(_vm.apartment.description.substring(0, 50)) +
+                        "...\n            "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "mb-2" }, [
+                    _c("strong", [_vm._v(_vm._s(_vm.apartment.city))]),
+                    _vm._v(
+                      " - " + _vm._s(_vm.apartment.address) + "\n            "
+                    ),
+                  ]),
                 ]),
               ]),
             ]),
           ]),
-        ]),
-      ]),
-    ]),
-  ])
+        ]
+      ),
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -41146,7 +41145,7 @@ var render = function () {
       _c("div", { staticClass: "search_container" }, [
         _c("div", { staticClass: "row g-0" }, [
           _c("div", { staticClass: "col-12 col-md-6" }, [
-            _c("div", { staticClass: "apartment_container" }, [
+            _c("div", { staticClass: "apartment_container px-5" }, [
               !_vm.switchPage
                 ? _c("div", { staticClass: "sponsor_column" }, [
                     _vm.filteredSponsorApartments.length
@@ -41842,7 +41841,7 @@ var render = function () {
                   _vm._v("Qual'è la tua prossima avventura?"),
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "my-3" }, [
+                _c("div", { staticClass: "my-5" }, [
                   _c("input", {
                     directives: [
                       {
@@ -41852,7 +41851,7 @@ var render = function () {
                         expression: "formCity",
                       },
                     ],
-                    staticClass: "py-1 ps-3",
+                    staticClass: "py-2 ps-3",
                     attrs: {
                       type: "text",
                       name: "luogo",
@@ -41880,7 +41879,7 @@ var render = function () {
                         expression: "formBeds",
                       },
                     ],
-                    staticClass: "py-1 ps-3",
+                    staticClass: "py-2 ps-3",
                     attrs: {
                       type: "text",
                       name: "ospiti",
@@ -41900,12 +41899,12 @@ var render = function () {
                 _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "my-3" },
+                  { staticClass: "my-5" },
                   [
                     _c(
                       "router-link",
                       {
-                        staticClass: "btn btn-sm btn-success",
+                        staticClass: "  button button_1",
                         attrs: {
                           to: {
                             name: "search",
@@ -42016,13 +42015,13 @@ var staticRenderFns = [
                     _vm._v("apartment.title"),
                   ]),
                   _vm._v(" "),
-                  _c("p", { staticClass: "card-text" }, [
+                  _c("p", { staticClass: "card-text " }, [
                     _vm._v("apartment.description"),
                   ]),
                   _vm._v(" "),
                   _c(
                     "a",
-                    { staticClass: "btn btn-dark", attrs: { href: "#" } },
+                    { staticClass: "button button_4", attrs: { href: "#" } },
                     [_vm._v("Scopri")]
                   ),
                 ]),
@@ -42054,7 +42053,7 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c(
                     "a",
-                    { staticClass: "btn btn-dark", attrs: { href: "#" } },
+                    { staticClass: "button button_4", attrs: { href: "#" } },
                     [_vm._v("Scopri")]
                   ),
                 ]),
@@ -42086,7 +42085,10 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c(
                     "a",
-                    { staticClass: "btn btn-dark", attrs: { href: "#" } },
+                    {
+                      staticClass: "button button_4 mt-2",
+                      attrs: { href: "#" },
+                    },
                     [_vm._v("Scopri")]
                   ),
                 ]),
@@ -42112,13 +42114,16 @@ var staticRenderFns = [
                     _vm._v("apartment.title"),
                   ]),
                   _vm._v(" "),
-                  _c("p", { staticClass: "card-text" }, [
+                  _c("p", { staticClass: "card-text " }, [
                     _vm._v("apartment.description"),
                   ]),
                   _vm._v(" "),
                   _c(
                     "a",
-                    { staticClass: "btn btn-dark", attrs: { href: "#" } },
+                    {
+                      staticClass: "button button_4 mt-5",
+                      attrs: { href: "#" },
+                    },
                     [_vm._v("Scopri")]
                   ),
                 ]),
