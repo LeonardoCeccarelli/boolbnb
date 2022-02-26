@@ -5320,6 +5320,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -11183,7 +11207,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "a.custom[data-v-900dec9a] {\n  display: inline-block;\n  font-weight: bold;\n  text-decoration: none;\n  color: black;\n  padding: 8px 14px;\n  margin-right: 5px;\n  cursor: pointer;\n}\na.custom.active[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(0);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a] {\n  position: relative;\n  overflow: hidden;\n  color: #001533 !important;\n}\n.custom_link_4[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(-100%);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a]:hover::before {\n  transform: translateX(0);\n}\n\n/* searchbox */\n.searchbox[data-v-900dec9a] {\n  border: 1px solid black;\n  padding: 4px 15px;\n  border-radius: 20px;\n  background-color: white;\n  height: 50px;\n  transition: 1s;\n}\n.searchbox[data-v-900dec9a]:hover {\n  border: 1px solid #6bb2f5;\n}\n.searchbox label[data-v-900dec9a] {\n  color: #aaaaaa;\n  font-size: 12px;\n}\n.searchbox span[data-v-900dec9a] {\n  font-size: 12px;\n}\n.searchbox input[data-v-900dec9a] {\n  border: none;\n  height: 20px;\n}\n.searchbox input[data-v-900dec9a]:focus-visible {\n  outline: none;\n}\n.slider[data-v-900dec9a]:hover {\n  cursor: pointer;\n}\n\n/* Dropdown menu */\n.serviceList[data-v-900dec9a] {\n  position: absolute;\n  top: 100%;\n  background-color: white;\n  width: 120px;\n  border: 1px solid #bbb9b9;\n  border-radius: 10px;\n}\n.serviceList .form-check-input[data-v-900dec9a] {\n  border: 1px solid #bbb9b9;\n}\n.serviceListLink[data-v-900dec9a] {\n  text-decoration: none;\n  color: black;\n}\n\n/* End Searchbox */\n.search_container[data-v-900dec9a] {\n  border: 2px solid transparent;\n  border-radius: 10px;\n  overflow: hidden;\n  box-shadow: 0px 0px 20px 0px rgba(0, 21, 51, 0.2);\n}\n.apartment_container[data-v-900dec9a],\n.map_container[data-v-900dec9a] {\n  height: 80vh;\n  width: 100%;\n}\n.apartment_container[data-v-900dec9a] {\n  overflow-y: auto;\n  overflow-x: hidden;\n  position: relative;\n}\n.apartment_container .sponsor_column[data-v-900dec9a],\n.apartment_container .basic_column[data-v-900dec9a] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  padding: 25px 10px;\n}", ""]);
+exports.push([module.i, "a.custom[data-v-900dec9a] {\n  display: inline-block;\n  font-weight: bold;\n  text-decoration: none;\n  color: black;\n  padding: 8px 14px;\n  margin-right: 5px;\n  cursor: pointer;\n}\na.custom.active[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(0);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a] {\n  position: relative;\n  overflow: hidden;\n  color: #001533 !important;\n}\n.custom_link_4[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(-100%);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a]:hover::before {\n  transform: translateX(0);\n}\n\n/* searchbox */\n.searchbox[data-v-900dec9a] {\n  padding: 20px 30px;\n  border-radius: 40px;\n  background-color: white;\n}\n.searchbox .fw-700[data-v-900dec9a] {\n  font-weight: 700;\n}\n.searchbox input[data-v-900dec9a] {\n  border: none;\n}\n.searchbox input[data-v-900dec9a]:focus-visible {\n  outline: none;\n}\n.searchbox button[data-v-900dec9a] {\n  color: white;\n  background-color: white;\n  border: none;\n}\n.searchbox .fa-search[data-v-900dec9a] {\n  background: #ff5a5f;\n  width: 60px;\n  height: 60px;\n  border-radius: 50%;\n  text-align: center;\n  line-height: 60px;\n  vertical-align: middle;\n  font-size: 25px;\n}\n.slider[data-v-900dec9a]:hover {\n  cursor: pointer;\n}\n\n/* Dropdown menu */\n.serviceList[data-v-900dec9a] {\n  position: absolute;\n  top: 100%;\n  padding: 20px;\n  background-color: rgba(255, 255, 255, 0.9);\n  border: 1px solid rgba(228, 228, 228, 0.9);\n  border-radius: 10px;\n  z-index: 100;\n}\n.serviceList .form-check-input[data-v-900dec9a] {\n  border: 1px solid #d8d2d2;\n}\n\n/* End Searchbox */\n.search_container[data-v-900dec9a] {\n  border: 2px solid transparent;\n  border-radius: 10px;\n  overflow: hidden;\n  box-shadow: 0px 0px 20px 0px rgba(0, 21, 51, 0.2);\n}\n.apartment_container[data-v-900dec9a],\n.map_container[data-v-900dec9a] {\n  height: 80vh;\n  width: 100%;\n}\n.apartment_container[data-v-900dec9a] {\n  overflow-y: auto;\n  overflow-x: hidden;\n  position: relative;\n}\n.apartment_container .sponsor_column[data-v-900dec9a],\n.apartment_container .basic_column[data-v-900dec9a] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  padding: 25px 10px;\n}", ""]);
 
 // exports
 
@@ -40887,223 +40911,237 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-12 searchbox d-flex" }, [
-          _c("div", { staticClass: "col d-flex flex-column" }, [
-            _c("label", { attrs: { for: "" } }, [_vm._v("Città")]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.filterCity,
-                  expression: "filterCity",
-                },
-              ],
-              attrs: { type: "text", placeholder: "Es. Milano" },
-              domProps: { value: _vm.filterCity },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.filterCity = $event.target.value
-                },
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col d-flex flex-column" }, [
-            _c("label", { attrs: { for: "" } }, [_vm._v("Letti")]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.filterBeds,
-                  expression: "filterBeds",
-                },
-              ],
-              attrs: {
-                type: "number",
-                min: "1",
-                max: "50",
-                placeholder: "Es. 1",
-              },
-              domProps: { value: _vm.filterBeds },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.filterBeds = $event.target.value
-                },
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col d-flex flex-column" }, [
-            _c("label", { attrs: { for: "" } }, [_vm._v("Stanze")]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.filterRooms,
-                  expression: "filterRooms",
-                },
-              ],
-              attrs: {
-                type: "number",
-                min: "1",
-                max: "50",
-                placeholder: "Es. 3",
-              },
-              domProps: { value: _vm.filterRooms },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.filterRooms = $event.target.value
-                },
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col d-flex flex-column" }, [
-            _c("div", [
-              _c("label", { attrs: { for: "" } }, [_vm._v("Distanza:")]),
-              _c("span", [_vm._v(" " + _vm._s(_vm.filterRange) + " Km")]),
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.filterRange,
-                  expression: "filterRange",
-                },
-              ],
-              staticClass: "slider",
-              attrs: {
-                type: "range",
-                min: "1",
-                step: "1",
-                max: "35",
-                id: "myRange",
-              },
-              domProps: { value: _vm.filterRange },
-              on: {
-                __r: function ($event) {
-                  _vm.filterRange = $event.target.value
-                },
-              },
-            }),
-          ]),
-          _vm._v(" "),
+      _c("div", { staticClass: "d-flex searchbox my-5 align-items-center" }, [
+        _c("div", { staticClass: "flex-grow-1" }, [
           _c(
             "div",
-            {
-              staticClass:
-                "\n            col\n            d-flex\n            flex-column\n            align-items-center\n            justify-content-center\n          ",
-            },
+            { staticClass: "row row-cols-2 row-cols-lg-5 align-items-top" },
             [
-              _c("div", { staticClass: "position-relative" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "serviceListLink",
-                    attrs: { href: "#" },
-                    on: { click: _vm.getExpanded },
-                  },
-                  [
-                    _vm._v("Servizi "),
-                    _c("i", { staticClass: "fas fa-angle-down" }),
-                  ]
-                ),
-                _vm._v(" "),
-                _vm.expanded === true
-                  ? _c(
-                      "div",
-                      { staticClass: "serviceList" },
-                      _vm._l(_vm.services, function (service) {
-                        return _c(
-                          "div",
-                          { key: service.id, staticClass: "form-check" },
-                          [
-                            _c("input", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.filterServices,
-                                  expression: "filterServices",
+              _c("div", { staticClass: "col mb-3 mb-lg-0" }, [
+                _c("div", { staticClass: "d-flex flex-column" }, [
+                  _c("label", { staticClass: "fw-700", attrs: { for: "" } }, [
+                    _vm._v("Città"),
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.filterCity,
+                        expression: "filterCity",
+                      },
+                    ],
+                    attrs: { type: "text", placeholder: "Es. Milano" },
+                    domProps: { value: _vm.filterCity },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.filterCity = $event.target.value
+                      },
+                    },
+                  }),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col mb-3 mb-lg-0" }, [
+                _c("div", { staticClass: "d-flex flex-column" }, [
+                  _c("label", { staticClass: "fw-700", attrs: { for: "" } }, [
+                    _vm._v("Letti"),
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.filterBeds,
+                        expression: "filterBeds",
+                      },
+                    ],
+                    attrs: {
+                      type: "number",
+                      min: "1",
+                      max: "50",
+                      placeholder: "Es. 1",
+                    },
+                    domProps: { value: _vm.filterBeds },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.filterBeds = $event.target.value
+                      },
+                    },
+                  }),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col mb-3 mb-lg-0" }, [
+                _c("div", { staticClass: "d-flex flex-column" }, [
+                  _c("label", { staticClass: "fw-700", attrs: { for: "" } }, [
+                    _vm._v("Stanze"),
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.filterRooms,
+                        expression: "filterRooms",
+                      },
+                    ],
+                    attrs: {
+                      type: "number",
+                      min: "1",
+                      max: "50",
+                      placeholder: "Es. 3",
+                    },
+                    domProps: { value: _vm.filterRooms },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.filterRooms = $event.target.value
+                      },
+                    },
+                  }),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col mb-3 mb-lg-0" }, [
+                _c("div", { staticClass: "position-relative" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "serviceListLink fw-700",
+                      on: { click: _vm.getExpanded },
+                    },
+                    [
+                      _vm._v("\n                Servizi "),
+                      _c("i", { staticClass: "fas fa-angle-down" }),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _vm.expanded === true
+                    ? _c(
+                        "div",
+                        { staticClass: "serviceList" },
+                        _vm._l(_vm.services, function (service) {
+                          return _c(
+                            "div",
+                            { key: service.id, staticClass: "form-check" },
+                            [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.filterServices,
+                                    expression: "filterServices",
+                                  },
+                                ],
+                                staticClass: "form-check-input",
+                                attrs: { type: "checkbox" },
+                                domProps: {
+                                  value: service.name,
+                                  checked: Array.isArray(_vm.filterServices)
+                                    ? _vm._i(_vm.filterServices, service.name) >
+                                      -1
+                                    : _vm.filterServices,
                                 },
-                              ],
-                              staticClass: "form-check-input",
-                              attrs: { type: "checkbox" },
-                              domProps: {
-                                value: service.name,
-                                checked: Array.isArray(_vm.filterServices)
-                                  ? _vm._i(_vm.filterServices, service.name) >
-                                    -1
-                                  : _vm.filterServices,
-                              },
-                              on: {
-                                change: function ($event) {
-                                  var $$a = _vm.filterServices,
-                                    $$el = $event.target,
-                                    $$c = $$el.checked ? true : false
-                                  if (Array.isArray($$a)) {
-                                    var $$v = service.name,
-                                      $$i = _vm._i($$a, $$v)
-                                    if ($$el.checked) {
-                                      $$i < 0 &&
-                                        (_vm.filterServices = $$a.concat([$$v]))
+                                on: {
+                                  change: function ($event) {
+                                    var $$a = _vm.filterServices,
+                                      $$el = $event.target,
+                                      $$c = $$el.checked ? true : false
+                                    if (Array.isArray($$a)) {
+                                      var $$v = service.name,
+                                        $$i = _vm._i($$a, $$v)
+                                      if ($$el.checked) {
+                                        $$i < 0 &&
+                                          (_vm.filterServices = $$a.concat([
+                                            $$v,
+                                          ]))
+                                      } else {
+                                        $$i > -1 &&
+                                          (_vm.filterServices = $$a
+                                            .slice(0, $$i)
+                                            .concat($$a.slice($$i + 1)))
+                                      }
                                     } else {
-                                      $$i > -1 &&
-                                        (_vm.filterServices = $$a
-                                          .slice(0, $$i)
-                                          .concat($$a.slice($$i + 1)))
+                                      _vm.filterServices = $$c
                                     }
-                                  } else {
-                                    _vm.filterServices = $$c
-                                  }
+                                  },
                                 },
-                              },
-                            }),
-                            _vm._v(" "),
-                            _c("label", { staticClass: "form-check-label" }, [
-                              _vm._v(
-                                "\n                  " +
-                                  _vm._s(service.name) +
-                                  "\n                "
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "label",
+                                { staticClass: "form-check-label me-3" },
+                                [
+                                  _vm._v(
+                                    "\n                    " +
+                                      _vm._s(service.name) +
+                                      "\n                  "
+                                  ),
+                                ]
                               ),
-                            ]),
-                          ]
-                        )
-                      }),
-                      0
-                    )
-                  : _vm._e(),
+                            ]
+                          )
+                        }),
+                        0
+                      )
+                    : _vm._e(),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col flex-grow-1" }, [
+                _c("div", { staticClass: "d-flex flex-column me-lg-5" }, [
+                  _c("label", { staticClass: "fw-700", attrs: { for: "" } }, [
+                    _vm._v("Distanza: " + _vm._s(_vm.filterRange) + " Km"),
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.filterRange,
+                        expression: "filterRange",
+                      },
+                    ],
+                    staticClass: "slider",
+                    attrs: {
+                      type: "range",
+                      min: "1",
+                      step: "1",
+                      max: "35",
+                      id: "myRange",
+                    },
+                    domProps: { value: _vm.filterRange },
+                    on: {
+                      __r: function ($event) {
+                        _vm.filterRange = $event.target.value
+                      },
+                    },
+                  }),
+                ]),
               ]),
             ]
           ),
-          _vm._v(" "),
-          _c("div", { staticClass: "col text-end" }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-success",
-                on: { click: _vm.getFiltered },
-              },
-              [_vm._v("Cerca")]
-            ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "ms-5 ms-lg-0" }, [
+          _c("div", { staticClass: "text-center" }, [
+            _c("button", { on: { click: _vm.getFiltered } }, [
+              _c("i", { staticClass: "fas fa-search" }),
+            ]),
           ]),
         ]),
       ]),
