@@ -9,7 +9,7 @@
 
 <div class="container-fluid">
   <div class="container my-5 p-5 shadow">
-    <h1 class="text-center mb-3">Area Messaggi</h1>
+    <h1 class="text-center mb-3 fw-bold">Area Messaggi</h1>
     <h4 class="text-center mb-4">Controlla i tuoi messaggi</h4>
 
 
@@ -19,7 +19,7 @@
       <div class="accordion-item shadow my-4">
         <h2 class="accordion-header" id="flush-headingOne">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne{{$mes->id}}" aria-expanded="false" aria-controls="flush-collapseOne{{$mes->id}}">
-            <span class="mx-4 text-uppercase">{{$mes->object}}</span>|<span class="mx-4 text-capitalize">{{$mes->name}}</span>|<span class="mx-4">{{$mes->email}}</span>
+            <span class="mx-4 text-uppercase fw-bold">{{$mes->object}}</span>|<span class="mx-4 text-capitalize fw-bold">{{$mes->name}}</span>|<span class="mx-4 fw-bold">{{$mes->email}}</span>
           </button>
         </h2>
         <div id="flush-collapseOne{{$mes->id}}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
