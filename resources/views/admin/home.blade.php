@@ -7,17 +7,22 @@
 
             <div class="row justify-content-center">
                 <div class="col-11 m-5">
-                    <div class="d-flex flex-column flex-md-row mb-4">
-                        <div class=" col col-md-7 py-3 text-white">
-                            <h3 class="mb-3 text-dark">Buongiorno {{ Auth::user()->name }},</h3>
-                            <h2 class="fw-bold text-dark">Benvenuto Nella Tua Area Riservata</h2>
+
+
+
+                    <div class="mb-4">
+                        <div class="row row-cols-1 row-cols-lg-2 justify-content-between align-items-center mb-5">
+                        <div class="col mb-5 mb-lg-0">
+                            <h2 class="mb-3">Buongiorno <strong>{{ Auth::user()->name }}</strong>,</h2>
+                            <h3 class="fst-italic">benvenuto nella tua area riservata</h3>
                         </div>
-                        <div class=" col col-md-5 d-flex justify-content-end align-items-center">
+                        <div class="col text-center text-lg-end">
                            <a class="button button_4"
                                     href="{{ route('admin.apartment.create') }}"
                                     class="fs-6 fw-bold text-white text-decoration-none">Aggiungi un
                                     appartamento</a>
                         </div>
+                    </div>
                     </div>
                     <div class="row row-cols-1 justify-content-center">
 
