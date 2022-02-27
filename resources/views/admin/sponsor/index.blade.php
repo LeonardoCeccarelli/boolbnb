@@ -5,31 +5,30 @@
 @endsection
 @section('content')
 
-<div class="container-fluid p-5"
-  style="background: rgb(2,0,36);background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,70,121,1) 35%, rgba(161,232,246,1) 100%);">
-  <div class="container my-5 p-5 bg-light rounded">
+
+  <div class="container my-5">
 
     @if ($end_date < $now)
 
-    <div class="  row text-center my-4">
-      <h1 class='mb-4 fw-bold' style="word-wrap: break-word;">SPONSORIZZA IL TUO ANNUNCIO </h1>
-      <p style="word-wrap: break-word;" class="fs-3 fw-bold">{{ $apartment->title }}</p>
+    <div class="row text-center my-5">
+      <h2 class='mb-4'>SPONSORIZZA IL TUO ANNUNCIO</h2>
+      <h3>{{ $apartment->title }}</h3>
     </div>
 
-    <div class=' row row-cols-1 row-col-lg-3 justify-content-around text-center py-4 '>
+    <div class='row row-cols-1 row-col-lg-3 justify-content-around text-center py-4 '>
 
       @foreach ($sponsor as $single_sponsor)
     
       {{-- Single Sponsor Card --}}
-      <div class='card shadow rounded mb-5' style='width:300px;  background-image: linear-gradient( 112.1deg,  rgba(32,38,57,1) 11.4%, rgba(63,76,119,1) 70.2% );'>
+      <div class='card shadow rounded mb-5' style='width:300px;'>
         
-        <div class='card-body text-white my-3'>
+        <div class='card-body my-3'>
           
-          <h3 class='card-title text-uppercase fw-bold mb-4'>{{ $single_sponsor->type }}</h3>
-          <p class='card-text fs-1'>{{ $single_sponsor->price }} &#8364;</p>
-          <p class='card-text fs-3' > {{ $single_sponsor->duration }}/<span class="fs-5">hr</span></p>
-          <hr>
-          <ul class="list-unstyled">
+          <h3 class='mb-4'>{{ $single_sponsor->type }}</h3>
+          <h1 class='mb-3' style="color:#FF5A5F">{{ $single_sponsor->price }} &#8364;</h1>
+          <h4> {{ $single_sponsor->duration }}/<span class="fs-5">hr</span></h4>
+          
+          <ul class="list-unstyled p-3 mt-4" style="border: 3px dashed #FF5A5F;">
             <li class="mb-2">Annuncio in homepage</li>
             <li class="mb-2">Annuncio posizionato in testa alle ricerche</li>
             <li class="mb-2">Annuncio consigliato per città</li>
@@ -52,7 +51,7 @@
       
           {{-- Select Sponsorship --}}
           <section class="col-12 d-flex flex-column align-items-center mb-5">
-            <h2 class="fw-bold mb-4">Seleziona Un Piano</h2>
+            <h2 class="mb-4">Seleziona Un Piano</h2>
             <select class='form-select form-select-lg' id='sponsor_select' name='sponsor_select' >
               
 
@@ -73,7 +72,7 @@
 
             {{-- Submit Payment Button --}}
             <div class='submit-btn-continer text-center'>
-              <input class='btn btn-dark w-100' type='submit' />
+              <input class='button button_2 text-uppercase w-100' type='submit' />
               <input id='nonce' name='payment_method_nonce' type='hidden' />
             </div>
           </section>
@@ -140,6 +139,6 @@
             });
     </script>
   </div>
-</div> 
+
 
 @endsection

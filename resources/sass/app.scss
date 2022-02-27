@@ -109,8 +109,17 @@
     width: 150px
 }
 }
-
-
+.sponsor-tag {
+    position: absolute;
+    top:10px;
+    left:20px;
+    background-color:#FF5A5F;
+    color:white;
+    border-radius: 5px;
+    text-transform: uppercase;
+   font-weight: bold;
+   letter-spacing: 1px;
+}
 .icone{
     right: 20px; 
     top:200px;

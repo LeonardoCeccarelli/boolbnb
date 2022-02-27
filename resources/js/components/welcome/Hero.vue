@@ -1,8 +1,8 @@
 <template>
   <div class="container-flex hero">
     <div class="hero-bg">
-      <div class="row row-cols-1 row-cols-lg-2 g-lg-3 h100">
-        <div class="col h100">
+      <div class="row row-cols-1 row-cols-lg-2 w-100 h100">
+        <div class="col">
           <div class="d-flex justify-content-center align-items-center h100">
             <!-- searchform -->
             <div class="white text-center py-4 w-50">
@@ -73,15 +73,12 @@ export default {
 .white {
   color: white;
 }
-
-
-
 .hero-bg {
   background-image: url("/img/hero-img.jpg");
   background-size: cover;
   background-position-y: center;
-  height: 1000px;
- 
+  height: 94vh;
+
 }
 input {
   border-radius: 30px;

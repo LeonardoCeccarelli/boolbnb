@@ -5344,6 +5344,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -11207,7 +11209,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "a.custom[data-v-900dec9a] {\n  display: inline-block;\n  font-weight: bold;\n  text-decoration: none;\n  color: black;\n  padding: 8px 14px;\n  margin-right: 5px;\n  cursor: pointer;\n}\na.custom.active[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(0);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a] {\n  position: relative;\n  overflow: hidden;\n  color: #001533 !important;\n}\n.custom_link_4[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(-100%);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a]:hover::before {\n  transform: translateX(0);\n}\n\n/* searchbox */\n.searchbox[data-v-900dec9a] {\n  padding: 20px 30px;\n  border-radius: 40px;\n  background-color: white;\n}\n.searchbox .fw-700[data-v-900dec9a] {\n  font-weight: 700;\n}\n.searchbox input[data-v-900dec9a] {\n  border: none;\n}\n.searchbox input[data-v-900dec9a]:focus-visible {\n  outline: none;\n}\n.searchbox button[data-v-900dec9a] {\n  color: white;\n  background-color: white;\n  border: none;\n}\n.searchbox .fa-search[data-v-900dec9a] {\n  background: #ff5a5f;\n  width: 60px;\n  height: 60px;\n  border-radius: 50%;\n  text-align: center;\n  line-height: 60px;\n  vertical-align: middle;\n  font-size: 25px;\n}\n.slider[data-v-900dec9a]:hover {\n  cursor: pointer;\n}\n\n/* Dropdown menu */\n.serviceList[data-v-900dec9a] {\n  position: absolute;\n  top: 100%;\n  padding: 20px;\n  background-color: rgba(255, 255, 255, 0.9);\n  border: 1px solid rgba(228, 228, 228, 0.9);\n  border-radius: 10px;\n  z-index: 100;\n}\n.serviceList .form-check-input[data-v-900dec9a] {\n  border: 1px solid #d8d2d2;\n}\n\n/* End Searchbox */\n.search_container[data-v-900dec9a] {\n  border: 2px solid transparent;\n  border-radius: 10px;\n  overflow: hidden;\n  box-shadow: 0px 0px 20px 0px rgba(0, 21, 51, 0.2);\n}\n.apartment_container[data-v-900dec9a],\n.map_container[data-v-900dec9a] {\n  height: 80vh;\n  width: 100%;\n}\n.apartment_container[data-v-900dec9a] {\n  overflow-y: auto;\n  overflow-x: hidden;\n  position: relative;\n}\n.apartment_container .sponsor_column[data-v-900dec9a],\n.apartment_container .basic_column[data-v-900dec9a] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  padding: 25px 10px;\n}", ""]);
+exports.push([module.i, "a.custom[data-v-900dec9a] {\n  display: inline-block;\n  font-weight: bold;\n  text-decoration: none;\n  color: black;\n  padding: 8px 14px;\n  margin-right: 5px;\n  cursor: pointer;\n}\na.custom.active[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(0);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a] {\n  position: relative;\n  overflow: hidden;\n  color: #001533 !important;\n}\n.custom_link_4[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(-100%);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a]:hover::before {\n  transform: translateX(0);\n}\n\n/* searchbox */\n.searchbox[data-v-900dec9a] {\n  padding: 20px 30px;\n  border-radius: 40px;\n  background-color: white;\n}\n.searchbox .fw-700[data-v-900dec9a] {\n  font-weight: 700;\n}\n.searchbox .input-small[data-v-900dec9a] {\n  width: 70px;\n}\n.searchbox input[data-v-900dec9a] {\n  border: none;\n}\n.searchbox input[data-v-900dec9a]:focus-visible {\n  outline: none;\n}\n.searchbox button[data-v-900dec9a] {\n  color: white;\n  background-color: white;\n  border: none;\n}\n.searchbox .fa-search[data-v-900dec9a] {\n  background: #ff5a5f;\n  width: 60px;\n  height: 60px;\n  border-radius: 50%;\n  text-align: center;\n  line-height: 60px;\n  vertical-align: middle;\n  font-size: 25px;\n}\n.slider[data-v-900dec9a]:hover {\n  cursor: pointer;\n}\n\n/* Dropdown menu */\n.serviceList[data-v-900dec9a] {\n  position: absolute;\n  top: 100%;\n  padding: 20px;\n  background-color: rgba(255, 255, 255, 0.9);\n  border: 1px solid rgba(228, 228, 228, 0.9);\n  border-radius: 10px;\n  z-index: 100;\n}\n.serviceList .form-check-input[data-v-900dec9a] {\n  border: 1px solid #d8d2d2;\n}\n\n/* End Searchbox */\n.search_container[data-v-900dec9a] {\n  border: 2px solid transparent;\n  border-radius: 10px;\n  overflow: hidden;\n  box-shadow: 0px 0px 20px 0px rgba(0, 21, 51, 0.2);\n}\n.apartment_container[data-v-900dec9a],\n.map_container[data-v-900dec9a] {\n  height: 80vh;\n  width: 100%;\n}\n.apartment_container[data-v-900dec9a] {\n  overflow-y: auto;\n  overflow-x: hidden;\n  position: relative;\n}\n.apartment_container .sponsor_column[data-v-900dec9a],\n.apartment_container .basic_column[data-v-900dec9a] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  padding: 25px 10px;\n}", ""]);
 
 // exports
 
@@ -11321,7 +11323,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* utilities */\n.white[data-v-b4eb6a1c] {\r\n  color: white;\n}\n.hero-bg[data-v-b4eb6a1c] {\r\n  background-image: url(\"/img/hero-img.jpg\");\r\n  background-size: cover;\r\n  background-position-y: center;\r\n  height: 1000px;\n}\ninput[data-v-b4eb6a1c] {\r\n  border-radius: 30px;\n}\n.h100[data-v-b4eb6a1c] {\r\n  height: 100%;\n}\r\n/* style bottoni */\r\n\r\n\r\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* utilities */\n.white[data-v-b4eb6a1c] {\r\n  color: white;\n}\n.hero-bg[data-v-b4eb6a1c] {\r\n  background-image: url(\"/img/hero-img.jpg\");\r\n  background-size: cover;\r\n  background-position-y: center;\r\n  height: 94vh;\n}\ninput[data-v-b4eb6a1c] {\r\n  border-radius: 30px;\n}\n.h100[data-v-b4eb6a1c] {\r\n  height: 100%;\n}\r\n/* style bottoni */\r\n\r\n\r\n", ""]);
 
 // exports
 
@@ -40961,6 +40963,7 @@ var render = function () {
                         expression: "filterBeds",
                       },
                     ],
+                    staticClass: "input-small",
                     attrs: {
                       type: "number",
                       min: "1",
@@ -40995,6 +40998,7 @@ var render = function () {
                         expression: "filterRooms",
                       },
                     ],
+                    staticClass: "input-small",
                     attrs: {
                       type: "number",
                       min: "1",
@@ -41865,8 +41869,8 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container-flex hero" }, [
     _c("div", { staticClass: "hero-bg" }, [
-      _c("div", { staticClass: "row row-cols-1 row-cols-lg-2 g-lg-3 h100" }, [
-        _c("div", { staticClass: "col h100" }, [
+      _c("div", { staticClass: "row row-cols-1 row-cols-lg-2 w-100 h100" }, [
+        _c("div", { staticClass: "col" }, [
           _c(
             "div",
             {

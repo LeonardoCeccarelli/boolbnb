@@ -30,6 +30,7 @@
                   min="1"
                   max="50"
                   placeholder="Es. 1"
+                  class="input-small"
                 />
               </div>
             </div>
@@ -44,6 +45,7 @@
                   min="1"
                   max="50"
                   placeholder="Es. 3"
+                  class="input-small"
                 />
               </div>
             </div>
@@ -317,6 +319,9 @@ a.custom {
 
 .fw-700 {
   font-weight: 700;
+}
+.input-small {
+  width:70px;
 }
   input {
     border: none;
