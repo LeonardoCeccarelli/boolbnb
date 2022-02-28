@@ -34,10 +34,13 @@ Route::middleware('auth')
   ->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
     Route::resource('/apartment', 'ApartmentController');
+    Route::resource('/message', 'MessageController');
     Route::get('/sponsor/{apartment}', 'SponsorController@index')->name('sponsor.index');
     Route::post('/sponsor/{apartment}/checkout', 'SponsorController@checkout')->name('sponsor.checkout');
     Route::get('/sponsor/{apartment}/transaction', 'SponsorController@transaction')->name('sponsor.transaction');
-    Route::get('/message', 'MessageController@index')->name('message');
+    
+
+  
   });
 Route::get('{any?}', function () {
   return view('guests.welcome');
