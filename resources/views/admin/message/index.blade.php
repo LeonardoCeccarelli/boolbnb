@@ -10,7 +10,7 @@
 <div class="container-fluid">
   <div class="container my-5 p-5 shadow">
     <h1 class="text-center mb-3 fw-bold ">Area Messaggi</h1>
-    <h4 class="text-center mb-4">Controlla i tuoi messaggi</h4>
+    <h4 class="text-center mb-4 fst-italic">Controlla i tuoi messaggi</h4>
 
 
     <div class="accordion accordion-flush " id="accordionFlushExample">
