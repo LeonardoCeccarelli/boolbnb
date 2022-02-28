@@ -9,22 +9,33 @@
 
 <div class="container-fluid">
   <div class="container my-5 p-5 shadow">
-    <h1 class="text-center mb-3 fw-bold">Area Messaggi</h1>
+    <h1 class="text-center mb-3 fw-bold ">Area Messaggi</h1>
     <h4 class="text-center mb-4">Controlla i tuoi messaggi</h4>
 
 
-    <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion accordion-flush " id="accordionFlushExample">
       @foreach ($message as $mes)
       
       <div class="accordion-item shadow my-4">
         <h2 class="accordion-header" id="flush-headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne{{$mes->id}}" aria-expanded="false" aria-controls="flush-collapseOne{{$mes->id}}">
-            <span class="mx-4 text-uppercase fw-bold">{{$mes->object}}</span>|<span class="mx-4 text-capitalize fw-bold">{{$mes->name}}</span>|<span class="mx-4 fw-bold">{{$mes->email}}</span>
+          <button class="accordion-button collapsed d-flex flex-column align-items-start flex-md-row flex-wrap" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne{{$mes->id}}" aria-expanded="false" aria-controls="flush-collapseOne{{$mes->id}}">
+            
+            <div class="mx-4 mb-1 pe-5 text-uppercase fw-bold fs-4 col-12">
+             <p style="word-wrap: break-word;">{{$mes->object}}</p> 
+            </div>
+
+            <div class="mx-4 mb-3 text-capitalize fw-bold">
+              {{$mes->name}}
+            </div> 
+
+            <div class="mx-4 mb-3 fw-bold">
+              {{$mes->email}}
+            </div>
           </button>
         </h2>
         <div id="flush-collapseOne{{$mes->id}}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
           <div class="accordion-body">
-            <p>{{$mes->content}}</p>
+            <p style="word-wrap: break-word;">{{$mes->content}}</p>
             <div class="text-center ">
                    
               <button type="button" class="btn btn-danger btn-sm text-white text mt-4" data-bs-toggle="modal"

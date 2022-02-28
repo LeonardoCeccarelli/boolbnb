@@ -51,9 +51,11 @@
 }
 .accordion-item{
     border-radius: 20px;
+    border-radius: 25px !important; 
 }
 .accordion-button{
     background-color: #ff999c;
+    border-radius: 25px !important; 
 }
 .accordion-button:focus{
     background-color: #FF5A5F;
@@ -66,9 +68,17 @@
     color:white;
 }
 
+
 @media only screen and (min-width: 600px) {
     .icone {
       font-size:13px;
       right:40px;
     }
   }
+
+  @media only screen and (max-width: 768px) {
+    .accordion-button::after {
+        margin-left: 50%;
+    
+    }
+  }  
