@@ -1,7 +1,9 @@
-<footer class="mb-5">
+<footer class="mt-5 py-5">
   <div class="container ">
     <div class="footer_a row row-cols-1 row-cols-md-2 row-cols-lg-4 py-5 justify-content-evenly">
-      <div class="col mb-3 text-center text-md-start">
+
+      <div class="col mb-3 text-center text-md-start d-flex justify-content-center">
+        <div class="w-75">
         <h5 class="fw-bold mb-2">Informazioni</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Newsroom</a></li>
@@ -11,7 +13,9 @@
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Boolbnb Luxe</a></li>
         </ul>
       </div>
-      <div class="col mb-3 text-center text-md-start">
+      </div>
+      <div class="col mb-3 text-center text-md-start d-flex justify-content-center">
+        <div class="w-75">
         <h5 class="fw-bold mb-2">Ospitare</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Prova a ospitare</a></li>
@@ -20,7 +24,10 @@
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Come ospitare responsabilmente</a></li>
         </ul>
       </div>
-      <div class="col mb-3 text-center text-md-start">
+      </div>
+
+      <div class="col mb-3 text-center text-md-start d-flex justify-content-center">
+        <div class="w-75">
         <h5 class="fw-bold mb-2">Community</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Boolbnb un rifugio sicuro</a></li>
@@ -28,7 +35,10 @@
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Invita degli amici</a></li>
         </ul>
       </div>
-      <div class="col text-center text-md-start">
+      </div>
+
+      <div class="col text-center text-md-start d-flex justify-content-center">
+        <div class="w-75 ">
         <h5 class="fw-bold mb-2">Assistenza</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Centro Assistenza</a></li>
@@ -38,6 +48,9 @@
         </ul>
       </div>
     </div>
+    </div>
+
+
     <div class="footer_b d-flex align-items-center flex-column">
       <div class="mb-3 d-flex">
         <a href="#" class="nav-link me-2">

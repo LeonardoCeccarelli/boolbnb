@@ -5320,6 +5320,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -11164,7 +11190,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".card[data-v-98a5036c] {\n  margin: 20px 0;\n  background-color: #001533;\n  color: white;\n}\n.card .show_link[data-v-98a5036c] {\n  opacity: 0;\n  transform: scale(0.1);\n  transition: all 0.1s linear;\n}\n.card:hover .show_link[data-v-98a5036c] {\n  opacity: 1;\n  transform: scale(1);\n}\n.card .card_image[data-v-98a5036c] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  display: block;\n}\n.card .apartment_service[data-v-98a5036c] {\n  display: inline-block;\n  margin-right: 5px;\n  font-size: 10px;\n  color: #9b9b9b;\n}\n.card .apartment_address[data-v-98a5036c] {\n  font-size: 13px;\n  color: #9b9b9b;\n}", ""]);
+exports.push([module.i, ".remove-undeline[data-v-98a5036c] {\n  text-decoration: none !important;\n}\n.card[data-v-98a5036c] {\n  margin: 20px 0;\n  color: black;\n}\n.card .card_image[data-v-98a5036c] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  display: block;\n  border: 1px solid lightgrey;\n}\n.card .apartment_address[data-v-98a5036c] {\n  font-size: 13px;\n  color: #9b9b9b;\n}\n.card .card-body[data-v-98a5036c] {\n  -webkit-text-decoration-line: none !important;\n          text-decoration-line: none !important;\n}", ""]);
 
 // exports
 
@@ -11183,7 +11209,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "a.custom[data-v-900dec9a] {\n  display: inline-block;\n  font-weight: bold;\n  text-decoration: none;\n  color: black;\n  padding: 8px 14px;\n  margin-right: 5px;\n  cursor: pointer;\n}\na.custom.active[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(0);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a] {\n  position: relative;\n  overflow: hidden;\n  color: #001533 !important;\n}\n.custom_link_4[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(-100%);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a]:hover::before {\n  transform: translateX(0);\n}\n\n/* searchbox */\n.searchbox[data-v-900dec9a] {\n  border: 1px solid black;\n  padding: 4px 15px;\n  border-radius: 20px;\n  background-color: white;\n  height: 50px;\n  transition: 1s;\n}\n.searchbox[data-v-900dec9a]:hover {\n  border: 1px solid #6bb2f5;\n}\n.searchbox label[data-v-900dec9a] {\n  color: #aaaaaa;\n  font-size: 12px;\n}\n.searchbox span[data-v-900dec9a] {\n  font-size: 12px;\n}\n.searchbox input[data-v-900dec9a] {\n  border: none;\n  height: 20px;\n}\n.searchbox input[data-v-900dec9a]:focus-visible {\n  outline: none;\n}\n.slider[data-v-900dec9a]:hover {\n  cursor: pointer;\n}\n\n/* Dropdown menu */\n.serviceList[data-v-900dec9a] {\n  position: absolute;\n  top: 100%;\n  background-color: white;\n  width: 120px;\n  border: 1px solid #bbb9b9;\n  border-radius: 10px;\n}\n.serviceList .form-check-input[data-v-900dec9a] {\n  border: 1px solid #bbb9b9;\n}\n.serviceListLink[data-v-900dec9a] {\n  text-decoration: none;\n  color: black;\n}\n\n/* End Searchbox */\n.search_container[data-v-900dec9a] {\n  border: 2px solid transparent;\n  border-radius: 10px;\n  background: #001533;\n  background: linear-gradient(36deg, rgba(0, 21, 51, 0.2021183473) 0%, rgba(255, 90, 95, 0.300157563) 47%, rgba(0, 21, 51, 0.2) 100%);\n  overflow: hidden;\n  box-shadow: 0px 0px 20px 0px rgba(0, 21, 51, 0.2);\n}\n.apartment_container[data-v-900dec9a],\n.map_container[data-v-900dec9a] {\n  height: 80vh;\n  width: 100%;\n}\n.apartment_container[data-v-900dec9a] {\n  overflow-y: auto;\n  overflow-x: hidden;\n  position: relative;\n}\n.apartment_container .sponsor_column[data-v-900dec9a],\n.apartment_container .basic_column[data-v-900dec9a] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  padding: 25px 10px;\n}", ""]);
+exports.push([module.i, "a.custom[data-v-900dec9a] {\n  display: inline-block;\n  font-weight: bold;\n  text-decoration: none;\n  color: black;\n  padding: 8px 14px;\n  margin-right: 5px;\n  cursor: pointer;\n}\na.custom.active[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(0);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a] {\n  position: relative;\n  overflow: hidden;\n  color: #001533 !important;\n}\n.custom_link_4[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(-100%);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a]:hover::before {\n  transform: translateX(0);\n}\n\n/* searchbox */\n.searchbox[data-v-900dec9a] {\n  padding: 20px 30px;\n  border-radius: 40px;\n  background-color: white;\n}\n.searchbox .fw-700[data-v-900dec9a] {\n  font-weight: 700;\n}\n.searchbox .input-small[data-v-900dec9a] {\n  width: 70px;\n}\n.searchbox input[data-v-900dec9a] {\n  border: none;\n}\n.searchbox input[data-v-900dec9a]:focus-visible {\n  outline: none;\n}\n.searchbox button[data-v-900dec9a] {\n  color: white;\n  background-color: white;\n  border: none;\n}\n.searchbox .fa-search[data-v-900dec9a] {\n  background: #ff5a5f;\n  width: 60px;\n  height: 60px;\n  border-radius: 50%;\n  text-align: center;\n  line-height: 60px;\n  vertical-align: middle;\n  font-size: 25px;\n}\n.slider[data-v-900dec9a]:hover {\n  cursor: pointer;\n}\n\n/* Dropdown menu */\n.serviceList[data-v-900dec9a] {\n  position: absolute;\n  top: 100%;\n  padding: 20px;\n  background-color: rgba(255, 255, 255, 0.9);\n  border: 1px solid rgba(228, 228, 228, 0.9);\n  border-radius: 10px;\n  z-index: 100;\n}\n.serviceList .form-check-input[data-v-900dec9a] {\n  border: 1px solid #d8d2d2;\n}\n\n/* End Searchbox */\n.search_container[data-v-900dec9a] {\n  border: 2px solid transparent;\n  border-radius: 10px;\n  overflow: hidden;\n  box-shadow: 0px 0px 20px 0px rgba(0, 21, 51, 0.2);\n}\n.apartment_container[data-v-900dec9a],\n.map_container[data-v-900dec9a] {\n  height: 80vh;\n  width: 100%;\n}\n.apartment_container[data-v-900dec9a] {\n  overflow-y: auto;\n  overflow-x: hidden;\n  position: relative;\n}\n.apartment_container .sponsor_column[data-v-900dec9a],\n.apartment_container .basic_column[data-v-900dec9a] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  padding: 25px 10px;\n}", ""]);
 
 // exports
 
@@ -11278,7 +11304,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.city-card {\n  cursor: pointer;\n  margin: 5px auto;\n  position: relative;\n  overflow: hidden;\n}\n.city-card:hover .overlay {\n  opacity: 0.7;\n  transform: scale(1);\n}\n.overlay {\n  position: absolute;\n  background-color: #ff5a5f;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  transform: scale(1.3);\n  opacity: 0;\n  transition: transform 0.4s ease 0s;\n}\n.overlay span {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  font-weight: bold;\n  font-size: 5em;\n  color: #fff;\n  font-family: Sans-serif;\n}\n.city-card img {\n  -o-object-fit: cover;\n     object-fit: cover;\n  transition: transform 0.8s ease;\n}\n.city-card:hover img {\n  transform: scale(1.1);\n}\n", ""]);
+exports.push([module.i, "\n.city-card {\r\n  cursor: pointer;\r\n  margin: 5px auto;\r\n  position: relative;\r\n  overflow: hidden;\n}\n.city-card:hover .overlay {\r\n  opacity: 0.7;\r\n  transform: scale(1);\n}\n.overlay {\r\n  position: absolute;\r\n  background-color: #ff5a5f;\r\n  width: 100%;\r\n  height: 100%;\r\n  top: 0;\r\n  transform: scale(1.3);\r\n  opacity: 0;\r\n  transition: transform 0.4s ease 0s;\n}\n.overlay span {\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 50%;\r\n  transform: translate(-50%, -50%);\r\n  font-weight: bold;\r\n  font-size: 5em;\r\n  color: #fff;\r\n  font-family: Sans-serif;\n}\n.city-card img {\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  transition: transform 0.8s ease;\n}\n.city-card:hover img {\r\n  transform: scale(1.1);\n}\r\n", ""]);
 
 // exports
 
@@ -11297,7 +11323,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* utilities */\n.white[data-v-b4eb6a1c] {\n  color: white;\n}\n.radius-30[data-v-b4eb6a1c] {\n  border-radius: 30px;\n}\n.bg-blue[data-v-b4eb6a1c] {\n  background-color: #001533;\n}\n.hero-bg[data-v-b4eb6a1c] {\n  background-image: url(\"/img/hero-img.jpg\");\n  background-size: cover;\n  background-position-y: center;\n  height: 600px;\n  border-radius: 30px;\n}\ninput[data-v-b4eb6a1c] {\n  border-radius: 30px;\n}\n.h100[data-v-b4eb6a1c] {\n  height: 100%;\n}\n/* style bottoni */\n.button[data-v-b4eb6a1c] {\n  padding: 8px 13px;\n  font-size: 15px;\n  text-decoration: none;\n}\n.button_1[data-v-b4eb6a1c] {\n  cursor: pointer;\n  color: white;\n  background-color: #001533;\n  border: 2px solid #001533;\n  transition: all 0.2s linear;\n}\n.button_1[data-v-b4eb6a1c]:hover {\n  box-shadow: 0px 10px 13px -7px #000000,\n    0px 0px 10px 5px rgba(255, 90, 95, 0.8);\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* utilities */\n.white[data-v-b4eb6a1c] {\r\n  color: white;\n}\n.hero-bg[data-v-b4eb6a1c] {\r\n  background-image: url(\"/img/hero-img.jpg\");\r\n  background-size: cover;\r\n  background-position-y: center;\r\n  height: 94vh;\n}\ninput[data-v-b4eb6a1c] {\r\n  border-radius: 30px;\n}\n.h100[data-v-b4eb6a1c] {\r\n  height: 100%;\n}\r\n/* style bottoni */\r\n\r\n\r\n", ""]);
 
 // exports
 
@@ -11316,7 +11342,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.sponsored-card {\n  position: relative;\n  border-radius: 5px;\n  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);\n  border-radius: 5px;\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card::after {\n  content: \"\";\n  border-radius: 5px;\n  position: absolute;\n  z-index: -1;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);\n  opacity: 0;\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card:hover {\n  transform: scale(1.05, 1.05);\n}\n.sponsored-card:hover::after {\n  opacity: 1;\n}\n", ""]);
+exports.push([module.i, "\n.sponsored-card {\r\n  position: relative;\r\n  border-radius: 5px;\r\n  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);\r\n  border-radius: 5px;\r\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card::after {\r\n  content: \"\";\r\n  border-radius: 5px;\r\n  position: absolute;\r\n  z-index: -1;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);\r\n  opacity: 0;\r\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card:hover {\r\n  transform: scale(1.05, 1.05);\n}\n.sponsored-card:hover::after {\r\n  opacity: 1;\n}\r\n", ""]);
 
 // exports
 
@@ -40802,67 +40828,66 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-12" }, [
-    _c("div", { staticClass: "card" }, [
-      _c("div", { staticClass: "row g-0" }, [
-        _c("div", { staticClass: "col-md-4" }, [
-          _c("img", {
-            staticClass: "img-fluid rounded-start card_image",
-            attrs: { src: _vm.apartment.cover_img, alt: "..." },
-          }),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card-body" }, [
-            _c("h5", { staticClass: "card-title" }, [
-              _vm._v(_vm._s(_vm.apartment.title)),
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "card-text" }, [
-              _vm._v(
-                "\n            " +
-                  _vm._s(_vm.apartment.description.substring(0, 30)) +
-                  "...\n          "
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row" }, [
-              _c(
-                "div",
-                { staticClass: "col-3" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "btn btn-primary show_link",
-                      attrs: {
-                        to: {
-                          name: "apartment",
-                          params: { id: _vm.apartment.id },
-                        },
-                      },
-                    },
-                    [_vm._v("Info")]
-                  ),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-9" }, [
-                _c("p", { staticClass: "mb-0 apartment_city" }, [
-                  _vm._v(_vm._s(_vm.apartment.city)),
+  return _c(
+    "div",
+    { staticClass: "col-12 px-2" },
+    [
+      _c(
+        "router-link",
+        {
+          staticClass: "remove-undeline",
+          attrs: {
+            to: {
+              name: "apartment",
+              params: { id: _vm.apartment.id },
+            },
+          },
+        },
+        [
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "row g-0 align-items-center" }, [
+              _c("div", { staticClass: "col-12 col-lg-4 p-2" }, [
+                _c("div", { staticClass: "ratio ratio-1x1" }, [
+                  _c("img", {
+                    staticClass: "img-fluid rounded-start card_image",
+                    attrs: { src: _vm.apartment.cover_img, alt: "..." },
+                  }),
                 ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "mb-0 apartment_address" }, [
-                  _vm._v(_vm._s(_vm.apartment.address)),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-12 col-lg-8" }, [
+                _c("div", { staticClass: "card-body" }, [
+                  _c(
+                    "h4",
+                    {
+                      staticClass: "card-title text-center text-lg-start mb-3",
+                    },
+                    [_c("strong", [_vm._v(" " + _vm._s(_vm.apartment.title))])]
+                  ),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text mb-5" }, [
+                    _vm._v(
+                      "\n              " +
+                        _vm._s(_vm.apartment.description.substring(0, 50)) +
+                        "...\n            "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "mb-2" }, [
+                    _c("strong", [_vm._v(_vm._s(_vm.apartment.city))]),
+                    _vm._v(
+                      " - " + _vm._s(_vm.apartment.address) + "\n            "
+                    ),
+                  ]),
                 ]),
               ]),
             ]),
           ]),
-        ]),
-      ]),
-    ]),
-  ])
+        ]
+      ),
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -40888,223 +40913,239 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-12 searchbox d-flex" }, [
-          _c("div", { staticClass: "col d-flex flex-column" }, [
-            _c("label", { attrs: { for: "" } }, [_vm._v("Città")]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.filterCity,
-                  expression: "filterCity",
-                },
-              ],
-              attrs: { type: "text", placeholder: "Es. Milano" },
-              domProps: { value: _vm.filterCity },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.filterCity = $event.target.value
-                },
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col d-flex flex-column" }, [
-            _c("label", { attrs: { for: "" } }, [_vm._v("Letti")]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.filterBeds,
-                  expression: "filterBeds",
-                },
-              ],
-              attrs: {
-                type: "number",
-                min: "1",
-                max: "50",
-                placeholder: "Es. 1",
-              },
-              domProps: { value: _vm.filterBeds },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.filterBeds = $event.target.value
-                },
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col d-flex flex-column" }, [
-            _c("label", { attrs: { for: "" } }, [_vm._v("Stanze")]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.filterRooms,
-                  expression: "filterRooms",
-                },
-              ],
-              attrs: {
-                type: "number",
-                min: "1",
-                max: "50",
-                placeholder: "Es. 3",
-              },
-              domProps: { value: _vm.filterRooms },
-              on: {
-                input: function ($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.filterRooms = $event.target.value
-                },
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col d-flex flex-column" }, [
-            _c("div", [
-              _c("label", { attrs: { for: "" } }, [_vm._v("Distanza:")]),
-              _c("span", [_vm._v(" " + _vm._s(_vm.filterRange) + " Km")]),
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.filterRange,
-                  expression: "filterRange",
-                },
-              ],
-              staticClass: "slider",
-              attrs: {
-                type: "range",
-                min: "1",
-                step: "1",
-                max: "35",
-                id: "myRange",
-              },
-              domProps: { value: _vm.filterRange },
-              on: {
-                __r: function ($event) {
-                  _vm.filterRange = $event.target.value
-                },
-              },
-            }),
-          ]),
-          _vm._v(" "),
+      _c("div", { staticClass: "d-flex searchbox my-5 align-items-center" }, [
+        _c("div", { staticClass: "flex-grow-1" }, [
           _c(
             "div",
-            {
-              staticClass:
-                "\n            col\n            d-flex\n            flex-column\n            align-items-center\n            justify-content-center\n          ",
-            },
+            { staticClass: "row row-cols-2 row-cols-lg-5 align-items-top" },
             [
-              _c("div", { staticClass: "position-relative" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "serviceListLink",
-                    attrs: { href: "#" },
-                    on: { click: _vm.getExpanded },
-                  },
-                  [
-                    _vm._v("Servizi "),
-                    _c("i", { staticClass: "fas fa-angle-down" }),
-                  ]
-                ),
-                _vm._v(" "),
-                _vm.expanded === true
-                  ? _c(
-                      "div",
-                      { staticClass: "serviceList" },
-                      _vm._l(_vm.services, function (service) {
-                        return _c(
-                          "div",
-                          { key: service.id, staticClass: "form-check" },
-                          [
-                            _c("input", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.filterServices,
-                                  expression: "filterServices",
+              _c("div", { staticClass: "col mb-3 mb-lg-0" }, [
+                _c("div", { staticClass: "d-flex flex-column" }, [
+                  _c("label", { staticClass: "fw-700", attrs: { for: "" } }, [
+                    _vm._v("Città"),
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.filterCity,
+                        expression: "filterCity",
+                      },
+                    ],
+                    attrs: { type: "text", placeholder: "Es. Milano" },
+                    domProps: { value: _vm.filterCity },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.filterCity = $event.target.value
+                      },
+                    },
+                  }),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col mb-3 mb-lg-0" }, [
+                _c("div", { staticClass: "d-flex flex-column" }, [
+                  _c("label", { staticClass: "fw-700", attrs: { for: "" } }, [
+                    _vm._v("Letti"),
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.filterBeds,
+                        expression: "filterBeds",
+                      },
+                    ],
+                    staticClass: "input-small",
+                    attrs: {
+                      type: "number",
+                      min: "1",
+                      max: "50",
+                      placeholder: "Es. 1",
+                    },
+                    domProps: { value: _vm.filterBeds },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.filterBeds = $event.target.value
+                      },
+                    },
+                  }),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col mb-3 mb-lg-0" }, [
+                _c("div", { staticClass: "d-flex flex-column" }, [
+                  _c("label", { staticClass: "fw-700", attrs: { for: "" } }, [
+                    _vm._v("Stanze"),
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.filterRooms,
+                        expression: "filterRooms",
+                      },
+                    ],
+                    staticClass: "input-small",
+                    attrs: {
+                      type: "number",
+                      min: "1",
+                      max: "50",
+                      placeholder: "Es. 3",
+                    },
+                    domProps: { value: _vm.filterRooms },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.filterRooms = $event.target.value
+                      },
+                    },
+                  }),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col mb-3 mb-lg-0" }, [
+                _c("div", { staticClass: "position-relative" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass: "serviceListLink fw-700",
+                      on: { click: _vm.getExpanded },
+                    },
+                    [
+                      _vm._v("\n                Servizi "),
+                      _c("i", { staticClass: "fas fa-angle-down" }),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _vm.expanded === true
+                    ? _c(
+                        "div",
+                        { staticClass: "serviceList" },
+                        _vm._l(_vm.services, function (service) {
+                          return _c(
+                            "div",
+                            { key: service.id, staticClass: "form-check" },
+                            [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.filterServices,
+                                    expression: "filterServices",
+                                  },
+                                ],
+                                staticClass: "form-check-input",
+                                attrs: { type: "checkbox" },
+                                domProps: {
+                                  value: service.name,
+                                  checked: Array.isArray(_vm.filterServices)
+                                    ? _vm._i(_vm.filterServices, service.name) >
+                                      -1
+                                    : _vm.filterServices,
                                 },
-                              ],
-                              staticClass: "form-check-input",
-                              attrs: { type: "checkbox" },
-                              domProps: {
-                                value: service.name,
-                                checked: Array.isArray(_vm.filterServices)
-                                  ? _vm._i(_vm.filterServices, service.name) >
-                                    -1
-                                  : _vm.filterServices,
-                              },
-                              on: {
-                                change: function ($event) {
-                                  var $$a = _vm.filterServices,
-                                    $$el = $event.target,
-                                    $$c = $$el.checked ? true : false
-                                  if (Array.isArray($$a)) {
-                                    var $$v = service.name,
-                                      $$i = _vm._i($$a, $$v)
-                                    if ($$el.checked) {
-                                      $$i < 0 &&
-                                        (_vm.filterServices = $$a.concat([$$v]))
+                                on: {
+                                  change: function ($event) {
+                                    var $$a = _vm.filterServices,
+                                      $$el = $event.target,
+                                      $$c = $$el.checked ? true : false
+                                    if (Array.isArray($$a)) {
+                                      var $$v = service.name,
+                                        $$i = _vm._i($$a, $$v)
+                                      if ($$el.checked) {
+                                        $$i < 0 &&
+                                          (_vm.filterServices = $$a.concat([
+                                            $$v,
+                                          ]))
+                                      } else {
+                                        $$i > -1 &&
+                                          (_vm.filterServices = $$a
+                                            .slice(0, $$i)
+                                            .concat($$a.slice($$i + 1)))
+                                      }
                                     } else {
-                                      $$i > -1 &&
-                                        (_vm.filterServices = $$a
-                                          .slice(0, $$i)
-                                          .concat($$a.slice($$i + 1)))
+                                      _vm.filterServices = $$c
                                     }
-                                  } else {
-                                    _vm.filterServices = $$c
-                                  }
+                                  },
                                 },
-                              },
-                            }),
-                            _vm._v(" "),
-                            _c("label", { staticClass: "form-check-label" }, [
-                              _vm._v(
-                                "\n                  " +
-                                  _vm._s(service.name) +
-                                  "\n                "
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "label",
+                                { staticClass: "form-check-label me-3" },
+                                [
+                                  _vm._v(
+                                    "\n                    " +
+                                      _vm._s(service.name) +
+                                      "\n                  "
+                                  ),
+                                ]
                               ),
-                            ]),
-                          ]
-                        )
-                      }),
-                      0
-                    )
-                  : _vm._e(),
+                            ]
+                          )
+                        }),
+                        0
+                      )
+                    : _vm._e(),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col flex-grow-1" }, [
+                _c("div", { staticClass: "d-flex flex-column me-lg-5" }, [
+                  _c("label", { staticClass: "fw-700", attrs: { for: "" } }, [
+                    _vm._v("Distanza: " + _vm._s(_vm.filterRange) + " Km"),
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.filterRange,
+                        expression: "filterRange",
+                      },
+                    ],
+                    staticClass: "slider",
+                    attrs: {
+                      type: "range",
+                      min: "1",
+                      step: "1",
+                      max: "35",
+                      id: "myRange",
+                    },
+                    domProps: { value: _vm.filterRange },
+                    on: {
+                      __r: function ($event) {
+                        _vm.filterRange = $event.target.value
+                      },
+                    },
+                  }),
+                ]),
               ]),
             ]
           ),
-          _vm._v(" "),
-          _c("div", { staticClass: "col text-end" }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-success",
-                on: { click: _vm.getFiltered },
-              },
-              [_vm._v("Cerca")]
-            ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "ms-5 ms-lg-0" }, [
+          _c("div", { staticClass: "text-center" }, [
+            _c("button", { on: { click: _vm.getFiltered } }, [
+              _c("i", { staticClass: "fas fa-search" }),
+            ]),
           ]),
         ]),
       ]),
@@ -41146,7 +41187,7 @@ var render = function () {
       _c("div", { staticClass: "search_container" }, [
         _c("div", { staticClass: "row g-0" }, [
           _c("div", { staticClass: "col-12 col-md-6" }, [
-            _c("div", { staticClass: "apartment_container" }, [
+            _c("div", { staticClass: "apartment_container px-5" }, [
               !_vm.switchPage
                 ? _c("div", { staticClass: "sponsor_column" }, [
                     _vm.filteredSponsorApartments.length
@@ -41826,10 +41867,10 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "hero bg-blue py-5" }, [
-    _c("div", { staticClass: "container hero-bg" }, [
-      _c("div", { staticClass: "row row-cols-1 row-cols-lg-2 g-lg-3 h100" }, [
-        _c("div", { staticClass: "col h100" }, [
+  return _c("div", { staticClass: "container-flex hero" }, [
+    _c("div", { staticClass: "hero-bg" }, [
+      _c("div", { staticClass: "row row-cols-1 row-cols-lg-2 w-100 h100" }, [
+        _c("div", { staticClass: "col" }, [
           _c(
             "div",
             {
@@ -41838,11 +41879,11 @@ var render = function () {
             },
             [
               _c("div", { staticClass: "white text-center py-4 w-50" }, [
-                _c("h3", { staticClass: "mb-4" }, [
+                _c("h1", { staticClass: "mb-4" }, [
                   _vm._v("Qual'è la tua prossima avventura?"),
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "my-3" }, [
+                _c("div", { staticClass: "my-5" }, [
                   _c("input", {
                     directives: [
                       {
@@ -41852,7 +41893,7 @@ var render = function () {
                         expression: "formCity",
                       },
                     ],
-                    staticClass: "py-1 ps-3",
+                    staticClass: "py-2 ps-3",
                     attrs: {
                       type: "text",
                       name: "luogo",
@@ -41880,7 +41921,7 @@ var render = function () {
                         expression: "formBeds",
                       },
                     ],
-                    staticClass: "py-1 ps-3",
+                    staticClass: "py-2 ps-3",
                     attrs: {
                       type: "text",
                       name: "ospiti",
@@ -41900,12 +41941,12 @@ var render = function () {
                 _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "my-3" },
+                  { staticClass: "my-5" },
                   [
                     _c(
                       "router-link",
                       {
-                        staticClass: "btn btn-sm btn-success",
+                        staticClass: "  button button_1",
                         attrs: {
                           to: {
                             name: "search",
@@ -41935,7 +41976,7 @@ var render = function () {
                 "div",
                 { staticClass: "text-center py-4 w-50" },
                 [
-                  _c("h3", { staticClass: "mb-5 white" }, [
+                  _c("h1", { staticClass: "mb-5 white" }, [
                     _vm._v("Non sai dove andare?"),
                   ]),
                   _vm._v(" "),
@@ -42016,13 +42057,13 @@ var staticRenderFns = [
                     _vm._v("apartment.title"),
                   ]),
                   _vm._v(" "),
-                  _c("p", { staticClass: "card-text" }, [
+                  _c("p", { staticClass: "card-text " }, [
                     _vm._v("apartment.description"),
                   ]),
                   _vm._v(" "),
                   _c(
                     "a",
-                    { staticClass: "btn btn-dark", attrs: { href: "#" } },
+                    { staticClass: "button button_4", attrs: { href: "#" } },
                     [_vm._v("Scopri")]
                   ),
                 ]),
@@ -42054,7 +42095,7 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c(
                     "a",
-                    { staticClass: "btn btn-dark", attrs: { href: "#" } },
+                    { staticClass: "button button_4", attrs: { href: "#" } },
                     [_vm._v("Scopri")]
                   ),
                 ]),
@@ -42086,7 +42127,10 @@ var staticRenderFns = [
                   _vm._v(" "),
                   _c(
                     "a",
-                    { staticClass: "btn btn-dark", attrs: { href: "#" } },
+                    {
+                      staticClass: "button button_4 mt-2",
+                      attrs: { href: "#" },
+                    },
                     [_vm._v("Scopri")]
                   ),
                 ]),
@@ -42112,13 +42156,16 @@ var staticRenderFns = [
                     _vm._v("apartment.title"),
                   ]),
                   _vm._v(" "),
-                  _c("p", { staticClass: "card-text" }, [
+                  _c("p", { staticClass: "card-text " }, [
                     _vm._v("apartment.description"),
                   ]),
                   _vm._v(" "),
                   _c(
                     "a",
-                    { staticClass: "btn btn-dark", attrs: { href: "#" } },
+                    {
+                      staticClass: "button button_4 mt-5",
+                      attrs: { href: "#" },
+                    },
                     [_vm._v("Scopri")]
                   ),
                 ]),
@@ -58813,8 +58860,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/giovanniconti/Desktop/Boolean Course/Boolean #43/boolbnb/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/giovanniconti/Desktop/Boolean Course/Boolean #43/boolbnb/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Sonia\Boolean\Esercizi\boolbnb\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Sonia\Boolean\Esercizi\boolbnb\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

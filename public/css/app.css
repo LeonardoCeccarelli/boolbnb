@@ -12178,6 +12178,13 @@ fieldset:disabled .btn {
   }
 }
 
+.narrow-font {
+  text-transform: uppercase;
+  letter-spacing: 0;
+  transform: scale(0.9, 1);
+  font-weight: 700;
+}
+
 .form-control:focus {
   color: #212529;
   background-color: #F8FAFC;
@@ -12206,6 +12213,20 @@ fieldset:disabled .btn {
 .button {
   padding: 8px 13px;
   font-size: 15px;
+  text-decoration: none !important;
+  border-radius: 10px !important;
+}
+
+.button_1 {
+  cursor: pointer;
+  color: white;
+  background-color: #001533;
+  border: 2px solid #001533;
+  transition: all 0.2s linear;
+}
+
+.button_1:hover {
+  box-shadow: 0px 10px 13px -7px #000000, 0px 0px 10px 5px rgba(255, 90, 95, 0.8);
 }
 
 .button_2 {
@@ -12213,13 +12234,59 @@ fieldset:disabled .btn {
   color: #FF5A5F;
   background-color: white;
   border: 2px solid #FF5A5F;
-  border-radius: 10px;
   transition: all 0.2s linear;
 }
 
 .button_2:hover {
   color: white;
+  background-color: #ff5a5f;
+}
+
+.button_4 {
+  cursor: pointer;
+  color: #001533;
+  background-color: white;
+  border: 2px solid #001533;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+}
+
+.button_4:hover {
+  color: white;
+  background-color: #001533;
+}
+
+.auth .bg-format {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  height: 100vh;
+}
+
+.auth .card {
+  margin-top: 100px;
+  opacity: 0.9;
+  border-radius: 20px;
+}
+
+.admin-form .input-70 {
+  width: 70px;
+}
+
+.admin-form .input-150 {
+  width: 150px;
+}
+
+.sponsor-tag {
+  position: absolute;
+  top: 10px;
+  left: 20px;
   background-color: #FF5A5F;
+  color: white;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .icone {
@@ -12233,5 +12300,9 @@ fieldset:disabled .btn {
     font-size: 13px;
     right: 40px;
   }
+}
+
+footer {
+  background-color: #e9e9e9;
 }
 

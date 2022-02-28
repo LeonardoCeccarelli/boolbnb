@@ -2,80 +2,106 @@
   <div>
     <!-- Searchbox -->
     <div class="container">
-      <div class="row">
-        <div class="col-12 searchbox d-flex">
-          <div class="col d-flex flex-column">
-            <label for="">Città</label>
-            <input v-model="filterCity" type="text" placeholder="Es. Milano" />
-          </div>
-          <div class="col d-flex flex-column">
-            <label for="">Letti</label>
-            <input
-              v-model="filterBeds"
-              type="number"
-              min="1"
-              max="50"
-              placeholder="Es. 1"
-            />
-          </div>
-          <div class="col d-flex flex-column">
-            <label for="">Stanze</label>
-            <input
-              v-model="filterRooms"
-              type="number"
-              min="1"
-              max="50"
-              placeholder="Es. 3"
-            />
-          </div>
-          <div class="col d-flex flex-column">
-            <div>
-              <label for="">Distanza:</label><span> {{ filterRange }} Km</span>
+      <div class="d-flex searchbox my-5 align-items-center">
+        <div class="flex-grow-1">
+
+
+
+          <div class="row row-cols-2 row-cols-lg-5 align-items-top">
+            <!-- CITTA FIELD -->
+            <div class="col mb-3 mb-lg-0">
+              <div class="d-flex flex-column">
+                <label class="fw-700" for="">Città</label>
+                <input
+                  v-model="filterCity"
+                  type="text"
+                  placeholder="Es. Milano"
+                />
+              </div>
             </div>
-            <input
-              type="range"
-              min="1"
-              step="1"
-              max="35"
-              v-model="filterRange"
-              class="slider"
-              id="myRange"
-            />
-          </div>
-          <div
-            class="
-              col
-              d-flex
-              flex-column
-              align-items-center
-              justify-content-center
-            "
-          >
-            <div class="position-relative">
-              <a href="#" class="serviceListLink" @click="getExpanded"
-                >Servizi <i class="fas fa-angle-down"></i
-              ></a>
-              <div v-if="expanded === true" class="serviceList">
-                <div
-                  class="form-check"
-                  v-for="service in services"
-                  :key="service.id"
-                >
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    :value="service.name"
-                    v-model="filterServices"
-                  />
-                  <label class="form-check-label">
-                    {{ service.name }}
-                  </label>
+
+            <!-- LETTI FIELD -->
+            <div class="col mb-3 mb-lg-0">
+              <div class="d-flex flex-column">
+                <label class="fw-700" for="">Letti</label>
+                <input
+                  v-model="filterBeds"
+                  type="number"
+                  min="1"
+                  max="50"
+                  placeholder="Es. 1"
+                  class="input-small"
+                />
+              </div>
+            </div>
+
+            <!-- STANZE FIELD -->
+            <div class="col mb-3 mb-lg-0">
+              <div class="d-flex flex-column">
+                <label class="fw-700" for="">Stanze</label>
+                <input
+                  v-model="filterRooms"
+                  type="number"
+                  min="1"
+                  max="50"
+                  placeholder="Es. 3"
+                  class="input-small"
+                />
+              </div>
+            </div>
+
+            <!-- SERVIZI FIELD -->
+            <div class="col mb-3 mb-lg-0">
+              <div class="position-relative">
+                <div class="serviceListLink fw-700" @click="getExpanded">
+                  Servizi <i class="fas fa-angle-down"></i>
+                </div>
+                <div v-if="expanded === true" class="serviceList">
+                  
+                  <div
+                    class="form-check"
+                    v-for="service in services"
+                    :key="service.id"
+                  >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      :value="service.name"
+                      v-model="filterServices"
+                    />
+                    <label class="form-check-label me-3">
+                      {{ service.name }}
+                    </label>
+                  </div>
                 </div>
               </div>
             </div>
+
+               <!-- DISTANZA FIELD -->
+            <div class="col flex-grow-1">
+              <div class="d-flex flex-column me-lg-5">
+                <label class="fw-700" for="">Distanza: {{ filterRange }} Km</label>
+
+                <input
+                  type="range"
+                  min="1"
+                  step="1"
+                  max="35"
+                  v-model="filterRange"
+                  class="slider"
+                  id="myRange"
+                />
+              </div>
+            </div>
           </div>
-          <div class="col text-end">
-            <button @click="getFiltered" class="btn btn-success">Cerca</button>
+        </div>
+
+        <!-- SUBMIT -->
+        <div class="ms-5 ms-lg-0">
+          <div class="text-center">
+            <button @click="getFiltered" class="">
+              <i class="fas fa-search"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -103,7 +129,7 @@
         <div class="row g-0">
           <!-- Sezione Appartamenti -->
           <div class="col-12 col-md-6">
-            <div class="apartment_container">
+            <div class="apartment_container px-5">
               <div v-if="!switchPage" class="sponsor_column">
                 <div v-if="filteredSponsorApartments.length">
                   <ApartmentCard
@@ -239,6 +265,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
 a.custom {
   display: inline-block;
   font-weight: bold;
@@ -282,68 +310,70 @@ a.custom {
 .custom_link_4:hover::before {
   transform: translateX(0);
 }
+
 /* searchbox */
 .searchbox {
-  border: 1px solid black;
-  padding: 4px 15px;
-  border-radius: 20px;
+  padding: 20px 30px;
+  border-radius: 40px;
   background-color: white;
-  height: 50px;
-  transition: 1s;
-  &:hover {
-    border: 1px solid rgb(107, 178, 245);
-  }
 
-  label {
-    color: rgb(170, 170, 170);
-    font-size: 12px;
-  }
-
-  span {
-    font-size: 12px;
-  }
+.fw-700 {
+  font-weight: 700;
+}
+.input-small {
+  width:70px;
+}
   input {
     border: none;
-    height: 20px;
+   
     &:focus-visible {
       outline: none;
     }
   }
+  button {
+    color: white;
+    background-color: white;
+    border: none;
+  }
+  .fa-search {
+    background: #ff5a5f;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    vertical-align: middle;
+    font-size: 25px;
+    
+  }
 }
-
 .slider {
   &:hover {
     cursor: pointer;
   }
 }
+
 /* Dropdown menu */
 .serviceList {
   position: absolute;
   top: 100%;
-  background-color: white;
-  width: 120px;
-  border: 1px solid rgb(187, 185, 185);
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgb(228, 228, 228, 0.9);
   border-radius: 10px;
+  z-index: 100;
+  
   .form-check-input {
-    border: 1px solid rgb(187, 185, 185);
+    border: 1px solid rgb(216, 210, 210);
   }
 }
-.serviceListLink {
-  text-decoration: none;
-  color: black;
-}
+
 /* End Searchbox */
 
 .search_container {
   border: 2px solid transparent;
   border-radius: 10px;
-  background: rgb(0, 21, 51);
-  background: linear-gradient(
-    36deg,
-    rgba(0, 21, 51, 0.20211834733893552) 0%,
-    rgba(255, 90, 95, 0.30015756302521013) 47%,
-    rgba(0, 21, 51, 0.2) 100%
-  );
+
   overflow: hidden;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 21, 51, 0.2);
   box-shadow: 0px 0px 20px 0px rgba(0, 21, 51, 0.2);
@@ -369,8 +399,5 @@ a.custom {
     width: 100%;
     padding: 25px 10px;
   }
-}
-
-.map_container {
 }
 </style>

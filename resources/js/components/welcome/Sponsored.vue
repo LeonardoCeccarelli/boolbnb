@@ -16,8 +16,8 @@
           <img src="/img/hero-img.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">apartment.title</h5>
-            <p class="card-text">apartment.description</p>
-            <a href="#" class="btn btn-dark">Scopri</a>
+            <p class="card-text ">apartment.description</p>
+            <a href="#" class="button button_4">Scopri</a>
           </div>
         </div>
       </div>
@@ -28,7 +28,7 @@
           <div class="card-body">
             <h5 class="card-title">apartment.title</h5>
             <p class="card-text">apartment.description</p>
-            <a href="#" class="btn btn-dark">Scopri</a>
+            <a href="#" class="button button_4">Scopri</a>
           </div>
         </div>
       </div>
@@ -39,7 +39,7 @@
           <div class="card-body">
             <h5 class="card-title">apartment.title</h5>
             <p class="card-text">apartment.description</p>
-            <a href="#" class="btn btn-dark">Scopri</a>
+            <a href="#" class="button button_4 mt-2">Scopri</a>
           </div>
         </div>
       </div>
@@ -49,8 +49,8 @@
           <img src="/img/hero-img.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">apartment.title</h5>
-            <p class="card-text">apartment.description</p>
-            <a href="#" class="btn btn-dark">Scopri</a>
+            <p class="card-text ">apartment.description</p>
+            <a href="#" class="button button_4 mt-5">Scopri</a>
           </div>
         </div>
       </div>
