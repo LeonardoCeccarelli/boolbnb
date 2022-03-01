@@ -134,32 +134,27 @@
 
     <div class="position-fixed icone" style="">
       <ul class="list-unstyled text-center ">
-        <li class="mb-4">
-          
+        <li class="mb-4" style="border: 1px solid #ff5a5f; padding: 5px; border-radius: 5px;">
           <a href="{{ route('admin.message.index', $apartment->id) }}"
             class="fw-bold mb-1 text-decoration-none sms text-dark">
-            <i class="fas fa-envelope fs-2 mb-2 sms-icon"></i>
-            <p>Messaggi </p>
+            <i class="fas fa-envelope fs-2 mb-2 sms-icon" style="color: #ff5a5f;"></i>
+            <p style="color: #001533; margin-bottom: 0;">Messaggi </p>
           </a>
         </li>
-        <li  class="mb-4">
-          
+        <li  class="mb-4" style="border: 1px solid #ff5a5f; padding: 5px; border-radius: 5px;">
           <a href="{{ route('admin.sponsor.index', $apartment) }}"
                 class="fw-bold mb-1  text-decoration-none text-dark ">
-                <i class="fas fa-crown fs-2 mb-2"></i>
-                <p>Sponsor</p>                
+                <i class="fas fa-crown fs-2 mb-2" style="color: #ff5a5f;"></i>
+                <p style="color: #001533; margin-bottom: 0;">Sponsor</p>                
           </a>
         </li>
-        <li  class="mb-4">
-          
+        <li  class="mb-4" style="border: 1px solid #ff5a5f; padding: 5px; border-radius: 5px;">
           <a href="{{ route('admin.apartment.edit', $apartment->id) }}"
             class="fw-bold mb-1 text-decoration-none text-dark ">
-            <i class="fas fa-pen fs-2 mb-2"></i>
-            <p>Modifica</p>
-             
+            <i class="fas fa-pen fs-2 mb-2" style="color: #ff5a5f;"></i>
+            <p style="color: #001533; margin-bottom: 0;">Modifica</p>
           </a>
         </li>
-        
       </ul>
       
     </div>

@@ -12178,6 +12178,25 @@ fieldset:disabled .btn {
   }
 }
 
+.braintree-sheet__content--form {
+  padding-left: 25px !important;
+  text-align: left !important;
+}
+
+iframe {
+  left: 0 !important;
+  position: relative !important;
+}
+
+.braintree-form__flexible-fields {
+  justify-content: left !important;
+}
+
+.braintree-form__field-group {
+  flex-grow: 0 !important;
+  margin-right: 1.5rem !important;
+}
+
 .narrow-font {
   text-transform: uppercase;
   letter-spacing: 0;
