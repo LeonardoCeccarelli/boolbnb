@@ -11,8 +11,8 @@
     @if ($end_date < $now)
 
     <div class="row text-center my-5">
-      <h2 class='mb-4'>SPONSORIZZA IL TUO ANNUNCIO</h2>
-      <h3>{{ $apartment->title }}</h3>
+      <h2 class='mb-4'>Sponsorizza il tuo annuncio</h2>
+      <h3><i>{{ $apartment->title }}</i></h3>
     </div>
 
     <div class='row row-cols-1 row-col-lg-3 justify-content-around text-center py-4 '>
@@ -51,7 +51,7 @@
       
           {{-- Select Sponsorship --}}
           <section class="col-12 d-flex flex-column align-items-center mb-5">
-            <h2 class="mb-4">Seleziona Un Piano</h2>
+            <h3 class="mb-4">Seleziona un piano</h3>
             <select class='form-select form-select-lg' id='sponsor_select' name='sponsor_select' >
               
 

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="sponsoredApartment" class="sponsored container pt-5">
+  <div v-if="sponsoredApartment.length" class="sponsored container pt-5">
     <h2 class="mb-4">Scopri le esperienze Boolbnb</h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-md-3 g-lg-3 h-100">
       <!-- CARD -> foreach per i primi 8 appartamenti sponsorizzati-->
@@ -42,7 +42,6 @@ export default {
   methods: {
     getData() {
       window.axios.get("api/welcome/sponsored").then((resp) => {
-        // console.log(resp.data);
         this.sponsoredApartment = resp.data;
       });
     },
