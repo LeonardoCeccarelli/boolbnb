@@ -136,7 +136,7 @@
       <ul class="list-unstyled text-center ">
         <li class="mb-4">
           
-          <a href="{{ route('admin.message', $apartment->id) }}"
+          <a href="{{ route('admin.message.index', $apartment->id) }}"
             class="fw-bold mb-1 text-decoration-none sms text-dark">
             <i class="fas fa-envelope fs-2 mb-2 sms-icon"></i>
             <p>Messaggi </p>

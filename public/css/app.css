@@ -12295,6 +12295,28 @@ fieldset:disabled .btn {
   font-size: 10px;
 }
 
+.accordion-item {
+  border-radius: 20px;
+  border-radius: 25px !important;
+}
+
+.accordion-button {
+  background-color: #ff999c;
+  border-radius: 25px !important;
+}
+
+.accordion-button:focus {
+  background-color: #FF5A5F;
+  box-shadow: 0 0 0 0.25rem #ff5a608c;
+  color: white;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #FF5A5F;
+  box-shadow: 0 0 0 0.25rem #ff5a608c;
+  color: white;
+}
+
 @media only screen and (min-width: 600px) {
   .icone {
     font-size: 13px;
@@ -12304,5 +12326,11 @@ fieldset:disabled .btn {
 
 footer {
   background-color: #e9e9e9;
+}
+
+@media only screen and (max-width: 768px) {
+  .accordion-button::after {
+    margin-left: 50%;
+  }
 }
 
