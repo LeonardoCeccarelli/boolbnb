@@ -5565,6 +5565,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -5606,7 +5613,8 @@ __webpack_require__.r(__webpack_exports__);
     closeOverlayImage: function closeOverlayImage() {
       this.overlayImage = false;
     }
-  }
+  },
+  mounted: function mounted() {}
 });
 
 /***/ }),
@@ -5734,12 +5742,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  // props: {
+  //   apartmentLat,
+  //   apartmentLon,
+  // },
   data: function data() {
     return {
       classMap: "show",
       apiKey: "74G2HVlLeNW6ZnVG4yzsaMj20OxuW1sJ",
-      lon: "12.48945",
-      lat: "41.89358"
+      lon: 40.84567,
+      lat: 12.5643
     };
   },
   methods: {
@@ -5784,10 +5796,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    coverImg: {
+      type: String,
+      "default": ""
+    }
+  }
+});
 
 /***/ }),
 
@@ -6056,7 +6072,7 @@ __webpack_require__.r(__webpack_exports__);
         }
       },
       apartment_id: this.$route.params.id,
-      ip_address: ''
+      ip_address: ""
     };
   },
   methods: {
@@ -6077,7 +6093,7 @@ __webpack_require__.r(__webpack_exports__);
     fetchIpAddress: function fetchIpAddress() {
       var _this3 = this;
 
-      fetch('https://api.ipify.org?format=json').then(function (response) {
+      fetch("https://api.ipify.org?format=json").then(function (response) {
         return response.json();
       }).then(function (response) {
         _this3.clientIp = response.ip;
@@ -11304,7 +11320,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.city-card {\r\n  cursor: pointer;\r\n  margin: 5px auto;\r\n  position: relative;\r\n  overflow: hidden;\n}\n.city-card:hover .overlay {\r\n  opacity: 0.7;\r\n  transform: scale(1);\n}\n.overlay {\r\n  position: absolute;\r\n  background-color: #ff5a5f;\r\n  width: 100%;\r\n  height: 100%;\r\n  top: 0;\r\n  transform: scale(1.3);\r\n  opacity: 0;\r\n  transition: transform 0.4s ease 0s;\n}\n.overlay span {\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 50%;\r\n  transform: translate(-50%, -50%);\r\n  font-weight: bold;\r\n  font-size: 5em;\r\n  color: #fff;\r\n  font-family: Sans-serif;\n}\n.city-card img {\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  transition: transform 0.8s ease;\n}\n.city-card:hover img {\r\n  transform: scale(1.1);\n}\r\n", ""]);
+exports.push([module.i, "\n.city-card {\n  cursor: pointer;\n  margin: 5px auto;\n  position: relative;\n  overflow: hidden;\n}\n.city-card:hover .overlay {\n  opacity: 0.7;\n  transform: scale(1);\n}\n.overlay {\n  position: absolute;\n  background-color: #ff5a5f;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  transform: scale(1.3);\n  opacity: 0;\n  transition: transform 0.4s ease 0s;\n}\n.overlay span {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  font-weight: bold;\n  font-size: 5em;\n  color: #fff;\n  font-family: Sans-serif;\n}\n.city-card img {\n  -o-object-fit: cover;\n     object-fit: cover;\n  transition: transform 0.8s ease;\n}\n.city-card:hover img {\n  transform: scale(1.1);\n}\n", ""]);
 
 // exports
 
@@ -11323,7 +11339,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* utilities */\n.white[data-v-b4eb6a1c] {\r\n  color: white;\n}\n.hero-bg[data-v-b4eb6a1c] {\r\n  background-image: url(\"/img/hero-img.jpg\");\r\n  background-size: cover;\r\n  background-position-y: center;\r\n  height: 94vh;\n}\ninput[data-v-b4eb6a1c] {\r\n  border-radius: 30px;\n}\n.h100[data-v-b4eb6a1c] {\r\n  height: 100%;\n}\r\n/* style bottoni */\r\n\r\n\r\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* utilities */\n.white[data-v-b4eb6a1c] {\n  color: white;\n}\n.hero-bg[data-v-b4eb6a1c] {\n  background-image: url(\"/img/hero-img.jpg\");\n  background-size: cover;\n  background-position-y: center;\n  height: 94vh;\n}\ninput[data-v-b4eb6a1c] {\n  border-radius: 30px;\n}\n.h100[data-v-b4eb6a1c] {\n  height: 100%;\n}\n/* style bottoni */\n\n\n", ""]);
 
 // exports
 
@@ -11342,7 +11358,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.sponsored-card {\r\n  position: relative;\r\n  border-radius: 5px;\r\n  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);\r\n  border-radius: 5px;\r\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card::after {\r\n  content: \"\";\r\n  border-radius: 5px;\r\n  position: absolute;\r\n  z-index: -1;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);\r\n  opacity: 0;\r\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card:hover {\r\n  transform: scale(1.05, 1.05);\n}\n.sponsored-card:hover::after {\r\n  opacity: 1;\n}\r\n", ""]);
+exports.push([module.i, "\n.sponsored-card {\n  position: relative;\n  border-radius: 5px;\n  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);\n  border-radius: 5px;\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card::after {\n  content: \"\";\n  border-radius: 5px;\n  position: absolute;\n  z-index: -1;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);\n  opacity: 0;\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card:hover {\n  transform: scale(1.05, 1.05);\n}\n.sponsored-card:hover::after {\n  opacity: 1;\n}\n", ""]);
 
 // exports
 
@@ -41275,36 +41291,17 @@ var render = function () {
             _c(
               "div",
               { staticClass: "cover_img", on: { click: _vm.getOverlayImage } },
-              [
-                _c("img", {
-                  attrs: {
-                    src: "https://www.classcountryhomes.it/wp-content/uploads/2019/05/appartamenti-in-vendita-roma-nord-38.jpg",
-                    alt: "",
-                  },
-                }),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-12 col-md-6" }, [
-            _c(
-              "div",
-              { staticClass: "other_img", on: { click: _vm.getOverlayImage } },
-              [
-                _vm._m(0),
-                _vm._v(" "),
-                _c("img", {
-                  attrs: {
-                    src: "https://www.lago.it/wp-content/uploads/2017/10/Lago-Appartamento-Store-Arnhem-1.jpg",
-                    alt: "",
-                  },
-                }),
-              ]
+              [_c("img", { attrs: { src: _vm.apartment.cover_img, alt: "" } })]
             ),
           ]),
         ]),
         _vm._v(" "),
-        _c("MapGeocode"),
+        _c("MapGeocode", {
+          attrs: {
+            apartmentLat: _vm.apartment.lat,
+            apartmentLon: _vm.apartment.lon,
+          },
+        }),
         _vm._v(" "),
         _c("div", { staticClass: "row my-5" }, [
           _c("div", { staticClass: "col-12 col-md-8" }, [
@@ -41312,18 +41309,42 @@ var render = function () {
               _c("div", { staticClass: "title_container mb-4" }, [
                 _c("h2", [_vm._v(_vm._s(_vm.apartment.title))]),
                 _vm._v(" "),
-                _c("p", [_vm._v("Roma - Piazza Venezia")]),
+                _c("p", [
+                  _vm._v(
+                    _vm._s(_vm.apartment.city) +
+                      " - " +
+                      _vm._s(_vm.apartment.address)
+                  ),
+                ]),
                 _vm._v(" "),
-                _c("p", [_vm._v("4 stanze/a - 4 posti/o letto - 1 bagni/o")]),
+                _c("p", [
+                  _vm._v(
+                    "\n              " +
+                      _vm._s(_vm.apartment.rooms) +
+                      " stanze - " +
+                      _vm._s(_vm.apartment.beds) +
+                      " posti/o\n              letto - " +
+                      _vm._s(_vm.apartment.bathrooms) +
+                      " bagni/o\n            "
+                  ),
+                ]),
               ]),
               _vm._v(" "),
-              _vm._m(1),
+              _c("div", { staticClass: "description_container mb-5" }, [
+                _c("p", [
+                  _vm._v(
+                    "\n              " +
+                      _vm._s(_vm.apartment.description) +
+                      "\n            "
+                  ),
+                ]),
+              ]),
               _vm._v(" "),
               _c("div", { staticClass: "form_button" }, [
                 _c(
                   "button",
                   {
-                    staticClass: "btn btn-primary",
+                    staticClass: "button button_special_1",
                     attrs: { type: "button", disabled: _vm.formActive },
                     on: { click: _vm.getFormActive },
                   },
@@ -41333,7 +41354,60 @@ var render = function () {
             ]),
           ]),
           _vm._v(" "),
-          _vm._m(2),
+          _c("div", { staticClass: "col-12 col-md-4 right_info" }, [
+            _c("p", { staticClass: "mb-2" }, [
+              _c("span", { staticClass: "price" }, [
+                _vm._v("€" + _vm._s(_vm.apartment.night_price)),
+              ]),
+              _vm._v("/notte\n        "),
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "mb-2" }, [
+              _c("span", { staticClass: "price" }, [
+                _vm._v(_vm._s(_vm.apartment.square_metres)),
+              ]),
+              _vm._v("/metri²\n        "),
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "mb-5" }, [
+              _vm._v("\n          Proprietario/a:\n          "),
+              this.apartment.user
+                ? _c("span", { staticClass: "fw-bold" }, [
+                    _vm._v(_vm._s(_vm.apartment.user.name)),
+                  ])
+                : _vm._e(),
+            ]),
+            _vm._v(" "),
+            _c("h5", { staticClass: "mb-4" }, [_vm._v("Servizi disponibili")]),
+            _vm._v(" "),
+            _vm.apartment.services && _vm.apartment.services.length
+              ? _c(
+                  "div",
+                  {
+                    staticClass:
+                      "row row-cols-2 row-cols-sm-1 row-cols-md-2 gy-3",
+                  },
+                  _vm._l(_vm.apartment.services, function (service) {
+                    return _c("div", { key: service.id, staticClass: "col" }, [
+                      _c("p", [
+                        _c("span", {
+                          domProps: { innerHTML: _vm._s(service.icon) },
+                        }),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "ms-2" }, [
+                          _vm._v(_vm._s(service.name)),
+                        ]),
+                      ]),
+                    ])
+                  }),
+                  0
+                )
+              : _c("div", [
+                  _c("h5", { staticClass: "text-secondary py-3" }, [
+                    _vm._v("Nessun servizio"),
+                  ]),
+                ]),
+          ]),
         ]),
         _vm._v(" "),
         _vm.formActive
@@ -41349,6 +41423,7 @@ var render = function () {
         _vm._v(" "),
         _vm.overlayImage
           ? _c("OverlayImage", {
+              attrs: { coverImg: _vm.apartment.cover_img },
               on: { closeOverlayImage: _vm.closeOverlayImage },
             })
           : _vm._e(),
@@ -41357,86 +41432,7 @@ var render = function () {
     ),
   ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "overlay_image" }, [
-      _c("div", { staticClass: "button_overlay_image" }, [
-        _c(
-          "button",
-          { staticClass: "btn btn-primary", attrs: { type: "button" } },
-          [_vm._v("\n                Vedi Tutto\n              ")]
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "description_container mb-5" }, [
-      _c("p", [
-        _vm._v(
-          "\n              Lorem ipsum dolor, sit amet consectetur adipisicing elit.\n              Provident, ducimus itaque? Expedita saepe praesentium provident,\n              eaque fuga rerum accusamus optio est repudiandae voluptate sint\n              reiciendis consequatur laboriosam veniam, incidunt nisi. Non\n              dolore alias quam fuga nisi doloribus commodi ut? Quisquam\n              consequuntur facilis hic, in, illum ipsum beatae quo nulla\n              tenetur sed perferendis expedita animi similique eius recusandae\n              tempore molestiae? Tempora!\n            "
-        ),
-      ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12 col-md-4 right_info" }, [
-      _c("p", { staticClass: "mb-2" }, [
-        _c("span", { staticClass: "price" }, [_vm._v("€50")]),
-        _vm._v("/notte"),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mb-5" }, [
-        _vm._v("\n          Proprietario/a: "),
-        _c("span", { staticClass: "fw-bold" }, [_vm._v("Leonardo")]),
-      ]),
-      _vm._v(" "),
-      _c("h5", { staticClass: "mb-4" }, [_vm._v("Servizi disponibili")]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "row row-cols-2 row-cols-sm-1 row-cols-md-2 gy-3" },
-        [
-          _c("div", { staticClass: "col" }, [
-            _c("p", [
-              _c("i", { staticClass: "fas fa-wifi" }),
-              _c("span", { staticClass: "ms-2" }, [_vm._v("Wi-Fi")]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col" }, [
-            _c("p", [
-              _c("i", { staticClass: "fas fa-wifi" }),
-              _c("span", { staticClass: "ms-2" }, [_vm._v("Portineria")]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col" }, [
-            _c("p", [
-              _c("i", { staticClass: "fas fa-wifi" }),
-              _c("span", { staticClass: "ms-2" }, [_vm._v("Sauna")]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col" }, [
-            _c("p", [
-              _c("i", { staticClass: "fas fa-wifi" }),
-              _c("span", { staticClass: "ms-2" }, [_vm._v("Piscina")]),
-            ]),
-          ]),
-        ]
-      ),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -41650,7 +41646,7 @@ var staticRenderFns = [
       _c(
         "a",
         {
-          staticClass: "btn btn-primary",
+          staticClass: "button button_special_1",
           attrs: {
             "data-bs-toggle": "collapse",
             href: "#collapseExample",
@@ -41705,24 +41701,14 @@ var render = function () {
       }),
     ]),
     _vm._v(" "),
-    _vm._m(0),
+    _vm.coverImg
+      ? _c("div", { staticClass: "overlay_banner_image" }, [
+          _c("img", { attrs: { src: _vm.coverImg, alt: "" } }),
+        ])
+      : _vm._e(),
   ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "overlay_banner_image" }, [
-      _c("img", {
-        attrs: {
-          src: "https://www.classcountryhomes.it/wp-content/uploads/2019/05/appartamenti-in-vendita-roma-nord-38.jpg",
-          alt: "",
-        },
-      }),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -58860,8 +58846,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\MAMP\Esercizi Php\boolbnb\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\MAMP\Esercizi Php\boolbnb\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/leonardo/Scrivania/Boolean/boolbnb/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/leonardo/Scrivania/Boolean/boolbnb/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

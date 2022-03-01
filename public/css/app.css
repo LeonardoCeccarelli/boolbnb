@@ -12317,6 +12317,43 @@ fieldset:disabled .btn {
   color: white;
 }
 
+.button_special_1 {
+  padding: 8px 13px;
+  font-size: 15px;
+  color: #001533;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: white;
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: #ffaaac 0 -12px 6px inset;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: -0.24px;
+  margin: 0;
+  outline: none;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.15s;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button_special_1:hover {
+  background-color: #ff5a5f;
+  box-shadow: #ffaaac 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+.button_special_1:active {
+  transform: scale(1.025);
+}
+
 @media only screen and (min-width: 600px) {
   .icone {
     font-size: 13px;
