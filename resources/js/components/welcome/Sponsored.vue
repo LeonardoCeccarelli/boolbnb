@@ -1,56 +1,30 @@
 <template>
-  <div class="sponsored container pt-5">
+  <div v-if="sponsoredApartment" class="sponsored container pt-5">
     <h2 class="mb-4">Scopri le esperienze Boolbnb</h2>
-    <div
-      class="
-        row row-cols-1 row-cols-md-2 row-cols-lg-4
-        g-md-3 g-lg-1
-        gy-4
-        justify-content-center
-      "
-    >
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-md-3 g-lg-3 h-100">
       <!-- CARD -> foreach per i primi 8 appartamenti sponsorizzati-->
 
-      <div class="col d-flex justify-content-center">
-        <div class="card sponsored-card" style="width: 18rem">
-          <img src="/img/hero-img.jpg" class="card-img-top" alt="..." />
+      <div
+        v-for="apartment in sponsoredApartment"
+        :key="apartment.id"
+        class="col d-flex justify-content-center"
+      >
+        <div class="card sponsored-card">
+          <img
+            :src="apartment.cover_img"
+            class="card-img-top card_image"
+            alt="..."
+          />
           <div class="card-body">
-            <h5 class="card-title">apartment.title</h5>
-            <p class="card-text ">apartment.description</p>
-            <a href="#" class="button button_4">Scopri</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col d-flex justify-content-center">
-        <div class="card sponsored-card" style="width: 18rem">
-          <img src="/img/hero-img.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">apartment.title</h5>
-            <p class="card-text">apartment.description</p>
-            <a href="#" class="button button_4">Scopri</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col d-flex justify-content-center">
-        <div class="card sponsored-card" style="width: 18rem">
-          <img src="/img/hero-img.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">apartment.title</h5>
-            <p class="card-text">apartment.description</p>
-            <a href="#" class="button button_4 mt-2">Scopri</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col d-flex justify-content-center">
-        <div class="card sponsored-card" style="width: 18rem">
-          <img src="/img/hero-img.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">apartment.title</h5>
-            <p class="card-text ">apartment.description</p>
-            <a href="#" class="button button_4 mt-5">Scopri</a>
+            <h5 class="card-title">{{ apartment.title }}</h5>
+            <p class="card-text">
+              {{ apartment.description.substring(0, 50) }}...
+            </p>
+            <router-link
+              :to="{ name: 'apartment', params: { id: apartment.id } }"
+              class="button button_4"
+              >Scopri</router-link
+            >
           </div>
         </div>
       </div>
@@ -68,12 +42,13 @@ export default {
   methods: {
     getData() {
       window.axios.get("api/welcome/sponsored").then((resp) => {
+        // console.log(resp.data);
         this.sponsoredApartment = resp.data;
       });
     },
   },
   mounted() {
-    // this.getData();
+    this.getData();
   },
 };
 </script>
@@ -108,5 +83,10 @@ export default {
 }
 .sponsored-card:hover::after {
   opacity: 1;
+}
+
+.card_image {
+  max-height: 250px;
+  object-fit: cover;
 }
 </style>

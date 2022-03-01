@@ -21,13 +21,16 @@ class ApartmentController extends Controller
 
     public function getSponsored()
     {
-        // $data = Apartment::with(["services", "user:id,name"])
-        //     ->where("visible", 1)
-        //     ->whereHas("sponsor", function ($query) {
-        //         $query->whereDate("end_date", ">", Carbon::now()->toDateString());
-        //     });
+        $data = Apartment::with(["services"])
+            ->where("visible", 1)
+            ->whereHas("sponsor", function ($query) {
+                $query->whereDate("end_date", ">", Carbon::now()->toDateString());
+            })->limit(8)->orderBy("updated_at", "DESC")->get();
 
-        // return $data;
+        foreach ($data as $apartment) {
+            $apartment['cover_img'] = url("storage/" . $apartment['cover_img']);
+        }
+        return $data;
     }
 
     public function getFiltered(Request $request)
@@ -39,7 +42,7 @@ class ApartmentController extends Controller
         if ($range < 1 || $range > 35) $range = 20;
         $services = $request->services;
 
-        $apartment = Apartment::with(["services", "user:id,name"])->where("visible", 1);
+        $apartment = Apartment::with(["services", "user:id,name"])->where("visible", 1)->orderBy("updated_at", "DESC");
         $basicApartment = $apartment->get();
 
 
