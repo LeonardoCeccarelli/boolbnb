@@ -3,17 +3,21 @@
     <div class="close_banner">
       <i @click="$emit('closeOverlayImage')" class="fas fa-times"></i>
     </div>
-    <div class="overlay_banner_image">
-      <img
-        src="https://www.classcountryhomes.it/wp-content/uploads/2019/05/appartamenti-in-vendita-roma-nord-38.jpg"
-        alt=""
-      />
+    <div v-if="coverImg" class="overlay_banner_image">
+      <img :src="coverImg" alt="" />
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    coverImg: {
+      type: String,
+      default: "",
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">

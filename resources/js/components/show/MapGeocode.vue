@@ -2,7 +2,7 @@
   <div>
     <p>
       <a
-        class="btn btn-primary"
+        class="button button_special_1"
         data-bs-toggle="collapse"
         href="#collapseExample"
         role="button"

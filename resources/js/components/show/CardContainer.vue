@@ -7,7 +7,7 @@
             <img :src="apartment.cover_img" alt="" />
           </div>
         </div>
-        <div class="col-12 col-md-6">
+        <!-- <div class="col-12 col-md-6">
           <div class="other_img" @click="getOverlayImage()">
             <div class="overlay_image">
               <div class="button_overlay_image">
@@ -21,7 +21,7 @@
               alt=""
             />
           </div>
-        </div>
+        </div> -->
       </div>
       <MapGeocode
         :apartmentLat="apartment.lat"
@@ -46,7 +46,7 @@
             <div class="form_button">
               <button
                 type="button"
-                class="btn btn-primary"
+                class="button button_special_1"
                 @click="getFormActive"
                 :disabled="formActive"
               >
@@ -80,13 +80,14 @@
               :key="service.id"
               class="col"
             >
-              <p v-html="service.icon">
+              <p>
+                <span v-html="service.icon"></span>
                 <span class="ms-2">{{ service.name }}</span>
               </p>
             </div>
           </div>
           <div v-else>
-            <h5>Nessun servizio</h5>
+            <h5 class="text-secondary py-3">Nessun servizio</h5>
           </div>
         </div>
       </div>
@@ -101,6 +102,7 @@
       ></FormContacts>
 
       <OverlayImage
+        :coverImg="apartment.cover_img"
         v-if="overlayImage"
         @closeOverlayImage="closeOverlayImage"
       ></OverlayImage>
