@@ -6012,32 +6012,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -6049,11 +6023,13 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       window.axios.get("api/welcome/sponsored").then(function (resp) {
+        // console.log(resp.data);
         _this.sponsoredApartment = resp.data;
       });
     }
   },
-  mounted: function mounted() {// this.getData();
+  mounted: function mounted() {
+    this.getData();
   }
 });
 
@@ -11375,7 +11351,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.sponsored-card {\n  position: relative;\n  border-radius: 5px;\n  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);\n  border-radius: 5px;\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card::after {\n  content: \"\";\n  border-radius: 5px;\n  position: absolute;\n  z-index: -1;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);\n  opacity: 0;\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card:hover {\n  transform: scale(1.05, 1.05);\n}\n.sponsored-card:hover::after {\n  opacity: 1;\n}\n", ""]);
+exports.push([module.i, "\n.sponsored-card {\n  position: relative;\n  border-radius: 5px;\n  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);\n  border-radius: 5px;\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card::after {\n  content: \"\";\n  border-radius: 5px;\n  position: absolute;\n  z-index: -1;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);\n  opacity: 0;\n  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);\n}\n.sponsored-card:hover {\n  transform: scale(1.05, 1.05);\n}\n.sponsored-card:hover::after {\n  opacity: 1;\n}\n.card_image {\n  max-height: 250px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n", ""]);
 
 // exports
 
@@ -42030,163 +42006,74 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _vm.sponsoredApartment
+    ? _c("div", { staticClass: "sponsored container pt-5" }, [
+        _c("h2", { staticClass: "mb-4" }, [
+          _vm._v("Scopri le esperienze Boolbnb"),
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "row row-cols-1 row-cols-md-2 row-cols-lg-4 g-md-3 g-lg-3 h-100",
+          },
+          _vm._l(_vm.sponsoredApartment, function (apartment) {
+            return _c(
+              "div",
+              {
+                key: apartment.id,
+                staticClass: "col d-flex justify-content-center",
+              },
+              [
+                _c("div", { staticClass: "card sponsored-card" }, [
+                  _c("img", {
+                    staticClass: "card-img-top card_image",
+                    attrs: { src: apartment.cover_img, alt: "..." },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "card-body" },
+                    [
+                      _c("h5", { staticClass: "card-title" }, [
+                        _vm._v(_vm._s(apartment.title)),
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "card-text" }, [
+                        _vm._v(
+                          "\n            " +
+                            _vm._s(apartment.description.substring(0, 50)) +
+                            "...\n          "
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "router-link",
+                        {
+                          staticClass: "button button_4",
+                          attrs: {
+                            to: {
+                              name: "apartment",
+                              params: { id: apartment.id },
+                            },
+                          },
+                        },
+                        [_vm._v("Scopri")]
+                      ),
+                    ],
+                    1
+                  ),
+                ]),
+              ]
+            )
+          }),
+          0
+        ),
+      ])
+    : _vm._e()
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "sponsored container pt-5" }, [
-      _c("h2", { staticClass: "mb-4" }, [
-        _vm._v("Scopri le esperienze Boolbnb"),
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "\n      row row-cols-1 row-cols-md-2 row-cols-lg-4\n      g-md-3 g-lg-1\n      gy-4\n      justify-content-center\n    ",
-        },
-        [
-          _c("div", { staticClass: "col d-flex justify-content-center" }, [
-            _c(
-              "div",
-              {
-                staticClass: "card sponsored-card",
-                staticStyle: { width: "18rem" },
-              },
-              [
-                _c("img", {
-                  staticClass: "card-img-top",
-                  attrs: { src: "/img/hero-img.jpg", alt: "..." },
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body" }, [
-                  _c("h5", { staticClass: "card-title" }, [
-                    _vm._v("apartment.title"),
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "card-text " }, [
-                    _vm._v("apartment.description"),
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    { staticClass: "button button_4", attrs: { href: "#" } },
-                    [_vm._v("Scopri")]
-                  ),
-                ]),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col d-flex justify-content-center" }, [
-            _c(
-              "div",
-              {
-                staticClass: "card sponsored-card",
-                staticStyle: { width: "18rem" },
-              },
-              [
-                _c("img", {
-                  staticClass: "card-img-top",
-                  attrs: { src: "/img/hero-img.jpg", alt: "..." },
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body" }, [
-                  _c("h5", { staticClass: "card-title" }, [
-                    _vm._v("apartment.title"),
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "card-text" }, [
-                    _vm._v("apartment.description"),
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    { staticClass: "button button_4", attrs: { href: "#" } },
-                    [_vm._v("Scopri")]
-                  ),
-                ]),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col d-flex justify-content-center" }, [
-            _c(
-              "div",
-              {
-                staticClass: "card sponsored-card",
-                staticStyle: { width: "18rem" },
-              },
-              [
-                _c("img", {
-                  staticClass: "card-img-top",
-                  attrs: { src: "/img/hero-img.jpg", alt: "..." },
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body" }, [
-                  _c("h5", { staticClass: "card-title" }, [
-                    _vm._v("apartment.title"),
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "card-text" }, [
-                    _vm._v("apartment.description"),
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "button button_4 mt-2",
-                      attrs: { href: "#" },
-                    },
-                    [_vm._v("Scopri")]
-                  ),
-                ]),
-              ]
-            ),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col d-flex justify-content-center" }, [
-            _c(
-              "div",
-              {
-                staticClass: "card sponsored-card",
-                staticStyle: { width: "18rem" },
-              },
-              [
-                _c("img", {
-                  staticClass: "card-img-top",
-                  attrs: { src: "/img/hero-img.jpg", alt: "..." },
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body" }, [
-                  _c("h5", { staticClass: "card-title" }, [
-                    _vm._v("apartment.title"),
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "card-text " }, [
-                    _vm._v("apartment.description"),
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "button button_4 mt-5",
-                      attrs: { href: "#" },
-                    },
-                    [_vm._v("Scopri")]
-                  ),
-                ]),
-              ]
-            ),
-          ]),
-        ]
-      ),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
