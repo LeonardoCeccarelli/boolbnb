@@ -4,9 +4,6 @@
     <div class="container">
       <div class="d-flex searchbox my-5 align-items-center">
         <div class="flex-grow-1">
-
-
-
           <div class="row row-cols-2 row-cols-lg-5 align-items-top">
             <!-- CITTA FIELD -->
             <div class="col mb-3 mb-lg-0">
@@ -54,10 +51,10 @@
             <div class="col mb-3 mb-lg-0">
               <div class="position-relative">
                 <div class="serviceListLink fw-700" @click="getExpanded">
-                  Servizi <i class="fas fa-angle-down"></i>
+                  <span class="services_cursor">Servizi</span>
+                  <i class="fas fa-angle-down"></i>
                 </div>
                 <div v-if="expanded === true" class="serviceList">
-                  
                   <div
                     class="form-check"
                     v-for="service in services"
@@ -77,10 +74,12 @@
               </div>
             </div>
 
-               <!-- DISTANZA FIELD -->
+            <!-- DISTANZA FIELD -->
             <div class="col flex-grow-1">
               <div class="d-flex flex-column me-lg-5">
-                <label class="fw-700" for="">Distanza: {{ filterRange }} Km</label>
+                <label class="fw-700" for=""
+                  >Distanza: {{ filterRange }} Km</label
+                >
 
                 <input
                   type="range"
@@ -265,8 +264,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
 a.custom {
   display: inline-block;
   font-weight: bold;
@@ -317,15 +314,15 @@ a.custom {
   border-radius: 40px;
   background-color: white;
 
-.fw-700 {
-  font-weight: 700;
-}
-.input-small {
-  width:70px;
-}
+  .fw-700 {
+    font-weight: 700;
+  }
+  .input-small {
+    width: 70px;
+  }
   input {
     border: none;
-   
+
     &:focus-visible {
       outline: none;
     }
@@ -344,7 +341,6 @@ a.custom {
     line-height: 60px;
     vertical-align: middle;
     font-size: 25px;
-    
   }
 }
 .slider {
@@ -362,7 +358,7 @@ a.custom {
   border: 1px solid rgb(228, 228, 228, 0.9);
   border-radius: 10px;
   z-index: 100;
-  
+
   .form-check-input {
     border: 1px solid rgb(216, 210, 210);
   }
@@ -399,5 +395,9 @@ a.custom {
     width: 100%;
     padding: 25px 10px;
   }
+}
+
+.services_cursor {
+  cursor: pointer;
 }
 </style>

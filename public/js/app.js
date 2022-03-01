@@ -5345,7 +5345,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -5742,35 +5741,53 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  // props: {
-  //   apartmentLat,
-  //   apartmentLon,
-  // },
+  props: {
+    apartmentLat: {
+      "default": 12.5643
+    },
+    apartmentLon: {
+      "default": 40.84567
+    }
+  },
   data: function data() {
     return {
       classMap: "show",
       apiKey: "74G2HVlLeNW6ZnVG4yzsaMj20OxuW1sJ",
-      lon: 40.84567,
-      lat: 12.5643
+      mapShow: false
     };
   },
   methods: {
-    getMap: function getMap() {
-      var map = tt.map({
-        key: this.apiKey,
-        container: myMap,
-        center: [this.lon, this.lat],
-        zoom: 14,
-        style: {
-          map: "basic_main"
-        }
-      });
-      var marker = new tt.Marker().setLngLat([this.lon, this.lat]).addTo(map);
-      this.classMap = "";
+    getMap: function getMap(bool) {
+      if (this.mapShow) return;
+
+      if (bool) {
+        var map = tt.map({
+          key: this.apiKey,
+          container: myMap,
+          center: [this.apartmentLon, this.apartmentLat],
+          zoom: 14,
+          style: {
+            map: "basic_main"
+          }
+        });
+        var marker = new tt.Marker().setLngLat([this.apartmentLon, this.apartmentLat]).addTo(map);
+        this.mapShow = true;
+      } else {
+        var _map = tt.map({
+          key: this.apiKey,
+          container: myMap,
+          zoom: 14,
+          style: {
+            map: "basic_main"
+          }
+        });
+
+        this.classMap = "";
+      }
     }
   },
   mounted: function mounted() {
-    this.getMap();
+    this.getMap(0);
   }
 });
 
@@ -11225,7 +11242,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "a.custom[data-v-900dec9a] {\n  display: inline-block;\n  font-weight: bold;\n  text-decoration: none;\n  color: black;\n  padding: 8px 14px;\n  margin-right: 5px;\n  cursor: pointer;\n}\na.custom.active[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(0);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a] {\n  position: relative;\n  overflow: hidden;\n  color: #001533 !important;\n}\n.custom_link_4[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(-100%);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a]:hover::before {\n  transform: translateX(0);\n}\n\n/* searchbox */\n.searchbox[data-v-900dec9a] {\n  padding: 20px 30px;\n  border-radius: 40px;\n  background-color: white;\n}\n.searchbox .fw-700[data-v-900dec9a] {\n  font-weight: 700;\n}\n.searchbox .input-small[data-v-900dec9a] {\n  width: 70px;\n}\n.searchbox input[data-v-900dec9a] {\n  border: none;\n}\n.searchbox input[data-v-900dec9a]:focus-visible {\n  outline: none;\n}\n.searchbox button[data-v-900dec9a] {\n  color: white;\n  background-color: white;\n  border: none;\n}\n.searchbox .fa-search[data-v-900dec9a] {\n  background: #ff5a5f;\n  width: 60px;\n  height: 60px;\n  border-radius: 50%;\n  text-align: center;\n  line-height: 60px;\n  vertical-align: middle;\n  font-size: 25px;\n}\n.slider[data-v-900dec9a]:hover {\n  cursor: pointer;\n}\n\n/* Dropdown menu */\n.serviceList[data-v-900dec9a] {\n  position: absolute;\n  top: 100%;\n  padding: 20px;\n  background-color: rgba(255, 255, 255, 0.9);\n  border: 1px solid rgba(228, 228, 228, 0.9);\n  border-radius: 10px;\n  z-index: 100;\n}\n.serviceList .form-check-input[data-v-900dec9a] {\n  border: 1px solid #d8d2d2;\n}\n\n/* End Searchbox */\n.search_container[data-v-900dec9a] {\n  border: 2px solid transparent;\n  border-radius: 10px;\n  overflow: hidden;\n  box-shadow: 0px 0px 20px 0px rgba(0, 21, 51, 0.2);\n}\n.apartment_container[data-v-900dec9a],\n.map_container[data-v-900dec9a] {\n  height: 80vh;\n  width: 100%;\n}\n.apartment_container[data-v-900dec9a] {\n  overflow-y: auto;\n  overflow-x: hidden;\n  position: relative;\n}\n.apartment_container .sponsor_column[data-v-900dec9a],\n.apartment_container .basic_column[data-v-900dec9a] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  padding: 25px 10px;\n}", ""]);
+exports.push([module.i, "a.custom[data-v-900dec9a] {\n  display: inline-block;\n  font-weight: bold;\n  text-decoration: none;\n  color: black;\n  padding: 8px 14px;\n  margin-right: 5px;\n  cursor: pointer;\n}\na.custom.active[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(0);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a] {\n  position: relative;\n  overflow: hidden;\n  color: #001533 !important;\n}\n.custom_link_4[data-v-900dec9a]::before {\n  content: \"\";\n  position: absolute;\n  top: 80%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background-color: #ffa5af;\n  transform: translateX(-100%);\n  transition: transform 0.2s ease-in-out;\n}\n.custom_link_4[data-v-900dec9a]:hover::before {\n  transform: translateX(0);\n}\n\n/* searchbox */\n.searchbox[data-v-900dec9a] {\n  padding: 20px 30px;\n  border-radius: 40px;\n  background-color: white;\n}\n.searchbox .fw-700[data-v-900dec9a] {\n  font-weight: 700;\n}\n.searchbox .input-small[data-v-900dec9a] {\n  width: 70px;\n}\n.searchbox input[data-v-900dec9a] {\n  border: none;\n}\n.searchbox input[data-v-900dec9a]:focus-visible {\n  outline: none;\n}\n.searchbox button[data-v-900dec9a] {\n  color: white;\n  background-color: white;\n  border: none;\n}\n.searchbox .fa-search[data-v-900dec9a] {\n  background: #ff5a5f;\n  width: 60px;\n  height: 60px;\n  border-radius: 50%;\n  text-align: center;\n  line-height: 60px;\n  vertical-align: middle;\n  font-size: 25px;\n}\n.slider[data-v-900dec9a]:hover {\n  cursor: pointer;\n}\n\n/* Dropdown menu */\n.serviceList[data-v-900dec9a] {\n  position: absolute;\n  top: 100%;\n  padding: 20px;\n  background-color: rgba(255, 255, 255, 0.9);\n  border: 1px solid rgba(228, 228, 228, 0.9);\n  border-radius: 10px;\n  z-index: 100;\n}\n.serviceList .form-check-input[data-v-900dec9a] {\n  border: 1px solid #d8d2d2;\n}\n\n/* End Searchbox */\n.search_container[data-v-900dec9a] {\n  border: 2px solid transparent;\n  border-radius: 10px;\n  overflow: hidden;\n  box-shadow: 0px 0px 20px 0px rgba(0, 21, 51, 0.2);\n}\n.apartment_container[data-v-900dec9a],\n.map_container[data-v-900dec9a] {\n  height: 80vh;\n  width: 100%;\n}\n.apartment_container[data-v-900dec9a] {\n  overflow-y: auto;\n  overflow-x: hidden;\n  position: relative;\n}\n.apartment_container .sponsor_column[data-v-900dec9a],\n.apartment_container .basic_column[data-v-900dec9a] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  padding: 25px 10px;\n}\n.services_cursor[data-v-900dec9a] {\n  cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -11244,7 +11261,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "ul[data-v-f7bf6cac] {\n  list-style: none;\n}\n.image_container div[data-v-f7bf6cac] {\n  border-radius: 10px;\n  overflow: hidden;\n}\n.image_container img[data-v-f7bf6cac] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 10px;\n}\n.image_container .cover_img[data-v-f7bf6cac] {\n  cursor: pointer;\n  height: 100%;\n}\n.image_container .other_img[data-v-f7bf6cac] {\n  height: 100%;\n  position: relative;\n  overflow: hidden;\n}\n.image_container .overlay_image[data-v-f7bf6cac] {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.55);\n  opacity: 0;\n  -webkit-backdrop-filter: none;\n          backdrop-filter: none;\n  transition: all 0.2s linear;\n}\n.image_container .overlay_image .button_overlay_image[data-v-f7bf6cac] {\n  position: absolute;\n  bottom: 110%;\n  left: 50%;\n  transform: translate(-50%, 50%);\n  transition: all 0.3s 0.2s ease-in-out;\n}\n.image_container .other_img:hover .overlay_image[data-v-f7bf6cac] {\n  opacity: 1;\n  -webkit-backdrop-filter: blur(4px);\n          backdrop-filter: blur(4px);\n}\n.image_container .other_img:hover .button_overlay_image[data-v-f7bf6cac] {\n  bottom: 50%;\n}\n.right_info .price[data-v-f7bf6cac] {\n  font-weight: bold;\n  font-size: 20px;\n  margin-right: 5px;\n  color: #ff5a5f;\n}\n@media only screen and (max-width: 768px) {\n.right_info[data-v-f7bf6cac] {\n    border-top: 2px solid #001533;\n    margin-top: 50px;\n    padding-top: 20px;\n}\n}\n@media only screen and (min-width: 769px) {\n.right_info[data-v-f7bf6cac] {\n    border-left: 2px solid #001533;\n}\n}", ""]);
+exports.push([module.i, "ul[data-v-f7bf6cac] {\n  list-style: none;\n}\n.image_container div[data-v-f7bf6cac] {\n  border-radius: 10px;\n  overflow: hidden;\n}\n.image_container img[data-v-f7bf6cac] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 10px;\n}\n.image_container .cover_img[data-v-f7bf6cac] {\n  cursor: pointer;\n  height: 100%;\n  max-height: 700px;\n}\n.image_container .other_img[data-v-f7bf6cac] {\n  height: 100%;\n  position: relative;\n  overflow: hidden;\n}\n.image_container .overlay_image[data-v-f7bf6cac] {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.55);\n  opacity: 0;\n  -webkit-backdrop-filter: none;\n          backdrop-filter: none;\n  transition: all 0.2s linear;\n}\n.image_container .overlay_image .button_overlay_image[data-v-f7bf6cac] {\n  position: absolute;\n  bottom: 110%;\n  left: 50%;\n  transform: translate(-50%, 50%);\n  transition: all 0.3s 0.2s ease-in-out;\n}\n.image_container .other_img:hover .overlay_image[data-v-f7bf6cac] {\n  opacity: 1;\n  -webkit-backdrop-filter: blur(4px);\n          backdrop-filter: blur(4px);\n}\n.image_container .other_img:hover .button_overlay_image[data-v-f7bf6cac] {\n  bottom: 50%;\n}\n.right_info .price[data-v-f7bf6cac] {\n  font-weight: bold;\n  font-size: 20px;\n  margin-right: 5px;\n  color: #ff5a5f;\n}\n@media only screen and (max-width: 768px) {\n.right_info[data-v-f7bf6cac] {\n    border-top: 2px solid #001533;\n    margin-top: 50px;\n    padding-top: 20px;\n}\n}\n@media only screen and (min-width: 769px) {\n.right_info[data-v-f7bf6cac] {\n    border-left: 2px solid #001533;\n}\n}", ""]);
 
 // exports
 
@@ -41043,7 +41060,10 @@ var render = function () {
                       on: { click: _vm.getExpanded },
                     },
                     [
-                      _vm._v("\n                Servizi "),
+                      _c("span", { staticClass: "services_cursor" }, [
+                        _vm._v("Servizi"),
+                      ]),
+                      _vm._v(" "),
                       _c("i", { staticClass: "fas fa-angle-down" }),
                     ]
                   ),
@@ -41624,7 +41644,32 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
+    _c(
+      "p",
+      {
+        on: {
+          click: function ($event) {
+            return _vm.getMap(1)
+          },
+        },
+      },
+      [
+        _c(
+          "a",
+          {
+            staticClass: "button button_special_1",
+            attrs: {
+              "data-bs-toggle": "collapse",
+              href: "#collapseExample",
+              role: "button",
+              "aria-expanded": "false",
+              "aria-controls": "collapseExample",
+            },
+          },
+          [_vm._v("\n      Dove ti troverai\n    ")]
+        ),
+      ]
+    ),
     _vm._v(" "),
     _c(
       "div",
@@ -41633,32 +41678,11 @@ var render = function () {
         class: _vm.classMap,
         attrs: { id: "collapseExample" },
       },
-      [_vm._m(1)]
+      [_vm._m(0)]
     ),
   ])
 }
 var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _c(
-        "a",
-        {
-          staticClass: "button button_special_1",
-          attrs: {
-            "data-bs-toggle": "collapse",
-            href: "#collapseExample",
-            role: "button",
-            "aria-expanded": "false",
-            "aria-controls": "collapseExample",
-          },
-        },
-        [_vm._v("\n      Dove ti troverai\n    ")]
-      ),
-    ])
-  },
   function () {
     var _vm = this
     var _h = _vm.$createElement

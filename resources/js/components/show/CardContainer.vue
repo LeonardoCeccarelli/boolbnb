@@ -171,6 +171,7 @@ ul {
   .cover_img {
     cursor: pointer;
     height: 100%;
+    max-height: 700px;
   }
 
   .other_img {

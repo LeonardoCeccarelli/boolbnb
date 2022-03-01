@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>
+    <p @click="getMap(1)">
       <a
         class="button button_special_1"
         data-bs-toggle="collapse"
@@ -22,37 +22,54 @@
 
 <script>
 export default {
-  // props: {
-  //   apartmentLat,
-  //   apartmentLon,
-  // },
+  props: {
+    apartmentLat: {
+      default: 12.5643,
+    },
+    apartmentLon: {
+      default: 40.84567,
+    },
+  },
   data() {
     return {
       classMap: "show",
       apiKey: "74G2HVlLeNW6ZnVG4yzsaMj20OxuW1sJ",
-      lon: 40.84567,
-      lat: 12.5643,
+      mapShow: false,
     };
   },
   methods: {
-    getMap() {
-      const map = tt.map({
-        key: this.apiKey,
-        container: myMap,
-        center: [this.lon, this.lat],
-        zoom: 14,
-        style: {
-          map: "basic_main",
-        },
-      });
+    getMap(bool) {
+      if (this.mapShow) return;
 
-      const marker = new tt.Marker().setLngLat([this.lon, this.lat]).addTo(map);
-
-      this.classMap = "";
+      if (bool) {
+        const map = tt.map({
+          key: this.apiKey,
+          container: myMap,
+          center: [this.apartmentLon, this.apartmentLat],
+          zoom: 14,
+          style: {
+            map: "basic_main",
+          },
+        });
+        const marker = new tt.Marker()
+          .setLngLat([this.apartmentLon, this.apartmentLat])
+          .addTo(map);
+        this.mapShow = true;
+      } else {
+        const map = tt.map({
+          key: this.apiKey,
+          container: myMap,
+          zoom: 14,
+          style: {
+            map: "basic_main",
+          },
+        });
+        this.classMap = "";
+      }
     },
   },
   mounted() {
-    this.getMap();
+    this.getMap(0);
   },
 };
 </script>
