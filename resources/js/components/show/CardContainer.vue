@@ -4,14 +4,11 @@
       <div class="row g-4 image_container mb-5">
         <div class="col-12 col-md-6">
           <div class="cover_img" @click="getOverlayImage">
-            <img
-              src="https://www.classcountryhomes.it/wp-content/uploads/2019/05/appartamenti-in-vendita-roma-nord-38.jpg"
-              alt=""
-            />
+            <img :src="apartment.cover_img" alt="" />
           </div>
         </div>
-        <div class="col-12 col-md-6">
-          <div class="other_img" @click="getOverlayImage">
+        <!-- <div class="col-12 col-md-6">
+          <div class="other_img" @click="getOverlayImage()">
             <div class="overlay_image">
               <div class="button_overlay_image">
                 <button class="btn btn-primary" type="button">
@@ -24,33 +21,32 @@
               alt=""
             />
           </div>
-        </div>
+        </div> -->
       </div>
-      <MapGeocode></MapGeocode>
+      <MapGeocode
+        :apartmentLat="apartment.lat"
+        :apartmentLon="apartment.lon"
+      ></MapGeocode>
       <div class="row my-5">
         <div class="col-12 col-md-8">
           <div class="left_info">
             <div class="title_container mb-4">
               <h2>{{ apartment.title }}</h2>
-              <p>Roma - Piazza Venezia</p>
-              <p>4 stanze/a - 4 posti/o letto - 1 bagni/o</p>
+              <p>{{ apartment.city }} - {{ apartment.address }}</p>
+              <p>
+                {{ apartment.rooms }} stanze - {{ apartment.beds }} posti/o
+                letto - {{ apartment.bathrooms }} bagni/o
+              </p>
             </div>
             <div class="description_container mb-5">
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Provident, ducimus itaque? Expedita saepe praesentium provident,
-                eaque fuga rerum accusamus optio est repudiandae voluptate sint
-                reiciendis consequatur laboriosam veniam, incidunt nisi. Non
-                dolore alias quam fuga nisi doloribus commodi ut? Quisquam
-                consequuntur facilis hic, in, illum ipsum beatae quo nulla
-                tenetur sed perferendis expedita animi similique eius recusandae
-                tempore molestiae? Tempora!
+                {{ apartment.description }}
               </p>
             </div>
             <div class="form_button">
               <button
                 type="button"
-                class="btn btn-primary"
+                class="button button_special_1"
                 @click="getFormActive"
                 :disabled="formActive"
               >
@@ -60,28 +56,38 @@
           </div>
         </div>
         <div class="col-12 col-md-4 right_info">
-          <p class="mb-2"><span class="price">€50</span>/notte</p>
+          <p class="mb-2">
+            <span class="price">€{{ apartment.night_price }}</span
+            >/notte
+          </p>
+          <p class="mb-2">
+            <span class="price">{{ apartment.square_metres }}</span
+            >/metri²
+          </p>
           <p class="mb-5">
-            Proprietario/a: <span class="fw-bold">Leonardo</span>
+            Proprietario/a:
+            <span v-if="this.apartment.user" class="fw-bold">{{
+              apartment.user.name
+            }}</span>
           </p>
           <h5 class="mb-4">Servizi disponibili</h5>
-          <div class="row row-cols-2 row-cols-sm-1 row-cols-md-2 gy-3">
-            <div class="col">
-              <p><i class="fas fa-wifi"></i><span class="ms-2">Wi-Fi</span></p>
-            </div>
-            <div class="col">
+          <div
+            v-if="apartment.services && apartment.services.length"
+            class="row row-cols-2 row-cols-sm-1 row-cols-md-2 gy-3"
+          >
+            <div
+              v-for="service in apartment.services"
+              :key="service.id"
+              class="col"
+            >
               <p>
-                <i class="fas fa-wifi"></i><span class="ms-2">Portineria</span>
+                <span v-html="service.icon"></span>
+                <span class="ms-2">{{ service.name }}</span>
               </p>
             </div>
-            <div class="col">
-              <p><i class="fas fa-wifi"></i><span class="ms-2">Sauna</span></p>
-            </div>
-            <div class="col">
-              <p>
-                <i class="fas fa-wifi"></i><span class="ms-2">Piscina</span>
-              </p>
-            </div>
+          </div>
+          <div v-else>
+            <h5 class="text-secondary py-3">Nessun servizio</h5>
           </div>
         </div>
       </div>
@@ -96,6 +102,7 @@
       ></FormContacts>
 
       <OverlayImage
+        :coverImg="apartment.cover_img"
         v-if="overlayImage"
         @closeOverlayImage="closeOverlayImage"
       ></OverlayImage>
@@ -142,6 +149,7 @@ export default {
       this.overlayImage = false;
     },
   },
+  mounted() {},
 };
 </script>
 
